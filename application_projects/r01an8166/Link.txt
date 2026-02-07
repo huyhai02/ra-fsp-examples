@@ -1,0 +1,8 @@
+Renesas RA Family Modbus Sample Program Package for RA8T2 and RA8M2 - EN version
+https://www.renesas.com/en/document/apn/renesas-ra-family-modbus-sample-program-package-ra8t2-and-ra8m2
+Renesas RA Family Modbus Sample Program Package for RA8T2 and RA8M2 - JP version
+https://www.renesas.com/ja/document/apn/renesas-ra-family-modbus-sample-program-package-ra8t2-and-ra8m2
+Related: r20an0824 - Quick Start Guide: Modbus Serial - EN version
+https://www.renesas.com/en/document/apn/quick-start-guide-modbus-serial
+Related: r20an0824 - Quick Start Guide: Modbus Serial - JP version
+https://www.renesas.com/ja/document/apn/quick-start-guide-modbus-serial
