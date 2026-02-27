@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Configs>
+    <History>
+        <Keyword>PIDR</Keyword>
+        <Keyword>NVIC</Keyword>
+        <Keyword>IRQCR0</Keyword>
+        <Keyword>IRQCI0</Keyword>
+    </History>
+</Configs>
