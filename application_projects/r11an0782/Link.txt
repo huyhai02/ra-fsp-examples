@@ -1,0 +1,2 @@
+Virtual EEPROM Example Using RA4E2
+https://www.renesas.com/en/document/apn/virtual-eeprom-example-using-ra4e2

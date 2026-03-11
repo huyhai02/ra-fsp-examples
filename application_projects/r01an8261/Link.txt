@@ -1,0 +1,2 @@
+RA8P1 and RA8D2/M2/T2 Secure Factory Programming
+https://www.renesas.com/en/document/apn/ra8p1-and-ra8d2m2t2-secure-factory-programming

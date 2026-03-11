@@ -9,7 +9,7 @@
 *                                                                    *
 **********************************************************************
 
-** emWin V6.44 - Graphical user interface for embedded applications **
+** emWin V6.48 - Graphical user interface for embedded applications **
 emWin is protected by international copyright laws.   Knowledge of the
 source code may not be used to write a similar product.  This file may
 only  be used  in accordance  with  a license  and should  not be  re-
@@ -169,53 +169,21 @@ void      GUI_CSS__ReadAttribValuePair(const char ** psCSS, char ** ppAttrib, ch
 #define LCD_XSIZE_F   ((F32)LCD_XSIZE)
 #define LCD_YSIZE_F   ((F32)LCD_YSIZE)
 
-#define SVG_LOCK(h)    if (h) {                \
-                         {                     \
-                           GUI_SVG_Obj * pObj; \
-                           GUI_LOCK();         \
-                           pObj = (GUI_SVG_Obj *)GUI_LOCK_H(h)
+#define LOCK_ABSTRACT(TYPE, HANDLE_VAR, PTR_VAR)    {                     \
+                            TYPE * PTR_VAR;                               \
+                            if (HANDLE_VAR) {                             \
+                              PTR_VAR = (TYPE *)GUI_LOCK_H((GUI_HMEM)HANDLE_VAR);   \
+                              if (PTR_VAR) {
+#define UNLOCK_ABSTRACT(PTR_VAR) GUI_UNLOCK_H(PTR_VAR);                   \
+                              }                                           \
+                            }                                             \
+                          }
 
-#define SVG_UNLOCK()       GUI_UNLOCK_H(pObj); \
-                           GUI_UNLOCK();       \
-                         }                     \
-                       }
-//
-// Iterating over a GUI_ARRAY, in the fashion of C++ range-based for loops.
-// The syntax is very similar:
-//   for                    (Item  i : ItemArray) {...}
-//   GUI_ARRAY_BEGIN_FOREACH(Item, i,  ItemArray)  ...
-// 
-// Notes: The first  if (pUnlock)... is done so that a 'continue' unlocks the last item.
-//        The second if (pUnlock)... is done so that a 'break' unlocks the last item.
-//
-#define GUI_ARRAY_BEGIN_FOREACH_ABSTRACT(TYPE, VAR, ARR, LOOP)                          \
-                               {                                                        \
-                                 unsigned i, NumItems;                                  \
-                                 TYPE * pUnlock = NULL;                                 \
-                                 TYPE * VAR;                                            \
-                                 if (ARR) {                                             \
-                                   NumItems = GUI_ARRAY_GetNumItems(ARR);               \
-                                   for LOOP {                                           \
-                                     if (pUnlock) {                                     \
-                                       GUI_UNLOCK_H(pUnlock);                           \
-                                     }                                                  \
-                                     pUnlock = VAR = (TYPE *)GUI_ARRAY_GetpItemLocked(ARR, i);
-#define GUI_ARRAY_END_FOREACH()                                                         \
-                                     GUI_UNLOCK_H(pUnlock);                             \
-                                   }                                                    \
-                                   if (pUnlock) {                                       \
-                                     GUI_UNLOCK_H(pUnlock);                             \
-                                   }                                                    \
-                                 }                                                      \
-                               }
-//
-// Allows iterating forward and backward
-//
-#define GUI_ARRAY_BEGIN_FOREACH(TYPE, VAR, ARR)          GUI_ARRAY_BEGIN_FOREACH_ABSTRACT(TYPE, VAR, ARR, (i = 0; i < NumItems; i++))
-#define GUI_ARRAY_BEGIN_FOREACH_REVERSE(TYPE, VAR, ARR)  GUI_ARRAY_BEGIN_FOREACH_ABSTRACT(TYPE, VAR, ARR, (i = NumItems - 1; i >= 0; i--))
-
+#define SVG_PATH_LOCK(h)   LOCK_ABSTRACT(GUI_SVG_PATH_Obj, h, pPath)
+#define SVG_PATH_UNLOCK()  UNLOCK_ABSTRACT(pPath)
+#define SVG_LOCK(h)        GUI_LOCK(); LOCK_ABSTRACT(GUI_SVG_Obj, h, pObj)
+#define SVG_UNLOCK()       UNLOCK_ABSTRACT(pObj); GUI_UNLOCK()
 #define GUI_ARRAY_ADD_ITEM(ARR, VAR)   GUI_ARRAY_AddItem(ARR, &VAR, sizeof(VAR))
-#define GUI_ARRAY_DELETE(ARR)          GUI_ARRAY_Delete(ARR); ARR = 0
 
 #define INIT_OBJ(TYPE, PTR)         GUI_SVG__Init_##TYPE(PTR)
 #define DECLARE_CONSTRUCTOR(TYPE)   void GUI_SVG__Init_##TYPE(TYPE * p)
@@ -484,34 +452,55 @@ typedef struct {
 
 typedef PTR_ADDR GUI_SVG_PATH_Handle;
 
+typedef enum {
+  GUI_SVG_DRIVER_LIMITATION_NONE    =      (0),
+  GUI_SVG_DRIVER_LIMITATION_NO_ARCS = (1 << 0), // Driver cannot handle arc segments
+} GUI_SVG_DRIVER_LIMITATION_FLAGS;
+
+//
+// GPU context management, needed if multiple modules access it
+//
+typedef struct {
+  void * pCtx;     // Global context of the 3rd party API, may be NULL if there's no pointer to this.
+  int    RefCount; // Ensures that above context does not get NULLed to early.
+} GUI_SVG_GPU_CONTEXT;
+
 //
 // Static context for each SVG driver
 //
 typedef struct {
-  GUI_SVG_HOOKS Hooks;        // Additional optional driver/draw init hooks.
-  const void  * pAPI;         // User supplied pointer to 2D vector API.
-  GUI_HMEM      hContext;     // Additional data req. by the driver, allocated on demand.
-  U8            DriverInited; // Flag set when driver has been inited.
+  GUI_SVG_HOOKS       Hooks;        // Additional optional driver/draw init hooks.
+  const void        * pAPI;         // User supplied pointer to 2D vector API.
+  GUI_HMEM            hContext;     // Additional data req. by the driver, allocated on demand.
+  GUI_SVG_GPU_CONTEXT GPU;          // Global context allocated by the 2D vector API. May be NULL.
+  U32                 Version;      // Version of the API (MAJOR << 16 | MINOR << 8 | BUGFIX)
+  U8                  DriverInited; // Flag set when driver has been inited.
 } GUI_SVG_DRIVER_CONTEXT;
 
 typedef struct {
-  GUI_SVG_PATH_Handle      (* pfCreatePath)     (void);
-  void                     (* pfAppendPath)     (GUI_SVG_Obj * pObj, GUI_SVG_PATH_Handle hPath, int NumSegments, const U8 * pSegments, int NumData, const float * pCoordinates);
-  void                     (* pfFinalizePath)   (GUI_SVG_Obj * pObj, GUI_SVG_PATH_Handle hPath);
-  void                     (* pfDestroyPath)    (GUI_SVG_Obj * pObj, GUI_SVG_PATH_Handle hPath);
-  void                     (* pfDrawPath)       (GUI_SVG_Obj * pObj, GUI_SVG_PATH_Handle hPath, GUI_SVG_STYLE * pStyle);
-  void                     (* pfDrawImage)      (GUI_SVG_Obj * pObj, const GUI_SVG_RENDER_TARGET * pRT);
-  void                     (* pfEnableClipping) (int x, int y, int w, int h);
-  void                     (* pfDisableClipping)(void);
-  U8                       (* pfInitDriver)     (void);
-  void                     (* pfDeinitDriver)   (void);
-  U8                       (* pfBeginDraw)      (GUI_SVG_Obj * pObj);
-  void                     (* pfEndDraw)        (GUI_SVG_Obj * pObj);
-  GUI_SVG_DRIVER            * pfGetDriver;
-  GUI_SVG_DRIVER_CONTEXT * (* pfGetContext)     (void);
-  void                     (* pfLoadAPI)        (void * pAPI, GUI_SVG_LOAD_API_CALLBACK * cbLoadFunction);
-  int                      (* pfHasAPI)         (void);
-  U8                       (* pfSetHooks)       (void);
+  U32                           DriverLimitationFlags;
+  GUI_SVG_PATH_Handle        (* pfCreatePath)     (void);
+  void                       (* pfAppendPath)     (GUI_SVG_Obj * pObj, GUI_SVG_PATH_Handle hPath, int NumSegments, const U8 * pSegments, int NumData, const float * pCoordinates);
+  void                       (* pfFinalizePath)   (GUI_SVG_Obj * pObj, GUI_SVG_PATH_Handle hPath);
+  void                       (* pfDestroyPath)    (GUI_SVG_Obj * pObj, GUI_SVG_PATH_Handle hPath);
+  void                       (* pfDrawPath)       (GUI_SVG_Obj * pObj, GUI_SVG_PATH_Handle hPath, GUI_SVG_STYLE * pStyle);
+  void                       (* pfDrawImage)      (GUI_SVG_Obj * pObj, const GUI_SVG_RENDER_TARGET * pRT);
+  U8                         (* pfMapPathCommand) (GUI_SVG_PATH_COMMAND Cmd);
+  void                       (* pfEnableClipping) (int x, int y, int w, int h);
+  void                       (* pfDisableClipping)(void);
+  U8                         (* pfInitDriver)     (void);
+  void                       (* pfDeinitDriver)   (void);
+  void                     * (* pfCreateGPUContext)(void);
+  void                       (* pfDeleteGPUContext)(void * pCtx);
+  U8                         (* pfBeginDraw)      (GUI_SVG_Obj * pObj);
+  void                       (* pfEndDraw)        (GUI_SVG_Obj * pObj);
+  void                       (* pfModifyImageSize)(U32 * pWidth, U32 * pHeight);
+  const LCD_API_COLOR_CONV * (* pfGetColorConv)   (void);
+  GUI_SVG_DRIVER              * pfGetDriver;
+  GUI_SVG_DRIVER_CONTEXT   * (* pfGetContext)     (void);
+  void                       (* pfLoadAPI)        (void * pAPI, GUI_SVG_LOAD_API_CALLBACK * cbLoadFunction);
+  int                        (* pfHasAPI)         (void);
+  U8                         (* pfSetHooks)       (void);
 } GUI_SVG_DRIVER_API;
 
 typedef int (DRAW_IMAGE_FILE_FUNC)(const void * pFileData, int FileSize, int x0, int y0);
@@ -558,6 +547,44 @@ typedef struct {
   float cx, cy, rx, ry;
 } GUI_SVG_ELLIPSE_PARAMETERS;
 
+//
+// Can be used in path objects for casting data array.
+//
+typedef struct {
+  float rx, ry;   // Radii
+  float Angle;    // Rotation angle
+  GUI_POINTF End; // End point of arc
+} GUI_SVG_ARC_PARAMETERS;
+
+typedef struct {
+  GUI_POINTF Control;
+  GUI_POINTF End;
+} GUI_SVG_QUAD_PARAMETERS;
+
+typedef struct {
+  GUI_POINTF Control1, Control2;
+  GUI_POINTF End;
+} GUI_SVG_BEZIER_PARAMETERS;
+
+typedef struct {
+  void * p;
+  U32    NumItems;
+  U32    MaxItems;
+  U32    SizeOfElement;
+} ARRAY_Obj;
+
+typedef enum {
+  GUI_SVG_PATH_FLAG_NATIVE_FORMAT = 0x1,
+} GUI_SVG_PATH_FLAGS;
+//
+// Can be used by a GUI_SVG_DRIVER when the path data has to be manually managed.
+//
+typedef struct {
+  ARRAY_Obj aSegments;
+  ARRAY_Obj aData;
+  U32       Flags;
+} GUI_SVG_PATH_Obj;
+
 /*********************************************************************
 *
 *       Private code
@@ -587,6 +614,20 @@ GUI_SVG_INDENT_DATA * GUI_SVG__IncIndent       (GUI_SVG_Obj * pObj);
 void                  GUI_SVG__DecIndent       (GUI_SVG_Obj * pObj);
 GUI_SVG_INDENT_DATA * GUI_SVG__GetCurrentIndent(GUI_SVG_Obj * pObj);
 void                  GUI_SVG__UnlockIndent    (GUI_SVG_Obj * pObj, GUI_SVG_INDENT_DATA ** ppData);
+//
+// Path buffers
+//
+GUI_SVG_PATH_Handle  GUI_SVG_PATH__Create        (U32 Flags, U32 NumInitalData, U32 NumInitialSegments, U32 NumAdditionalBytes);
+void                 GUI_SVG_PATH__Append        (GUI_SVG_PATH_Handle hPath, const U8 * pSegments, int NumSegments, const float * pData);
+GUI_SVG_PATH_COMMAND GUI_SVG_PATH__GetSegmentAt  (GUI_SVG_PATH_Handle hPath, U32 Index);
+const float        * GUI_SVG_PATH__GetDataAt     (GUI_SVG_PATH_Handle hPath, U32 Index);
+unsigned             GUI_SVG_PATH__GetNumSegments(GUI_SVG_PATH_Handle hPath);
+void                 GUI_SVG_PATH__Delete        (GUI_SVG_PATH_Handle hPath);
+//
+// GPU context management
+//
+void * GUI_SVG_DRIVER__GetGPUContext   (void);
+void   GUI_SVG_DRIVER__DeleteGPUContext(void);
 //
 // Constructors for objects
 //
@@ -622,10 +663,12 @@ extern GUI_SVG_CONTEXT GUI_SVG__Context;
 extern const GUI_SVG_DRIVER_API GUI_SVG__OpenVG_API;
 extern const GUI_SVG_DRIVER_API GUI_SVG__VGLite_API;
 extern const GUI_SVG_DRIVER_API GUI_SVG__NemaVG_API;
+extern const GUI_SVG_DRIVER_API GUI_SVG__NanoVG_API;
 //
-#define GUI_SVG_DRIVER_API_OPENVG  &GUI_SVG__OpenVG_API
-#define GUI_SVG_DRIVER_API_VGLITE  &GUI_SVG__VGLite_API
-#define GUI_SVG_DRIVER_API_NEMAVG  &GUI_SVG__NemaVG_API
+#define GUI_SVG_DRIVER_API_OPENVG  (&GUI_SVG__OpenVG_API)
+#define GUI_SVG_DRIVER_API_VGLITE  (&GUI_SVG__VGLite_API)
+#define GUI_SVG_DRIVER_API_NEMAVG  (&GUI_SVG__NemaVG_API)
+#define GUI_SVG_DRIVER_API_NANOVG  (&GUI_SVG__NanoVG_API)
 
 #if defined(__cplusplus)
 }

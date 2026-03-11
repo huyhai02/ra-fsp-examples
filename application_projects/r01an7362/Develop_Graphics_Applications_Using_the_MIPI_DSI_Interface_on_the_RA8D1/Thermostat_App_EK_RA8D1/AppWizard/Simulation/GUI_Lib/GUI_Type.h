@@ -9,7 +9,7 @@
 *                                                                    *
 **********************************************************************
 
-** emWin V6.44 - Graphical user interface for embedded applications **
+** emWin V6.48 - Graphical user interface for embedded applications **
 emWin is protected by international copyright laws.   Knowledge of the
 source code may not be used to write a similar product.  This file may
 only  be used  in accordance  with  a license  and should  not be  re-
@@ -711,7 +711,7 @@ typedef struct {
 typedef struct {
   GUI_TTF_DATA * pTTF;     // Pointer to GUI_TTF_DATA structure which contains location and size
                            // of font file.
-  U32 aImageTypeBuffer[4]; /* Buffer for image type structure */
+  U32 aImageTypeBuffer[6]; /* Buffer for image type structure */
   int PixelHeight;         // Pixel height of new font. It means the height of the surrounding
                            // rectangle between the glyphs 'g' anf 'f'. Please notice that it is
                            // not the distance between two lines of text. With other words the value

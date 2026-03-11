@@ -9,7 +9,7 @@
 *                                                                    *
 **********************************************************************
 
-** emWin V6.44 - Graphical user interface for embedded applications **
+** emWin V6.48 - Graphical user interface for embedded applications **
 emWin is protected by international copyright laws.   Knowledge of the
 source code may not be used to write a similar product.  This file may
 only  be used  in accordance  with  a license  and should  not be  re-
@@ -243,11 +243,9 @@ typedef EGLSurface (GUI_SVG_EGL_CREATEPIXMAPSURFACE_FUNC)(EGLDisplay dpy, EGLCon
 typedef EGLBoolean (GUI_SVG_EGL_DESTROYSURFACE_FUNC)     (EGLDisplay dpy, EGLSurface surface);
 typedef EGLContext (GUI_SVG_EGL_CREATECONTEXT_FUNC)      (EGLDisplay dpy, EGLConfig config, EGLContext share_context, const EGLint *attrib_list);
 typedef EGLBoolean (GUI_SVG_EGL_INITIALIZE_FUNC)         (EGLDisplay dpy, EGLint *major, EGLint *minor);
-typedef EGLBoolean (GUI_SVG_EGL_SWAPBUFFERS_FUNC)        (EGLDisplay dpy, EGLSurface surface);
 typedef EGLBoolean (GUI_SVG_EGL_BINDAPI_FUNC)            (EGLenum api);
 typedef EGLBoolean (GUI_SVG_EGL_CHOOSECONFIG_FUNC)       (EGLDisplay dpy, const EGLint *attrib_list, EGLConfig *configs, EGLint config_size, EGLint *num_config);
 typedef EGLBoolean (GUI_SVG_EGL_MAKECURRENT_FUNC)        (EGLDisplay dpy, EGLSurface draw, EGLSurface read, EGLContext ctx);
-typedef EGLBoolean (GUI_SVG_EGL_COPYBUFFERS_FUNC)        (EGLDisplay dpy, EGLSurface surface, EGLNativePixmapType target);
 typedef EGLint     (GUI_SVG_EGL_GETERROR_FUNC)           (void);
 //
 // OpenVG API
@@ -308,11 +306,9 @@ typedef struct {
   GUI_SVG_EGL_DESTROYSURFACE_FUNC      * pfDestroySurface;      // Pointer to EGL function \c{eglDestroySurface()}
   GUI_SVG_EGL_CREATECONTEXT_FUNC       * pfCreateContext;       // Pointer to EGL function \c{eglCreateContext()}
   GUI_SVG_EGL_INITIALIZE_FUNC          * pfInitialize;          // Pointer to EGL function \c{eglInitialize()}
-  GUI_SVG_EGL_SWAPBUFFERS_FUNC         * pfSwapBuffers;         // Pointer to EGL function \c{eglSwapBuffers()}
   GUI_SVG_EGL_BINDAPI_FUNC             * pfBindAPI;             // Pointer to EGL function \c{eglBindAPI()}
   GUI_SVG_EGL_CHOOSECONFIG_FUNC        * pfChooseConfig;        // Pointer to EGL function \c{eglChooseConfig()}
   GUI_SVG_EGL_MAKECURRENT_FUNC         * pfMakeCurrent;         // Pointer to EGL function \c{eglMakeCurrent()}
-  GUI_SVG_EGL_COPYBUFFERS_FUNC         * pfCopyBuffers;         // Pointer to EGL function \c{eglCopyBuffers()}
   GUI_SVG_EGL_GETERROR_FUNC            * pfGetError;            // Pointer to EGL function \c{eglGetError()}
 } GUI_SVG_EGL_API_STRUCT;
 
@@ -393,11 +389,9 @@ typedef struct {
     eglDestroySurface,                                \
     eglCreateContext,                                 \
     eglInitialize,                                    \
-    eglSwapBuffers,                                   \
     eglBindAPI,                                       \
     eglChooseConfig,                                  \
     eglMakeCurrent,                                   \
-    eglCopyBuffers,                                   \
     eglGetError,                                      \
   }
 

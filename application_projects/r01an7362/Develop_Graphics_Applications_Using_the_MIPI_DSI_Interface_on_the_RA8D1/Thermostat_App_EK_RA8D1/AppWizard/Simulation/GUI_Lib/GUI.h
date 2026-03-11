@@ -9,7 +9,7 @@
 *                                                                    *
 **********************************************************************
 
-** emWin V6.44 - Graphical user interface for embedded applications **
+** emWin V6.48 - Graphical user interface for embedded applications **
 emWin is protected by international copyright laws.   Knowledge of the
 source code may not be used to write a similar product.  This file may
 only  be used  in accordance  with  a license  and should  not be  re-
@@ -24,6 +24,7 @@ Purpose     : GUI API include file
 #define  GUI_H
 
 #include <stddef.h>
+#include <string.h>   // for memset()
 
 #include "GUI_ConfDefaults.h"
 #include "GUI_Type.h"
@@ -128,6 +129,7 @@ typedef enum {
   DEVICE_CLASS_DRIVER = 0,
   DEVICE_CLASS_DRIVER_MODIFIER,   // Zoom or delta-pixel modifier
   DEVICE_CLASS_VNC,
+  DEVICE_CLASS_DIRTY,
   DEVICE_CLASS_SPRITE,
   DEVICE_CLASS_MEMDEV,
   DEVICE_CLASS_ALPHA,
@@ -180,6 +182,46 @@ extern const GUI_DEVICE_API GUI_MEMDEV_DEVICE_1;
 extern const GUI_DEVICE_API GUI_MEMDEV_DEVICE_8;
 extern const GUI_DEVICE_API GUI_MEMDEV_DEVICE_16;
 extern const GUI_DEVICE_API GUI_MEMDEV_DEVICE_32;
+
+#if GUI_SUPPORT_PROFILE
+
+/*********************************************************************
+*
+*       Instrumentation
+*/
+/*********************************************************************
+*
+*       GUI_PROFILE_API
+*/
+typedef struct {
+  void (*pfRecordEndCall)   (unsigned EventId);
+  void (*pfRecordEndCallU32)(unsigned EventId, U32 Para0);
+  void (*pfRecordVoid)      (unsigned EventId);
+  void (*pfRecordU32)       (unsigned EventId, U32 Para0);
+  void (*pfRecordU32x2)     (unsigned EventId, U32 Para0, U32 Para1);
+  void (*pfRecordU32x3)     (unsigned EventId, U32 Para0, U32 Para1, U32 Para2);
+  void (*pfRecordU32x4)     (unsigned EventId, U32 Para0, U32 Para1, U32 Para2, U32 Para3);
+  void (*pfRecordU32x5)     (unsigned EventId, U32 Para0, U32 Para1, U32 Para2, U32 Para3, U32 Para4);
+  void (*pfRecordU32x6)     (unsigned EventId, U32 Para0, U32 Para1, U32 Para2, U32 Para3, U32 Para4, U32 Para5);
+  void (*pfRecordU32x7)     (unsigned EventId, U32 Para0, U32 Para1, U32 Para2, U32 Para3, U32 Para4, U32 Para5, U32 Para6);
+  void (*pfRecordString)    (unsigned EventId, const char * pPara0);
+  void (*pfRecordStringx2)  (unsigned EventId, const char * pPara0, const char * pPara1);
+} GUI_PROFILE_API;
+
+U32  GUI_PROFILE_GetAPIDesc(const char ** psDesc);
+void GUI_PROFILE_SetAPI    (const GUI_PROFILE_API * pAPI, U32 IdOffset);
+void GUI_SYSVIEW_Init(void);
+
+/*********************************************************************
+*
+*       GUI_PROFILE
+*/
+typedef struct {
+  U32                    IdOffset;
+  const GUI_PROFILE_API * pAPI;
+} GUI_PROFILE;
+
+#endif
 
 /*********************************************************************
 *
@@ -235,6 +277,9 @@ struct GUI_CONTEXT {
     U8 WM_IsActive;
     U8 DisableCliprect;
     U8 ClipBKActive;
+  #endif
+  #if GUI_SUPPORT_PROFILE
+    GUI_PROFILE Profile;
   #endif
   //
   // Array of pointers to device chains
@@ -306,6 +351,34 @@ int GUI_DIRTYDEVICE_Delete      (void);
 int GUI_DIRTYDEVICE_DeleteEx    (int LayerIndex);
 int GUI_DIRTYDEVICE_Fetch       (GUI_DIRTYDEVICE_INFO * pInfo);
 int GUI_DIRTYDEVICE_FetchEx     (GUI_DIRTYDEVICE_INFO * pInfo, int LayerIndex);
+
+/*********************************************************************
+*
+*       GUI_DIRTYTILES
+*/
+int  GUI_DIRTYTILES_CreateEx (int NumCols, int NumRows,  int LayerIndex);
+int  GUI_DIRTYTILES_Create   (int NumCols, int NumRows);
+int  GUI_DIRTYTILES_FetchEx  (GUI_RECT ** ppRects, U8 ** ppBytes, int LayerIndex);
+int  GUI_DIRTYTILES_Fetch    (GUI_RECT ** ppRects, U8 ** ppBytes);
+void GUI_DIRTYTILES_CleanUpEx(int LayerIndex);
+void GUI_DIRTYTILES_CleanUp  (void);
+
+/*********************************************************************
+*
+*       GUI_DIRTY
+*/
+typedef struct GUI_DIRTY_DEVICE GUI_DIRTY_DEVICE;
+
+struct GUI_DIRTY_DEVICE {
+  GUI_DEVICE       * pDevice;
+  void            (* pfAddRect)(GUI_DEVICE * pDevice, int x0, int y0, int x1, int y1);
+  GUI_DIRTY_DEVICE * pNext;
+};
+
+extern void (* GUI__pfAddDirtyRect)(int x0, int y0, int x1, int y1);
+extern void (* GUI__pfAddDirtyPoly)(const GUI_POINT * pPoints, int NumPoints, int x, int y);
+
+void GUI_DIRTY__AddDevice(GUI_DEVICE * pDevice, GUI_DIRTY_DEVICE * pDirty, void (* pfAddRect)(GUI_DEVICE * pDevice, int x0, int y0, int x1, int y1));
 
 /*********************************************************************
 *
@@ -603,8 +676,6 @@ void GUI_FillRect              (int x0, int y0, int x1, int y1);
 void GUI_FillRectEx            (const GUI_RECT * pRect);
 void GUI_FillRoundedRect       (int x0, int y0, int x1, int y1, int r);
 void GUI_FillRoundedRectEx     (const GUI_RECT * pRect, int r);
-void GUI_FillRoundedRectB      (int x0, int y0, int x1, int y1, int r);
-void GUI_FillRoundedRectT      (int x0, int y0, int x1, int y1, int r);
 void GUI_GetClientRect         (GUI_RECT * pRect);
 void GUI_InvertRect            (int x0, int y0, int x1, int y1);
 void GUI_MoveRel               (int dx, int dy);
@@ -1044,6 +1115,7 @@ typedef const GUI_SVG_DRIVER_STRUCT * (GUI_SVG_DRIVER)(void);
 #define GUI_SVG_DRIVER_OPENVG    (&GUI_SVG_DRIVER_OpenVG)
 #define GUI_SVG_DRIVER_VGLITE    (&GUI_SVG_DRIVER_VGLite)
 #define GUI_SVG_DRIVER_NEMAVG    (&GUI_SVG_DRIVER_NemaVG)
+#define GUI_SVG_DRIVER_NANOVG    (&GUI_SVG_DRIVER_NanoVG)
 
 //
 // Not to be documented, above defines are documented.
@@ -1051,6 +1123,7 @@ typedef const GUI_SVG_DRIVER_STRUCT * (GUI_SVG_DRIVER)(void);
 const GUI_SVG_DRIVER_STRUCT * GUI_SVG_DRIVER_OpenVG(void);
 const GUI_SVG_DRIVER_STRUCT * GUI_SVG_DRIVER_VGLite(void);
 const GUI_SVG_DRIVER_STRUCT * GUI_SVG_DRIVER_NemaVG(void);
+const GUI_SVG_DRIVER_STRUCT * GUI_SVG_DRIVER_NanoVG(void);
 //
 // GUI_SVG_DRIVER API
 //
@@ -1060,6 +1133,7 @@ GUI_SVG_DRIVER * GUI_SVG_DRIVER_GetSelected   (void);
 int              GUI_SVG_DRIVER_HasBoundAPI   (GUI_SVG_DRIVER * pDriver);
 int              GUI_SVG_DRIVER_Select        (GUI_SVG_DRIVER * pDriver);
 void             GUI_SVG_DRIVER_SetHooks      (GUI_SVG_DRIVER * pDriver, const GUI_SVG_HOOKS * pHooks);
+int              GUI_SVG_DRIVER_SetVersion    (GUI_SVG_DRIVER * pDriver, U8 Major, U8 Minor, U8 Bugfix);
 //
 // Compatability macros
 //
@@ -1850,6 +1924,28 @@ GUI_MBITMAP_DRAW_FUNC_EX(SVG)
 
 /*********************************************************************
 *
+*       Emscripten related 
+*/
+
+/*********************************************************************
+*
+*       GUI_EMSCRIPTEN_DATE
+*/
+typedef struct {
+  int Year;    // Year (e.g. 2024)
+  int Month;   // Month (January == 1, February == 2, ...)
+  int Day;     // Day of the month (1st day of month == 1)
+  int Weekday; // Day of the week (Monday == 1, Tuesday == 2, ...)
+  int Hour;    // Hour (valid range: [0-23]).
+  int Minute;  // Minute (valid range: [0-59]).
+  int Second;  // Second (valid range: [0-59]).
+} GUI_EMSCRIPTEN_DATE;
+
+void GUI_EMSCRIPTEN_GetNow        (GUI_EMSCRIPTEN_DATE * pDate);
+void GUI_EMSCRIPTEN_GetNowTimezone(GUI_EMSCRIPTEN_DATE * pDate, const char * sTimezone);
+
+/*********************************************************************
+*
 *       Alpha blending
 */
 /*********************************************************************
@@ -2322,6 +2418,8 @@ void GUI_PID_SetHook         (void (* pfHook)(      GUI_PID_STATE *));  // Publi
 void GUI_PID__SetHook        (void (* pfHook)(const GUI_PID_STATE *));  // Private
 void GUI_PID__OrientationHook(GUI_PID_STATE * pState);                  // Private
 void GUI_PID_RegisterReadHook(GUI_REGISTER_HOOK * pRegisterReadHook);
+U8   GUI_PID__BlockInput     (int OnOff);                               // Private
+U8   GUI_PID__IsInputBlocked (void);                                    // Private
 
 /*********************************************************************
 *

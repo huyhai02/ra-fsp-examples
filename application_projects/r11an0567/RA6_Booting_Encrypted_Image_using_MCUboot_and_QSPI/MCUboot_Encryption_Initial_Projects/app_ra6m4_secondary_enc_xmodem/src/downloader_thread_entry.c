@@ -4,24 +4,10 @@
  ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
- * Copyright [2020-2022] Renesas Electronics Corporation and/or its affiliates.  All Rights Reserved.
- *
- * This software and documentation are supplied by Renesas Electronics America Inc. and may only be used with products
- * of Renesas Electronics Corp. and its affiliates ("Renesas").  No other uses are authorized.  Renesas products are
- * sold pursuant to Renesas terms and conditions of sale.  Purchasers are solely responsible for the selection and use
- * of Renesas products and Renesas assumes no liability.  No license, express or implied, to any intellectual property
- * right is granted by Renesas. This software is protected under all applicable laws, including copyright laws. Renesas
- * reserves the right to change or discontinue this software and/or this documentation. THE SOFTWARE AND DOCUMENTATION
- * IS DELIVERED TO YOU "AS IS," AND RENESAS MAKES NO REPRESENTATIONS OR WARRANTIES, AND TO THE FULLEST EXTENT
- * PERMISSIBLE UNDER APPLICABLE LAW, DISCLAIMS ALL WARRANTIES, WHETHER EXPLICITLY OR IMPLICITLY, INCLUDING WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT, WITH RESPECT TO THE SOFTWARE OR
- * DOCUMENTATION.  RENESAS SHALL HAVE NO LIABILITY ARISING OUT OF ANY SECURITY VULNERABILITY OR BREACH.  TO THE MAXIMUM
- * EXTENT PERMITTED BY LAW, IN NO EVENT WILL RENESAS BE LIABLE TO YOU IN CONNECTION WITH THE SOFTWARE OR DOCUMENTATION
- * (OR ANY PERSON OR ENTITY CLAIMING RIGHTS DERIVED FROM YOU) FOR ANY LOSS, DAMAGES, OR CLAIMS WHATSOEVER, INCLUDING,
- * WITHOUT LIMITATION, ANY DIRECT, CONSEQUENTIAL, SPECIAL, INDIRECT, PUNITIVE, OR INCIDENTAL DAMAGES; ANY LOST PROFITS,
- * OTHER ECONOMIC DAMAGE, PROPERTY DAMAGE, OR PERSONAL INJURY; AND EVEN IF RENESAS HAS BEEN ADVISED OF THE POSSIBILITY
- * OF SUCH LOSS, DAMAGES, CLAIMS OR COSTS.
- **********************************************************************************************************************/
+* Copyright (c) 2020 - 2025 Renesas Electronics Corporation and/or its affiliates
+*
+* SPDX-License-Identifier: BSD-3-Clause
+***********************************************************************************************************************/
 #include "downloader_thread.h"
 #include "header.h"
 #include "comms.h"
@@ -96,12 +82,7 @@ void display_image_slot_info(void)
     comms_send(str, strlen((char *)str));
     snprintf((char *)str, sizeof(str), "Image size: \t\t0x%08X (%ld bytes)\r\n", (unsigned int)p_img_header->ih_img_size, p_img_header->ih_img_size);
     comms_send(str, strlen((char *)str));
-
-
 }
-
-usb_callback_t g_usb_cb;
-
 
 /* Downloader Thread entry function */
 /* pvParameters contains TaskHandle_t */
@@ -109,33 +90,38 @@ void downloader_thread_entry(void *pvParameters)
 {
     FSP_PARAMETER_NOT_USED (pvParameters);
 
-       fsp_err_t err;
+    fsp_err_t err;
 
-   /* Open the comms driver */
-      err = comms_open();
-      if (FSP_SUCCESS != err)
-      {
-          /* Stop as comms open failure */
-          while(1)
-          {
-              ;
-          }
-      }
+    /* Open the comms driver */
+    err = comms_open();
+    if (FSP_SUCCESS != err)
+    {
+        /* Stop as comms open failure */
+        while (1)
+        {
+          ;
+        }
+    }
 
     /* Confirm the image in the primary slot.
      * This is required after a test update in swap mode.
      * This makes the swap permanent, and prevents MCUboot from reverting to the previous image.
      */
+    assert(0 == boot_set_confirmed());
 
-   assert(0 == boot_set_confirmed());
+    err = R_FLASH_HP_Open(&g_flash0_ctrl, &g_flash0_cfg);
+    if (FSP_SUCCESS != err)
+    {
+        /* Stop as Flash open failure */
+        while (1)
+        {
+            ;
+        }
+    }
 
-   err =   R_FLASH_HP_Open(&g_flash0_ctrl, &g_flash0_cfg);
-
-    while(1)
+    while (1)
     {
         menu();
         vTaskDelay (1);
     }
-
 }
-

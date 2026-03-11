@@ -550,7 +550,7 @@ static void otaAppCallback( OtaJobEvent_t event,
              * up through manual activation by resetting the device. The demo reports the error
              * and shuts down the OTA agent.
              */
-            IotLogError( "New image activation failed.\r\n" );
+            IotLogError( "[RED]New image activation failed.\r\n[WHITE]" );
 
             /* Shutdown OTA Agent, if it is required that the unsubscribe operations are not
              * performed while shutting down please set the second parameter to 0 instead of 1. */
@@ -564,7 +564,7 @@ static void otaAppCallback( OtaJobEvent_t event,
             /**
              * No user action is needed here. OTA agent handles the job failure event.
              */
-            IotLogInfo( "Received an OtaJobEventFail notification from OTA Agent. \r\n" );
+            IotLogInfo( "[RED]Received an OtaJobEventFail notification from OTA Agent. \r\n[WHITE]" );
 
             break;
 
@@ -576,17 +576,17 @@ static void otaAppCallback( OtaJobEvent_t event,
              * image, this would be the place to kick off those tests before calling
              * OTA_SetImageState() with the final result of either accepted or rejected. */
 
-            IotLogInfo( "Received OtaJobEventStartTest callback from OTA Agent. \r\n");
+            IotLogInfo( "[GREEN]Received OtaJobEventStartTest callback from OTA Agent. \r\n[WHITE]");
 
             err = OTA_SetImageState( OtaImageStateAccepted );
 
             if( err == OtaErrNone )
             {
-                IotLogInfo( "New image validation succeeded in self test mode. \r\n");
+                IotLogInfo( "[GREEN]New image validation succeeded in self test mode. \r\n[WHITE]");
             }
             else
             {
-                IotLogError( "Failed to set image state as accepted with error %d. \r\n", err);
+                IotLogError( "[RED]Failed to set image state as accepted with error %d. \r\n[WHITE]", err);
             }
 
             break;
@@ -604,13 +604,35 @@ static void otaAppCallback( OtaJobEvent_t event,
 
             /* Requires manual activation of previous image as self-test for
              * new image downloaded failed.*/
-            IotLogError( "[RED]OTA Self-test failed for new image. shutting down OTA Agent.\r\n[WHITE]" );
+            IotLogInfo( "[RED]OTA Self-test failed for new image. shutting down OTA Agent.\r\n[WHITE]" );
 
             /* Shutdown OTA Agent, if it is required that the unsubscribe operations are not
              * performed while shutting down please set the second parameter to 0 instead of 1. */
             OTA_Shutdown( 0, 1 );
 
             break;
+
+        case OtaJobEventReceivedJob:
+
+            IotLogDebug( "Received OtaJobEventReceivedJob callback from OTA Agent.\r\n" );
+            IotLogInfo("[GREEN]Start receiving OTA job event from AWS Cloud\r\n[WHITE]");
+
+            break;
+
+        case OtaJobEventUpdateComplete:
+
+            IotLogDebug( "Received OtaJobEventUpdateComplete callback from OTA Agent.\r\n" );
+            IotLogInfo("[GREEN]Firmware updated completely.\r\n[WHITE]");
+
+            break;
+
+        case OtaJobEventNoActiveJob:
+
+            IotLogDebug( "Received OtaJobEventNoActiveJob callback from OTA Agent.\r\n" );
+            IotLogInfo("[GREEN]There is no active job now.\r\n[WHITE]");
+
+            break;
+
         default:
             IotLogWarn( "Received an unhandled callback event from OTA Agent, event = %d \r\n", event );
 
@@ -644,7 +666,7 @@ static void prvMqttJobCallback( void * pvIncomingPublishCallbackContext,
         IotLogError( "Received OTA job message size (%d) is larger than the OTA maximum size (%d) defined.\n\n", pxPublishInfo->payloadLength, OTA_DATA_BLOCK_SIZE );
         return;
     }
-    IotLogInfo( "Received OTA job message, size: %d.\r\n", pxPublishInfo->payloadLength );
+    IotLogInfo( "Received OTA job message, size: %d.\r\n", pxPublishInfo->payloadLength);
     pData = prvOTAEventBufferGet();
 
     if( pData != NULL )

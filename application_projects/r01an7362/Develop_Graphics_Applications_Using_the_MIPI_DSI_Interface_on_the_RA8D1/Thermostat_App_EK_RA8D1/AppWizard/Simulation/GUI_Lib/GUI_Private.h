@@ -9,7 +9,7 @@
 *                                                                    *
 **********************************************************************
 
-** emWin V6.44 - Graphical user interface for embedded applications **
+** emWin V6.48 - Graphical user interface for embedded applications **
 emWin is protected by international copyright laws.   Knowledge of the
 source code may not be used to write a similar product.  This file may
 only  be used  in accordance  with  a license  and should  not be  re-
@@ -603,6 +603,229 @@ LCD_COLOR GUI__MixColors       (LCD_COLOR Color, LCD_COLOR BkColor, U8 Intens);
 void      GUI__MixColorsBulk   (U32 * pFG, U32 * pBG, U32 * pDst, unsigned OffFG, unsigned OffBG, unsigned OffDest, unsigned xSize, unsigned ySize, U8 Intens);
 
 extern const GUI_UC_ENC_APILIST GUI_UC_None;
+
+/*********************************************************************
+*
+*       Instrumentation via SystemView
+*
+**********************************************************************
+*/
+/*********************************************************************
+*
+*       Profile event identifiers
+*/
+enum {
+  //
+  // GUI_..
+  //
+  GUI_EVTID_GUI_DRAWBITMAP = 0,
+  GUI_EVTID_GUI_DRAWCIRCLE,
+  GUI_EVTID_GUI_DRAWROUNDEDRECT,
+  GUI_EVTID_GUI_FILLCIRCLE,
+  GUI_EVTID_GUI_FILLROUNDEDRECT,
+  GUI_EVTID_GUI_INIT,
+  GUI_EVTID_GUI_MEMDEV_DRAW,
+  GUI_EVTID_GUI_MULTIBUF_BEGINEX,
+  GUI_EVTID_GUI_MULTIBUF_CONFIRMEX,
+  GUI_EVTID_GUI_MULTIBUF_ENDEX,
+  //
+  // GUI_AA_...
+  //
+  GUI_EVTID_GUI_AA__DRAWCHARAA4,
+  GUI_EVTID_GUI_AA__DRAWCHARAA8,
+  GUI_EVTID_GUI_AA_DRAWARCHR,
+  GUI_EVTID_GUI_AA_DRAWCIRCLE,
+  GUI_EVTID_GUI_AA_DRAWLINE,
+  GUI_EVTID_GUI_AA_DRAWPOLYOUTLINE,
+  GUI_EVTID_GUI_AA_FILLCIRCLE,
+  GUI_EVTID_GUI_AA_FILLPOLYGON,
+  //
+  // GUI__...
+  //
+  GUI_EVTID_GUI__DISPLINE,
+  GUI_EVTID_GUI__DRAWCHAREXT,
+  //
+  // GL_...
+  //
+  GUI_EVTID_GL_DRAWBITMAP,
+  GUI_EVTID_GL_DRAWLINE,
+  //
+  // LCD_...
+  //
+  GUI_EVTID_LCD_DRAWBITMAP,
+  GUI_EVTID_LCD_DRAWHLINE,
+  GUI_EVTID_LCD_DRAWPIXEL,
+  GUI_EVTID_LCD_DRAWVLINE,
+  GUI_EVTID_LCD_FILLRECT,
+  //
+  // WM_...
+  //
+  GUI_EVTID_WM_EXEC,
+  GUI_EVTID_WM__PAINT,
+  GUI_EVTID_WM__PAINTWINANDOVERLAYS,
+  //
+  // Last entry, number of ids.
+  //
+  GUI_NUM_EVTIDS
+};
+
+#define GUI_PROFILE_GET_EVENT_ID(EvtId) ((unsigned)(EvtId) + (unsigned)GUI_pContext->Profile.IdOffset)
+
+/*********************************************************************
+*
+*       GUI_PROFILE_END_CALL
+*/
+#if (GUI_SUPPORT_PROFILE != 0) && (GUI_SUPPORT_PROFILE_END_CALL != 0)
+  #define GUI_PROFILE_END_CALL(EventId)                                                \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                          \
+      GUI_pContext->Profile.pAPI->pfRecordEndCall(GUI_PROFILE_GET_EVENT_ID(EventId));  \
+    }
+#else
+  #define GUI_PROFILE_END_CALL(EventId)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_END_CALL_U32
+*/
+#if (GUI_SUPPORT_PROFILE != 0) && (GUI_SUPPORT_PROFILE_END_CALL != 0)
+  #define GUI_PROFILE_END_CALL_U32(EventId, Para0)                                                      \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                           \
+      GUI_pContext->Profile.pAPI->pfRecordEndCallU32(GUI_PROFILE_GET_EVENT_ID(EventId), (U32)(Para0));  \
+    }
+#else
+  #define GUI_PROFILE_END_CALL_U32(EventId, ReturnValue)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_VOID
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_VOID(EventId)                                            \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                       \
+      GUI_pContext->Profile.pAPI->pfRecordVoid(GUI_PROFILE_GET_EVENT_ID(EventId));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_VOID(EventId)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_U32
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_U32(EventId, Para0)                                                   \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                    \
+      GUI_pContext->Profile.pAPI->pfRecordU32(GUI_PROFILE_GET_EVENT_ID(EventId), (U32)(Para0));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_U32(EventId, Para0)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_U32x2
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_U32x2(EventId, Para0, Para1)                                                          \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                                    \
+      GUI_pContext->Profile.pAPI->pfRecordU32x2(GUI_PROFILE_GET_EVENT_ID(EventId), (U32)(Para0), (U32)(Para1));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_U32x2(Id, Para0, Para1)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_U32x3
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_U32x3(EventId, Para0, Para1, Para2)                                                                 \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                                                  \
+      GUI_pContext->Profile.pAPI->pfRecordU32x3(GUI_PROFILE_GET_EVENT_ID(EventId), (U32)(Para0), (U32)(Para1), (U32)(Para2));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_U32x3(EventId, Para0, Para1, Para2)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_U32x4
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_U32x4(EventId, Para0, Para1, Para2, Para3)                                                                        \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                                                                \
+      GUI_pContext->Profile.pAPI->pfRecordU32x4(GUI_PROFILE_GET_EVENT_ID(EventId), (U32)(Para0), (U32)(Para1), (U32)(Para2), (U32)(Para3));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_U32x4(EventId, Para0, Para1, Para2, Para3)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_U32x5
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_U32x5(EventId, Para0, Para1, Para2, Para3, Para4)                                                                               \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                                                                              \
+      GUI_pContext->Profile.pAPI->pfRecordU32x5(GUI_PROFILE_GET_EVENT_ID(EventId), (U32)(Para0), (U32)(Para1), (U32)(Para2), (U32)(Para3), (U32)(Para4));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_U32x5(EventId, Para0, Para1, Para2, Para3, Para4)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_U32x6
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_U32x6(EventId, Para0, Para1, Para2, Para3, Para4, Para5)                                                                                      \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                                                                                            \
+      GUI_pContext->Profile.pAPI->pfRecordU32x6(GUI_PROFILE_GET_EVENT_ID(EventId), (U32)(Para0), (U32)(Para1), (U32)(Para2), (U32)(Para3), (U32)(Para4), (U32)(Para5));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_U32x6(EventId, Para0, Para1, Para2, Para3, Para4, Para5)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_U32x7
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_U32x7(EventId, Para0, Para1, Para2, Para3, Para4, Para5, Para6)                                                                                             \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                                                                                                          \
+      GUI_pContext->Profile.pAPI->pfRecordU32x7(GUI_PROFILE_GET_EVENT_ID(EventId), (U32)(Para0), (U32)(Para1), (U32)(Para2), (U32)(Para3), (U32)(Para4), (U32)(Para5), (U32)(Para6));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_U32x7(EventId, Para0, Para1, Para2, Para3, Para4, Para5, Para6)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_CALL_STRING
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_STRING(EventId, pPara0)                                                            \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                                 \
+      GUI_pContext->Profile.pAPI->pfRecordString(GUI_PROFILE_GET_EVENT_ID(EventId), (const char *)(pPara0));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_STRING(EventId, pPara0)
+#endif
+
+/*********************************************************************
+*
+*       GUI_PROFILE_RECORD_API_STRINGx2
+*/
+#if GUI_SUPPORT_PROFILE
+  #define GUI_PROFILE_CALL_STRINGx2(EventId, pPara0, pPara1)                                                                            \
+    if (GUI_pContext->Profile.pAPI != NULL) {                                                                                           \
+      GUI_pContext->Profile.pAPI->pfRecordStringx2(GUI_PROFILE_GET_EVENT_ID(EventId), (const char *)(pPara0), (const char *)(pPara1));  \
+    }
+#else
+  #define GUI_PROFILE_CALL_STRINGx2(EventId, pPara0, pPara1)
+#endif
 
 /*********************************************************************
 *

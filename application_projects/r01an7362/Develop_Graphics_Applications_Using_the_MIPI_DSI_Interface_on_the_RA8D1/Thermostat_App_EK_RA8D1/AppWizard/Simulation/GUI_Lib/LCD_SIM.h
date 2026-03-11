@@ -9,7 +9,7 @@
 *                                                                    *
 **********************************************************************
 
-** emWin V6.44 - Graphical user interface for embedded applications **
+** emWin V6.48 - Graphical user interface for embedded applications **
 emWin is protected by international copyright laws.   Knowledge of the
 source code may not be used to write a similar product.  This file may
 only  be used  in accordance  with  a license  and should  not be  re-
@@ -126,6 +126,7 @@ int          SIM_GUI_GetForwardRButton(void);
 void         SIM_GUI_SetForwardRButton(int OnOff);
 void         SIM_GUI_SetTransMode(int LayerIndex, int TransMode);
 void         SIM_GUI_SetChroma(int LayerIndex, unsigned long ChromaMin, unsigned long ChromaMax);
+void         SIM_GUI_TakeScreenshot(void);
 void         SIM_GUI_UseCustomBitmaps(void);
 void         SIM_GUI_SetAccellerator(int Accellerator);
 void         SIM_GUI_SetMainScreenOffset(int x, int y);

@@ -3,7 +3,7 @@
 *        Solutions for real time microcontroller applications        *
 **********************************************************************
 *                                                                    *
-*        (c) 1996 - 2024  SEGGER Microcontroller GmbH                *
+*        (c) 1996 - 2025  SEGGER Microcontroller GmbH                *
 *                                                                    *
 *        Internet: www.segger.com    Support:  support@segger.com    *
 *                                                                    *
@@ -121,7 +121,7 @@ extern APPW_ROOT_INFO ID_SCREEN_LOG_RootInfo;
 *
 *       Project path
 */
-#define APPW_PROJECT_PATH "C:/ra-solutions-rvc/application_projects/r01an7362/Thermostat_App_EK_RA8D1/AppWizard"
+#define APPW_PROJECT_PATH "D:/ra-solutions-rvc/application_projects/r01an7362/Develop_Graphics_Applications_Using_the_MIPI_DSI_Interface_on_the_RA8D1/Thermostat_App_EK_RA8D1/AppWizard"
 
 #endif  // RESOURCE_H
 

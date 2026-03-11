@@ -1,9 +1,8 @@
 /*
- * qspi_operations.h
- *
- *  Created on: Aug 20, 2022
- *      Author: a5099044
- */
+* Copyright (c) 2020 - 2025 Renesas Electronics Corporation and/or its affiliates
+*
+* SPDX-License-Identifier: BSD-3-Clause
+*/
 
 #ifndef QSPI_OPERATIONS_H_
 #define QSPI_OPERATIONS_H_

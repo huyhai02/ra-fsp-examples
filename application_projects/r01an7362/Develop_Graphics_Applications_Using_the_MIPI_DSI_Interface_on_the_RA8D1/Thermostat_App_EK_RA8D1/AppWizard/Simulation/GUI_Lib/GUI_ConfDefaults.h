@@ -9,7 +9,7 @@
 *                                                                    *
 **********************************************************************
 
-** emWin V6.44 - Graphical user interface for embedded applications **
+** emWin V6.48 - Graphical user interface for embedded applications **
 emWin is protected by international copyright laws.   Knowledge of the
 source code may not be used to write a similar product.  This file may
 only  be used  in accordance  with  a license  and should  not be  re-
@@ -28,6 +28,16 @@ Attention : Do not modify this file ! If you do, you will not
 #define  GUI_CONFDEFAULTS_H
 
 #include "GUIConf.h"
+
+#ifndef   GUI_SUPPORT_PROFILE
+  #define GUI_SUPPORT_PROFILE 0
+#endif
+
+#ifdef GUI_SUPPORT_PROFILE
+  #ifndef GUI_SUPPORT_PROFILE_END_CALL
+    #define GUI_SUPPORT_PROFILE_END_CALL  1
+  #endif
+#endif
 
 #ifndef   GUI_SUPPORT_BIDI
   #define GUI_SUPPORT_BIDI 1
@@ -106,6 +116,10 @@ Attention : Do not modify this file ! If you do, you will not
   #else
     #define GUI_BIDI_MAX_CHARS_PER_LINE  80
   #endif
+#endif
+
+#ifndef GUI_WINSUPPORT
+  #define GUI_WINSUPPORT      0
 #endif
 
 #ifndef GUI_SUPPORT_TOUCH

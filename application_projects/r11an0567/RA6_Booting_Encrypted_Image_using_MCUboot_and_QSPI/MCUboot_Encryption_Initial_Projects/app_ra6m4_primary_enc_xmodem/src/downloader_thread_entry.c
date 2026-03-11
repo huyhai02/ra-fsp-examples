@@ -4,7 +4,7 @@
  ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
-* Copyright (c) 2020 - 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2020 - 2025 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 ***********************************************************************************************************************/
@@ -82,12 +82,7 @@ void display_image_slot_info(void)
     comms_send(str, strlen((char *)str));
     snprintf((char *)str, sizeof(str), "Image size: \t\t0x%08X (%ld bytes)\r\n", (unsigned int)p_img_header->ih_img_size, p_img_header->ih_img_size);
     comms_send(str, strlen((char *)str));
-
-
 }
-
-usb_callback_t g_usb_cb;
-
 
 /* Downloader Thread entry function */
 /* pvParameters contains TaskHandle_t */
@@ -95,25 +90,31 @@ void downloader_thread_entry(void *pvParameters)
 {
     FSP_PARAMETER_NOT_USED (pvParameters);
 
-       fsp_err_t err;
+    fsp_err_t err;
 
-   /* Open the comms driver */
-      err = comms_open();
-      if (FSP_SUCCESS != err)
-      {
-          /* Stop as comms open failure */
-          while(1)
-          {
-              ;
-          }
-      }
-      err =   R_FLASH_HP_Open(&g_flash0_ctrl, &g_flash0_cfg);
+    /* Open the comms driver */
+    err = comms_open();
+    if (FSP_SUCCESS != err)
+    {
+        /* Stop as comms open failure */
+        while (1)
+        {
+          ;
+        }
+    }
+    err = R_FLASH_HP_Open(&g_flash0_ctrl, &g_flash0_cfg);
+    if (FSP_SUCCESS != err)
+    {
+        /* Stop as Flash open failure */
+        while (1)
+        {
+            ;
+        }
+    }
 
-    while(1)
+    while (1)
     {
         menu();
         vTaskDelay (1);
     }
-
 }
-

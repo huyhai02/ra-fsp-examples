@@ -1,0 +1,2 @@
+Third-Party Program Protection for RA0 MCUs
+https://www.renesas.com/en/document/apn/third-party-program-protection-ra0-mcus

@@ -1,0 +1,2 @@
+RA0/RA2 MCUboot and USB-Based Firmware Updates
+https://www.renesas.com/en/document/apn/ra0ra2-mcuboot-and-usb-based-firmware-updates

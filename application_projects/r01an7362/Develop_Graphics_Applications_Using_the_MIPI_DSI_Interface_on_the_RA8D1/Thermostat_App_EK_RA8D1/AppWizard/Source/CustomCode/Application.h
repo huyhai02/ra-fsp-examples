@@ -3,7 +3,7 @@
 *        Solutions for real time microcontroller applications        *
 **********************************************************************
 *                                                                    *
-*        (c) 1996 - 2024  SEGGER Microcontroller GmbH                *
+*        (c) 1996 - 2025  SEGGER Microcontroller GmbH                *
 *                                                                    *
 *        Internet: www.segger.com    Support:  support@segger.com    *
 *                                                                    *
@@ -28,13 +28,13 @@ Purpose     : Content to be managed by customer
 #define THERMO_TARGET_TEMP_LOW   (61U)
 #define GPT_PWM_MAX_PERCENT      (100U)
 #define GUI_CUSTOM_COLOR         (0x708CAFU)
-/* Default Time: Monday 9:30:00 5 Jan 2024, not daylight saving time */
+/* Default Time: Monday 9:30:00 5 Nov 2025, not daylight saving time */
 #define TM_SEC                   (0U)
 #define TM_MIN                   (30U)
 #define TM_HOUR                  (9U)
 #define TM_MDAY                  (5U)
-#define TM_MON                   (0U)
-#define TM_YEAR                  (124U)
+#define TM_MON                   (10U)
+#define TM_YEAR                  (125U)
 #define TM_WDAY                  (1U)
 #define TM_YDAY                  (4U)
 #define TM_ISDST                 (0U)

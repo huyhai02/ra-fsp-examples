@@ -1,2 +1,2 @@
-RA8 Secure Factory Programming
-https://www.renesas.com/en/document/apn/ra8-secure-factory-programming
+RA8M1/D1/T1/E1 and RA8E2 Secure Factory Programming
+https://www.renesas.com/en/document/apn/ra8m1d1t1e1-and-ra8e2-secure-factory-programming

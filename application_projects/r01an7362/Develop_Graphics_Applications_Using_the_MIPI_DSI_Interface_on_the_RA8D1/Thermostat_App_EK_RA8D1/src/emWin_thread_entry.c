@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2020 - 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2020 - 2025 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 */
@@ -190,9 +190,6 @@ void emWin_thread_entry(void * pvParameters)
         __asm("BKPT #0\n");
     }
 
-    /* Initialize SDRAM */
-    bsp_sdram_init();
-
     /* Start AppWizard control */
     MainTask();
 
@@ -265,13 +262,13 @@ void mipi_dsi_push_table (const lcd_table_setting_t *table)
         mipi_dsi_cmd_t msg =
         {
           .channel = 0,
-          .cmd_id = p_entry->cmd_id,
+          .cmd_id = (mipi_cmd_id_t)p_entry->cmd_id,
           .flags = p_entry->flags,
           .tx_len = p_entry->size,
           .p_tx_buffer = p_entry->buffer,
         };
 
-        if (MIPI_DSI_DISPLAY_CONFIG_DATA_DELAY_FLAG == msg.cmd_id)
+        if (MIPI_DSI_DISPLAY_CONFIG_DATA_DELAY_FLAG == (mipi_dsi_cmd_id_t)msg.cmd_id)
         {
             const TickType_t xDelay = table->size / portTICK_PERIOD_MS;
             vTaskDelay(xDelay);

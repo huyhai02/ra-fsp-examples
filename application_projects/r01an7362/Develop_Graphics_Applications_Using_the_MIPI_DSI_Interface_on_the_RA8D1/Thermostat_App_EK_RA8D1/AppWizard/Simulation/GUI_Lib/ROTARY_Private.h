@@ -9,7 +9,7 @@
 *                                                                    *
 **********************************************************************
 
-** emWin V6.44 - Graphical user interface for embedded applications **
+** emWin V6.48 - Graphical user interface for embedded applications **
 emWin is protected by international copyright laws.   Knowledge of the
 source code may not be used to write a similar product.  This file may
 only  be used  in accordance  with  a license  and should  not be  re-
@@ -58,6 +58,7 @@ typedef struct {
   WM_HMEM           hDrawObjMarker;    // Draw object for marker image
   WM_HMEM           hDrawObjMarkerHR;  // Draw object for marker image (HR)
   GUI_MEMDEV_Handle hMemMarker;        // Handle of marker device
+  I32               Value;
   //
   // Pointer to rotation function
   //
