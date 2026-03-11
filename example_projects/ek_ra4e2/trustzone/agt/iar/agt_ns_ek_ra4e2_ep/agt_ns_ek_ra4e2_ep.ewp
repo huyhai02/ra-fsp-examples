@@ -231,10 +231,7 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>_RA_CORE=CM33</state>
-                    <state>_RA_TZ_NONSECURE</state>
-                    <state>_RENESAS_RA_</state>
-                    <state>_RA_ORDINAL=2</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -355,15 +352,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$/ra/arm/CMSIS_5/CMSIS/Core/Include</state>
-                    <state>$PROJ_DIR$/ra/fsp/inc</state>
-                    <state>$PROJ_DIR$/ra/fsp/inc/api</state>
-                    <state>$PROJ_DIR$/ra/fsp/inc/instances</state>
-                    <state>$PROJ_DIR$/ra_cfg/fsp_cfg</state>
-                    <state>$PROJ_DIR$/ra_cfg/fsp_cfg/bsp</state>
-                    <state>$PROJ_DIR$/ra_gen</state>
-                    <state>$PROJ_DIR$/src</state>
-                    <state>$PROJ_DIR$</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1039,7 +1028,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>###Unitialized###</state>
+                    <state>agt_ns_ek_ra4e2_ep_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1387,10 +1376,6 @@
                 <option>
                     <name>CCDefines</name>
                     <state>NDEBUG</state>
-                    <state>_RA_CORE=CM33</state>
-                    <state>_RA_TZ_NONSECURE</state>
-                    <state>_RENESAS_RA_</state>
-                    <state>_RA_ORDINAL=2</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1511,15 +1496,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$/ra/arm/CMSIS_5/CMSIS/Core/Include</state>
-                    <state>$PROJ_DIR$/ra/fsp/inc</state>
-                    <state>$PROJ_DIR$/ra/fsp/inc/api</state>
-                    <state>$PROJ_DIR$/ra/fsp/inc/instances</state>
-                    <state>$PROJ_DIR$/ra_cfg/fsp_cfg</state>
-                    <state>$PROJ_DIR$/ra_cfg/fsp_cfg/bsp</state>
-                    <state>$PROJ_DIR$/ra_gen</state>
-                    <state>$PROJ_DIR$/src</state>
-                    <state>$PROJ_DIR$</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>

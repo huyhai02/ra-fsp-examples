@@ -10,13 +10,14 @@
       <TargetName>Target_1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
+      <pArmCC>6240000::V6.24::ARMCLANG</pArmCC>
+      <pCCUsed>6240000::V6.24::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>R7KA8M2JF:CPU0</Device>
           <Vendor>Renesas</Vendor>
-          <PackID>Renesas.RA_DFP.6.2.0-beta.0</PackID>
+          <PackID>Renesas.RA_DFP.6.4.0</PackID>
           <PackURL>https://www2.renesas.eu/Keil_MDK_Packs/</PackURL>
           <Cpu>CPUTYPE("Cortex-M85") DSP TZ MVE(FP) FPU3(DFPU) PACBTI CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -461,7 +462,7 @@
     </gpdscs>
     <apis/>
     <components>
-      <component Cclass="Flex Software" Cgroup="RA Configuration" Cvendor="Renesas" Cversion="1.0.0" condition="RA Device" generator="Renesas RA Smart Configurator">
+      <component Cclass="Flex Software" Cgroup="RA Configuration" Cvendor="Renesas" Cversion="1.0.0" condition="RA Device" generator="Renesas RA Smart Configurator" ymlID="Flex Software:RA Configuration">
         <package name="RA_DFP" schemaVersion="1.6.0" url="www.renesas.com/RA/MDK_pack/" vendor="Renesas" version="6.2.0-beta.0"/>
         <targetInfos>
           <targetInfo name="Target_1"/>
@@ -470,5 +471,14 @@
     </components>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>wdt_ek_ra8m2_ep</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

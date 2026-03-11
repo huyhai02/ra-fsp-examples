@@ -13,12 +13,14 @@
 
 #include "common_utils.h"
 
-#define EP_VERSION              ("1.0")
-#if BSP_FEATURE_SAU_IS_AVAILABLE
+#define EP_VERSION              ("1.1")
+
+#if BSP_PERIPHERAL_SAU_PRESENT
 #define MODULE_NAME             "sau_lin Module  "
-#elif BSP_FEATURE_SCI_IS_AVAILABLE
+#elif BSP_PERIPHERAL_SCI_B_PRESENT
 #define MODULE_NAME             "sci_b_lin Module"
-#endif
+#endif /* BSP_PERIPHERAL_SAU_PRESENT || BSP_PERIPHERAL_SCI_B_PRESENT */
+
 #define BANNER_INFO             "\r\n******************************************************************"\
                                 "\r\n*   Renesas FSP Example Project for "MODULE_NAME"             *"\
                                 "\r\n*   Example Project Version %s                                  *"\
@@ -27,21 +29,16 @@
                                 "\r\nRefer to readme.txt file for more details on Example Project and" \
                                 "\r\nFSP User's Manual for more information about "MODULE_NAME" driver\r\n"
 
-#if BSP_FEATURE_SAU_IS_AVAILABLE
+#if BSP_PERIPHERAL_SAU_PRESENT
 
-#define EP_INFO                  "\r\nThis project demonstrates the basic functionalities of Local Interconnect"\
-                                 "\r\nNetwork (LIN) on Renesas RA MCUs based on the Renesas FSP. The LIN"\
-                                 "\r\nmodules communicate with transceivers that satisfy the ISO9141 protocol."\
-                                 "\r\nThe Master defines four distinct messages, each assigned a unique ID,"\
-                                 "\r\nallowing the user to select and transmit a specific message to the Slave."\
-                                 "\r\nThe Master sends a start frame with the selected ID to retrieve data,"\
-                                 "\r\nand the Slave responds accordingly. The user can select a baud rate"\
-                                 "\r\n(2400, 4800, 9600, 10400, 14400, 19200) from the application menu."\
-                                 "\r\nAdditionally, the LIN module's baud rate can be configured to other"\
-                                 "\r\nsupported values, as specified in the markdown file, by modifying the"\
-                                 "\r\nconfiguration.xml. For the SAU LIN Slave, users can enter Low Power"\
-                                 "\r\nMode (Software Standby) via the EP menu and wake up when triggered"\
-                                 "\r\nby the Master.\r\n\r\n"
+#define EP_INFO                 "\r\nThis project demonstrates the basic functionalities of LIN on Renesas"\
+                                "\r\nRA MCUs based on Renesas FSP. The Master defines four distinct messages,"\
+                                "\r\neach assigned a unique ID, allowing the user to select and transmit"\
+                                "\r\na specific message to the Slave. The Master sends a start frame with"\
+                                "\r\nthe selected ID to retrieve data, and the Slave responds accordingly."\
+                                "\r\nAdditionally, users can configure the baud rate to other supported values."\
+                                "\r\nFor the Slave, users can enter Low Power Mode (Software Standby) via"\
+                                "\r\nthe EP menu and wake up when triggered by the Master.\r\n\r\n"
 
 #define MAIN_MENU               "\r\n=== LIN Slave Main Menu ==="\
                                 "\r\n1. Configure baud rate"\
@@ -50,10 +47,9 @@
 
 /* LIN API Mapping */
 #define LIN_OPEN                 (R_SAU_LIN_Open)
-#define LIN_START_FRAME_WRITE    (R_SAU_LIN_StartFrameWrite)
-#define LIN_INFO_FRAME_WRITE     (R_SAU_LIN_InformationFrameWrite)
-#define LIN_INFO_FRAME_READ      (R_SAU_LIN_InformationFrameRead)
+#define LIN_WRITE                (R_SAU_LIN_Write)
 #define LIN_COMMUNICATION_ABORT  (R_SAU_LIN_CommunicationAbort)
+#define LIN_READ                 (R_SAU_LIN_Read)
 #define LIN_BAUD_CALCULATE       (R_SAU_UART_BaudCalculate)
 #define LIN_CLOSE                (R_SAU_LIN_Close)
 
@@ -66,34 +62,28 @@
 #define TIMER_STOP               (R_TAU_Stop)
 #define TIMER_CLOSE              (R_TAU_Close)
 
-#elif BSP_FEATURE_SCI_IS_AVAILABLE
+#elif BSP_PERIPHERAL_SCI_B_PRESENT
 
-#define EP_INFO                  "\r\nThis project demonstrates the basic functionalities of Local Interconnect"\
-                                 "\r\nNetwork (LIN) on Renesas RA MCUs based on the Renesas FSP. The LIN"\
-                                 "\r\nmodules communicate with transceivers that satisfy the ISO9141 protocol."\
-                                 "\r\nThe Master defines four distinct messages, each assigned a unique ID,"\
-                                 "\r\nallowing the user to select and transmit a specific message to the Slave."\
-                                 "\r\nThe Master sends a start frame with the selected ID to retrieve data,"\
-                                 "\r\nand the Slave responds accordingly. The user can select a baud rate"\
-                                 "\r\n(2400, 4800, 9600, 10400, 14400, 19200) from the application menu."\
-                                 "\r\nAdditionally, the LIN module's baud rate can be configured to other"\
-                                 "\r\nsupported values, as specified in the markdown file, by modifying the"\
-                                 "\r\nconfiguration.xml.\r\n\r\n"
+#define EP_INFO                  "\r\nThis project demonstrates the basic functionalities of LIN on Renesas"\
+                                 "\r\nRA MCUs based on Renesas FSP. The Master defines four distinct messages,"\
+                                 "\r\neach assigned a unique ID, allowing the user to select and transmit"\
+                                 "\r\na specific message to the Slave. The Master sends a start frame with"\
+                                 "\r\nthe selected ID to retrieve data, and the Slave responds accordingly."\
+                                 "\r\nAdditionally, users can configure the baud rate to other supported values.\r\n\r\n"
 
 #define MAIN_MENU                "\r\n=== LIN Slave Main Menu ==="\
                                  "\r\n1. Configure baud rate"\
 								 "\r\n\nSelect an option or wait for master communication:\r\n"
 
-/* LIN API Mapping */
+/* LIN API mapping */
 #define LIN_OPEN                 (R_SCI_B_LIN_Open)
-#define LIN_START_FRAME_WRITE    (R_SCI_B_LIN_StartFrameWrite)
-#define LIN_INFO_FRAME_WRITE     (R_SCI_B_LIN_InformationFrameWrite)
+#define LIN_WRITE                (R_SCI_B_LIN_Write)
 #define LIN_COMMUNICATION_ABORT  (R_SCI_B_LIN_CommunicationAbort)
 #define LIN_BAUD_CALCULATE       (R_SCI_B_LIN_BaudCalculate)
-#define LIN_INFO_FRAME_READ      (R_SCI_B_LIN_InformationFrameRead)
+#define LIN_READ                 (R_SCI_B_LIN_Read)
 #define LIN_CLOSE                (R_SCI_B_LIN_Close)
 
-/* Timer API Mapping */
+/* Timer API mapping */
 #define TIMER_OPEN               (R_GPT_Open)
 #define TIMER_RESET              (R_GPT_Reset)
 #define TIMER_PERIOD_SET         (R_GPT_PeriodSet)
@@ -102,7 +92,7 @@
 #define TIMER_STOP               (R_GPT_Stop)
 #define TIMER_CLOSE              (R_GPT_Close)
 
-#endif
+#endif /* BSP_PERIPHERAL_SAU_PRESENT || BSP_PERIPHERAL_SCI_B_PRESENT */
 
 #define TIMEOUT_LIMIT                       (1000000U)
 #define TRANSFER_LENGTH                     (8)
@@ -148,14 +138,14 @@
 #define LIN_PID_MASK_ID                     (0x3FU)    /* Mask to extract 6-bit LIN ID from PID */
 
 
-#define BAUDRATE_OPTION     "\r\n\r\n=== LIN Slave Baud Rate Selection ==="\
-                            "\r\n[1]. 2400  bps"\
-                            "\r\n[2]. 4800  bps"\
-                            "\r\n[3]. 9600  bps"\
-                            "\r\n[4]. 10400 bps"\
-                            "\r\n[5]. 14400 bps"\
-                            "\r\n[6]. 19200 bps (Default)"\
-                            "\r\n\nSelect an option:"
+#define BAUDRATE_OPTION                     "\r\n\r\n=== LIN Slave Baud Rate Selection ==="\
+		                                    "\r\n[1]. 2400  bps"\
+											"\r\n[2]. 4800  bps"\
+											"\r\n[3]. 9600  bps"\
+											"\r\n[4]. 10400 bps"\
+											"\r\n[5]. 14400 bps"\
+											"\r\n[6]. 19200 bps (Default)"\
+											"\r\n\nSelect an option:"
 typedef struct
 {
     uint8_t id;

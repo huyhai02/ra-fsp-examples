@@ -11,23 +11,24 @@
         in e² studio. The error LED will turn on if an error occurs.
 
 2. Software Requirements:
-	Renesas Flexible Software Package (FSP): Version 6.3.0
+	Renesas Flexible Software Package (FSP): Version 6.4.0
         e2 studio: Version 2025-12
-	GCC ARM Embedded Toolchain: Version 13.2.1.arm-13-7
-	Terminal Console Application: Tera Term or a similar application
+    GCC ARM Embedded Toolchain: Version 13.2.1.arm-13-7
+    Terminal Console Application: Tera Term or a similar application
 
 3. Hardware Requirements:
-	- Supported RA board: EK-RA2L2
-	- 1 × RA board
-	- 1 × USB Type-A male to Micro-B male cable
-        - 1 × USB Type-C male to Type-C male cable
-        - 1 × E2 Lite emulator with mini USB and target cables (for programming and debugging)
+    - Supported RA board: EK-RA2L2
+    - 1 × RA board
+    - 1 × USB Type-C male to Type-C male cable
+    - 1 × E2 Lite emulator with mini USB and target cables (for programming and debugging)
+    - 1 × USB Type-A male to Micro-B male cable (Optional)
 
 4. Hardware Connections:
-	- Connect the E2 Lite emulator to the target board using either the J20 or J13 connector.
-        - Connect the J10 port to the host PC using a USB cable. This connection is dedicated to providing 5V power to the board.
-        - Connect the USB Full-Speed (J11) port to the host PC using a USB Type-C cable for data communication and additional power.
-        - To ensure correct operation, set the jumpers on the EK-RA2L2 board as follows: J16(2-3), J8(1-2), J9(2-3),
-		  J29(1-2,3-4,5-6,7-8), J40(5-6), J41(56)
+    - Connect the E2 Lite emulator to the target board using either the J20 or J13 connector.
+    - Connect the USB Full-Speed (J11) port to the host PC using a USB Type-C cable for data communication and additional power.
+    - To ensure correct operation, set the jumpers on the EK-RA2L2 board as follows: J16(2-3), J8(1-2), J9(2-3),
+          J29(1-2,3-4,5-6,7-8), J40(5-6), J41(56)
+    - (Optional) Connect the J10 port to the host PC using a USB cable. This connection provides 5V power to the board,
+    which is required for the QE for USB tool to continuously monitor the USB (J11) status.
 
 Note: For detailed instructions on running the EP and its operation, refer to the "Verifying Operation" section of md file.

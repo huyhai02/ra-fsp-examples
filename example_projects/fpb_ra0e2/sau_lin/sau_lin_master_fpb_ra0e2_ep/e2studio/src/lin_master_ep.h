@@ -1,10 +1,9 @@
 /***********************************************************************************************************************
  * File Name    : lin_master_ep.h
- * Description  : Contains macros data structures and functions used in lin_master_ep.c
- *
+ * Description  : Contains macros data structures and functions used in lin_master_ep.c.
  **********************************************************************************************************************/
 /***********************************************************************************************************************
- * Copyright (c) 2025 Renesas Electronics Corporation and/or its affiliates
+ * Copyright (c) 2025 - 2026 Renesas Electronics Corporation and/or its affiliates
  *
  * SPDX-License-Identifier: BSD-3-Clause
  **********************************************************************************************************************/
@@ -12,39 +11,39 @@
 #ifndef LIN_MASTER_EP_H_
 #define LIN_MASTER_EP_H_
 
-#include <stdint.h>
-#include "hal_data.h"
+#include "common_utils.h"
 
-#define EP_VERSION              ("1.0")
-#if BSP_FEATURE_SAU_IS_AVAILABLE
+#define EP_VERSION              ("1.1")
+
+#if BSP_PERIPHERAL_SAU_PRESENT
 #define MODULE_NAME             "sau_lin Module  "
-#elif BSP_FEATURE_SCI_IS_AVAILABLE
+#elif BSP_PERIPHERAL_SCI_B_PRESENT
 #define MODULE_NAME             "sci_b_lin Module"
-#endif
+#endif /* BSP_PERIPHERAL_SAU_PRESENT || BSP_PERIPHERAL_SCI_B_PRESENT */
+
 #define BANNER_INFO             "\r\n******************************************************************"\
                                 "\r\n*   Renesas FSP Example Project for "MODULE_NAME"             *"\
                                 "\r\n*   Example Project Version %s                                  *"\
-                                "\r\n*   Flex Software Pack Version  %d.%d.%d                            *"\
+                                "\r\n*   Flex Software Pack Version %d.%d.%d                             *"\
                                 "\r\n******************************************************************"\
                                 "\r\nRefer to readme.txt file for more details on Example Project and" \
                                 "\r\nFSP User's Manual for more information about "MODULE_NAME" driver\r\n"
 
-#define ENABLE_MASTER_TIMEOUT_MANAGEMENT   (1U)
-#define WRITE_FRAME_ID_20H                 (0x20)
-#define WRITE_FRAME_ID_21H                 (0x21)
-#define WRITE_FRAME_ID_22H                 (0x22)
-#define WRITE_FRAME_ID_23H                 (0x23)
+#define ENABLE_MASTER_TIMEOUT_MANAGEMENT    (1U)
+#define WRITE_FRAME_ID_20H                  (0x20)
+#define WRITE_FRAME_ID_21H                  (0x21)
+#define WRITE_FRAME_ID_22H                  (0x22)
+#define WRITE_FRAME_ID_23H                  (0x23)
 
-#define READ_FRAME_ID_10H                  (0x10)
-#define READ_FRAME_ID_11H                  (0x11)
-#define READ_FRAME_ID_12H                  (0x12)
-#define READ_FRAME_ID_13H                  (0x13)
+#define READ_FRAME_ID_10H                   (0x10)
+#define READ_FRAME_ID_11H                   (0x11)
+#define READ_FRAME_ID_12H                   (0x12)
+#define READ_FRAME_ID_13H                   (0x13)
 
 #define FRAME_ID_20H_DATA_LENGTH            (3)
 #define FRAME_ID_21H_DATA_LENGTH            (3)
 #define FRAME_ID_22H_DATA_LENGTH            (3)
 #define FRAME_ID_23H_DATA_LENGTH            (3)
-#define FRAME_ID_24H_DATA_LENGTH            (2)
 
 #define FRAME_ID_10H_DATA_LENGTH            (2)
 #define FRAME_ID_11H_DATA_LENGTH            (2)
@@ -77,7 +76,7 @@
 #define TIMEOUT_LIMIT                       (1000000U)
 #define LIN_PID_MASK_ID                     (0x3FU)    /* Mask to extract 6-bit LIN ID from PID */
 
-#if BSP_FEATURE_SAU_IS_AVAILABLE
+#if BSP_PERIPHERAL_SAU_PRESENT
 
 #define EP_INFO                  "\r\nThis project demonstrates the basic functionalities of Local Interconnect"\
                                  "\r\nNetwork (LIN) on Renesas RA MCUs based on the Renesas FSP. The LIN"\
@@ -100,16 +99,15 @@
                                  "\r\n4. Send a wake-up signal"\
                                  "\r\n\nSelect an option:"
 
-/* LIN API Mapping */
+/* LIN API mapping */
 #define LIN_OPEN                 (R_SAU_LIN_Open)
-#define LIN_START_FRAME_WRITE    (R_SAU_LIN_StartFrameWrite)
-#define LIN_INFO_FRAME_WRITE     (R_SAU_LIN_InformationFrameWrite)
+#define LIN_WRITE                (R_SAU_LIN_Write)
 #define LIN_COMMUNICATION_ABORT  (R_SAU_LIN_CommunicationAbort)
-#define LIN_INFO_FRAME_READ      (R_SAU_LIN_InformationFrameRead)
+#define LIN_READ                 (R_SAU_LIN_Read)
 #define LIN_BAUD_CALCULATE       (R_SAU_UART_BaudCalculate)
 #define LIN_CLOSE                (R_SAU_LIN_Close)
 
-/* Timer API Mapping */
+/* Timer API mapping */
 #define TIMER_OPEN               (R_TAU_Open)
 #define TIMER_RESET              (R_TAU_Reset)
 #define TIMER_PERIOD_SET         (R_TAU_PeriodSet)
@@ -118,7 +116,7 @@
 #define TIMER_STOP               (R_TAU_Stop)
 #define TIMER_CLOSE              (R_TAU_Close)
 
-#elif BSP_FEATURE_SCI_IS_AVAILABLE
+#elif BSP_PERIPHERAL_SCI_B_PRESENT
 
 #define EP_INFO                  "\r\nThis project demonstrates the basic functionalities of Local Interconnect"\
                                  "\r\nNetwork (LIN) on Renesas RA MCUs based on the Renesas FSP. The LIN"\
@@ -138,16 +136,15 @@
                                  "\r\n3. Transmit and receive LIN data"\
                                  "\r\n\nSelect an option:"
 
-/* LIN API Mapping */
+/* LIN API mapping */
 #define LIN_OPEN                 (R_SCI_B_LIN_Open)
-#define LIN_START_FRAME_WRITE    (R_SCI_B_LIN_StartFrameWrite)
-#define LIN_INFO_FRAME_WRITE     (R_SCI_B_LIN_InformationFrameWrite)
+#define LIN_WRITE                (R_SCI_B_LIN_Write)
 #define LIN_COMMUNICATION_ABORT  (R_SCI_B_LIN_CommunicationAbort)
 #define LIN_BAUD_CALCULATE       (R_SCI_B_LIN_BaudCalculate)
-#define LIN_INFO_FRAME_READ      (R_SCI_B_LIN_InformationFrameRead)
+#define LIN_READ                 (R_SCI_B_LIN_Read)
 #define LIN_CLOSE                (R_SCI_B_LIN_Close)
 
-/* Timer API Mapping */
+/* Timer API mapping */
 #define TIMER_OPEN               (R_GPT_Open)
 #define TIMER_RESET              (R_GPT_Reset)
 #define TIMER_PERIOD_SET         (R_GPT_PeriodSet)
@@ -156,22 +153,22 @@
 #define TIMER_STOP               (R_GPT_Stop)
 #define TIMER_CLOSE              (R_GPT_Close)
 
-#endif
+#endif /* BSP_PERIPHERAL_SAU_PRESENT || BSP_PERIPHERAL_SCI_B_PRESENT */
 
-#define WRITE_MENU          "\r\n=== LIN Write Selection ===" \
-                            "\r\n1. Frame ID: 0x20" \
-                            "\r\n2. Frame ID: 0x21" \
-                            "\r\n3. Frame ID: 0x22" \
-                            "\r\n4. Frame ID: 0x23" \
-                            "\r\n0. Exit" \
+#define WRITE_MENU          "\r\n=== LIN Write Selection ==="\
+                            "\r\n1. Frame ID: 0x20"\
+                            "\r\n2. Frame ID: 0x21"\
+                            "\r\n3. Frame ID: 0x22"\
+                            "\r\n4. Frame ID: 0x23"\
+                            "\r\n0. Exit"\
                             "\r\n\nSelect an option:\r\n"
 
-#define READ_MENU          "\r\n=== LIN Read Selection ===" \
-                            "\r\n1. Frame ID: 0x10" \
-                            "\r\n2. Frame ID: 0x11" \
-                            "\r\n3. Frame ID: 0x12" \
-                            "\r\n4. Frame ID: 0x13" \
-                            "\r\n0. Exit" \
+#define READ_MENU          "\r\n=== LIN Read Selection ==="\
+                            "\r\n1. Frame ID: 0x10"\
+                            "\r\n2. Frame ID: 0x11"\
+                            "\r\n3. Frame ID: 0x12"\
+                            "\r\n4. Frame ID: 0x13"\
+                            "\r\n0. Exit"\
                             "\r\n\nSelect an option:\r\n"
 
 #define BAUDRATE_OPTION     "\r\n\r\n=== LIN Master Baud Rate Selection ==="\
@@ -184,8 +181,8 @@
                             "\r\n\nSelect an option:"
 typedef struct
 {
-    uint32_t header_timeout_us;   // Header timeout in microseconds
-    uint32_t response_timeout_us; // Response timeout in microseconds
+    uint32_t header_timeout_us;   /* Header timeout in microseconds */
+    uint32_t response_timeout_us; /* Response timeout in microseconds */
 } lin_timing_t;
 
 typedef struct

@@ -60,10 +60,10 @@ To build and run this example project, the following resources are needed.
 ### Hardware Requirements ###
 * Supported RA boards: EK-RA8M1, FPB-RA0E2.
 * 2 x RA boards
-* 2 × USB cables:
+* 2 x USB cables:
     * FPB-RA0E2: USB Type-C cables
     * EK-RA8M1: Micro-USB cables
-* 2 x LIN transceiver
+* 2 x LIN transceivers
     * Link Product: https://www.mikroe.com/lin-click
 	* Manufacturer Product Number: MIKROE-3816 
 * 1 x 12V DC Power Supply
@@ -73,20 +73,23 @@ To build and run this example project, the following resources are needed.
 
 ### Hardware Connections  ###
 
-| Board        | Pin Name  | Pin Number           |
-|--------------|-----------|----------------------|
-| FPB-RA0E2    | RX_PIN    | P403 (J1, Pin 4)     |
-|              | TX_PIN    | P402 (J1, Pin 3)     |
-|              | P3V3      | 3V3  (J3, Pin 4)     |
-|              | GND       | GND  (J3, Pin 6)     |
-| EK-RA8M1     | RX_PIN    | P610 (J54 Pin 22)    |
-|              | TX_PIN    | P609 (J54 Pin 16)    |
-|              | P3V3      | 3V3  (J54, Pin 1)    |
-|              | GND       | GND  (J54, Pin 39)   |
+| Board        | Pin Name  | Pin Number      |
+|--------------|-----------|-----------------|
+| FPB-RA0E2    | RX_PIN    | P403 (J1:4)     |
+|              | TX_PIN    | P402 (J1:3)     |
+|              | P3V3      | 3V3  (J3:4)     |
+|              | GND       | GND  (J3:6)     |
+| EK-RA8M1     | RX_PIN    | P610 (J54:22)   |
+|              | TX_PIN    | P609 (J54:16)   |
+|              | P3V3      | 3V3  (J54:1)    |
+|              | GND       | GND  (J54:39)   |
+
+* Note:
+  * For FPB-RA0E2: The user must close E46 and E47 to use J-Link OB VCOM for Serial Terminal (UART).
 
 Please refer to the RX_PIN, TX_PIN, P3V3, and GND assignments above for the connections below:
    		  
-![hardware_connection](images/Lin_connection.png "Lin Connection")
+![hardware_connection](images/lin_connection.png "LIN Connection")
 
 Note: 
 * The LIN transceiver requires a 12V supply. Connect VS to 12V and GND to ground.
@@ -96,17 +99,17 @@ Note:
 
 ### Hardware configuration ###
 **LIN transceiver settings**
-| Label | Name       | Default | Description                                                                 |
-|-------|------------|---------|-----------------------------------------------------------------------------|
-| JP1   | VCC SEL    | Left    | Power supply voltage selection: Left position (3.3V), Right position (5V).  |
+| Label | Name       | Default | Description                                                                             |
+|-------|------------|---------|-----------------------------------------------------------------------------------------|
+| JP1   | VCC SEL    | Left    | Power supply voltage selection: Left position (3.3V), Right position (5V).              |
 | JP2   | MODE       | Left    | Communication mode selection: Left position (Slave mode), Right position (Master mode). |
 
 ### Software Requirements ###
-* Renesas Flexible Software Package (FSP): Version 6.2.0
-* e2 studio: Version 2025-10
+* Renesas Flexible Software Package (FSP): Version 6.4.0
+* e2 studio: Version 2025-12
 * GCC ARM Embedded Toolchain: Version 13.2.1.arm-13-7
 * Serial Terminal Console Application: Tera Term or a similar application
-* SEGGER J-Link RTT Viewer: Version 8.74
+* SEGGER J-Link RTT Viewer: Version 9.14a
 
 Refer to the software required section in [Example Project Usage Guide](https://github.com/renesas/ra-fsp-examples/blob/master/example_projects/Example%20Project%20Usage%20Guide.pdf)
 
@@ -121,7 +124,7 @@ the operation of this example project:
 ## System Level Block Diagram ##
 **The high-level block diagram of the system is shown below:**
 
-![High Level Block Diagram](images/lin_block_diagram.jpg "The High Level Block Diagram")
+![High Level Block Diagram](images/lin_block_diagram.png "The High Level Block Diagram")
 
 ## FSP Modules Used ##
 List all the various modules that are used in this example project. Refer to the FSP User Manual for further details on each module listed below.
@@ -130,27 +133,28 @@ List all the various modules that are used in this example project. Refer to the
 #### Master mode ####
 | Module Name        | Usage                                                                                      | Searchable Keyword      |
 |--------------------|--------------------------------------------------------------------------------------------|-------------------------|
-| r_sau_lin      | SAU LIN supports Local Interface Network (LIN) transactions in master mode       | r_sau_lin            |
-| r_tau       | The TAU module can be used to measure LIN transaction timing in master mode.       | r_tau            |
+| r_sau_lin          | SAU LIN supports Local Interface Network (LIN) transactions in master mode                 | r_sau_lin               |
+| r_tau              | The TAU module can be used to measure LIN transaction timing in master mode.               | r_tau                   |
 
 #### Slave mode ####
-| Module Name        | Usage                                                                                      | Searchable Keyword      |
-|--------------------|--------------------------------------------------------------------------------------------|-------------------------|
-| r_sau_lin       | SAU LIN supports Local Interface Network (LIN) transactions in slave mode.       | r_sau_lin            |
-| r_lpm       | The low power modes driver is used to configure and place the device into the desired low power mode.        | r_lpm            |
+| Module Name | Usage                                                                                                 | Searchable Keyword |
+|-------------|-------------------------------------------------------------------------------------------------------|--------------------|
+| r_sau_lin   | SAU LIN supports Local Interface Network (LIN) transactions in slave mode.                            | r_sau_lin          |
+| r_lpm       | The low power modes driver is used to configure and place the device into the desired low power mode. | r_lpm              |
 
 ### SCI B LIN ###
 #### Master mode ####
-| Module Name        | Usage                                                                                      | Searchable Keyword      |
-|--------------------|--------------------------------------------------------------------------------------------|-------------------------|
-| r_sci_b_lin      | The Simple LIN on SCI_B HAL module supports Local Interface Network (LIN) transactions in master mode.       | r_sci_b_lin            |
-| r_gpt       | The GPT module can be used to measure LIN transaction timing in master mode.       | r_gpt            |
+
+| Module Name | Usage                                                                                                  | Searchable Keyword |
+|-------------|--------------------------------------------------------------------------------------------------------|--------------------|
+| r_sci_b_lin | The Simple LIN on SCI_B HAL module supports Local Interface Network (LIN) transactions in master mode. | r_sci_b_lin        |
+| r_gpt       | The GPT module can be used to measure LIN transaction timing in master mode.                           | r_gpt              |
 
 #### Slave mode ####
-| Module Name        | Usage                                                                                      | Searchable Keyword      |
-|--------------------|--------------------------------------------------------------------------------------------|-------------------------|
-| r_sci_b_lin       | The Simple LIN on SCI_B HAL module supports Local Interface Network (LIN) transactions in slave mode.       | r_sci_b_lin            |
 
+| Module Name | Usage                                                                                                 | Searchable Keyword |
+|-------------|-------------------------------------------------------------------------------------------------------|--------------------|
+| r_sci_b_lin | The Simple LIN on SCI_B HAL module supports Local Interface Network (LIN) transactions in slave mode. | r_sci_b_lin        |
 
 ## Module Configuration Notes ##
 This section describes FSP configuration properties that are important or different from those selected by default.
@@ -159,79 +163,91 @@ This section describes FSP configuration properties that are important or differ
 
 #### Master Mode
 
-| Module Property Path and Identifier                                                                                 | Default Value     | Used Value             | Reason                                         |
-|---------------------------------------------------------------------------------------------------------------------|-------------------|------------------------|------------------------------------------------|
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Common > Master Support`                            | Disabled          | Enabled                | Select the LIN operating in master mode        |
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Common > Slave Support`                             | Enabled           | Disabled               | Disable slave support in master mode           |
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Common > Wake-up Support`                           | Disabled          | Enabled                | Enable LIN wake-up signal                      |
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Module g_master LIN (r_sau_lin) > Callback`         | sau_lin0_callback | lin_master_callback    | Set user-defined callback for SAU LIN module      |
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Module g_master LIN (r_sau_lin) > Baud Rate`         | 19200 | 19200    | Select the LIN baudrate       |
-| `configuration.xml > Stacks > r_tau > Settings > Property > Module g_lin_master_timeout > General > Period`         | 0x10000           | 1                      | Specify the timer period                       |
-| `configuration.xml > Stacks > r_tau > Settings > Property > Module g_lin_master_timeout > General > Period Unit`    | Raw Counts        | Microseconds           | Define timer period unit                       |
-| `configuration.xml > Stacks > r_tau > Settings > Property > Module g_lin_master_timeout > Callback`                 | NULL | lin_master_overflow_callback    | Set user-defined callback for timer module     |
+| Module Property Path and Identifier                                                                                                     | Default Value     | Used Value                   | Reason                                       |
+|-----------------------------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------|----------------------------------------------|
+| `configuration.xml > Stacks > r_sau_lin > Properties > Settings > Property > Common > Master Support`                                   | Disabled          | Enabled                      | Select the LIN operating in master mode      |
+| `configuration.xml > Stacks > r_sau_lin > Properties > Settings > Property > Common > Slave Support`                                    | Enabled           | Disabled                     | Disable slave support in master mode         |
+| `configuration.xml > Stacks > r_sau_lin > Properties > Settings > Property > Common > Wake-up Support`                                  | Disabled          | Enabled                      | Enable LIN wake-up signal                    |
+| `configuration.xml > Stacks > r_sau_lin > Properties > Settings > Property > Module g_master LIN (r_sau_lin) > Mode`                    | Slave             | Master                       | Select the LIN operating in master mode      |
+| `configuration.xml > Stacks > r_sau_lin > Properties > Settings > Property > Module g_master LIN (r_sau_lin) > Callback`                | sau_lin0_callback | lin_master_callback          | Set user-defined callback for SAU LIN module |
+| `configuration.xml > Stacks > r_sau_lin > Properties > Settings > Property > Module g_master LIN (r_sau_lin) > Baud Rate`               | 19200             | 19200                        | Select the LIN baudrate                      |
+| `configuration.xml > Stacks > r_sau_lin > Properties > Settings > Property > Module g_master LIN (r_sau_lin) > Auto Synchronization`    | Enable            | Disable                      | Disable the auto synchronization for master  |
+| `configuration.xml > Stacks > r_tau > Properties > Settings > Property > Module g_lin_master_timeout > General > Period`                | 0x10000           | 1                            | Specify the timer period                     |
+| `configuration.xml > Stacks > r_tau > Properties > Settings > Property > Module g_lin_master_timeout > General > Period Unit`           | Raw Counts        | Microseconds                 | Define timer period unit                     |
+| `configuration.xml > Stacks > r_tau > Properties > Settings > Property > Module g_lin_master_timeout > Interrupts > Callback`           | NULL              | lin_master_overflow_callback | Set user-defined callback for timer module   |
+| `configuration.xml > Stacks > r_tau > Properties > Settings > Property > Module g_lin_master_timeout > Interrupts > Interrupt Priority` | Disabled          | Priority 2                   | Set timer interrupt priority                 |
+
+| Configure Clock path                                                | Default Value     | Used Value       | Reason                                         |
+|---------------------------------------------------------------------|-------------------|------------------|------------------------------------------------|
+| `configuration.xml > Clocks > Clocks Configuration > ICLK Src`      | HOCO              | HOCO             | Select  operating clock by HOCO clock source.  |
+| `configuration.xml > Clocks > Clocks Configuration > TAU CK00 Div ` | TAU CK00 Div/1    | TAU CK00 Div/128 | Divider for TAU CK00 is 128.                   |
 
 #### Slave Mode
 
-| Module Property Path and Identifier                                                                                     | Default Value     | Used Value                   | Reason                                          |
-|-------------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------|-------------------------------------------------|
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Common > Wake-up Support`                               | Disabled          | Enabled                      | Enable LIN wake-up signal                       |
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Common > Auto Synchronization Support`                  | Disabled          | Enabled                      | Enable automatic synchronization                |
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Module g_slave LIN (r_sau_lin) > Callback`             | sau_lin0_callback | lin_slave_callback    | Set user-defined callback for SAU LIN module      |
-| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Module g_slave LIN (r_sau_lin) > Baud Rate`         | 19200 | 19200    | Select the LIN baudrate       |
-
+| Module Property Path and Identifier                                                                         | Default Value     | Used Value         | Reason                                       |
+|-------------------------------------------------------------------------------------------------------------|-------------------|--------------------|----------------------------------------------|
+| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Common > Wake-up Support`                   | Disabled          | Enabled            | Enable LIN wake-up signal                    |
+| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Common > Auto Synchronization Support`      | Disabled          | Enabled            | Enable automatic synchronization             |
+| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Module g_slave LIN (r_sau_lin) > Callback`  | sau_lin0_callback | lin_slave_callback | Set user-defined callback for SAU LIN module |
+| `configuration.xml > Stacks > r_sau_lin > Settings > Property > Module g_slave LIN (r_sau_lin) > Baud Rate` | 19200             | 19200              | Select the LIN baudrate                      |
 
 
 ### SCI B LIN Configuration ###
 #### Master Mode
 
-| Module Property Path and Identifier                                                                                  | Default Value     | Used Value            | Reason                                         |
-|----------------------------------------------------------------------------------------------------------------------|-------------------|------------------------|------------------------------------------------|
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_master LIN (r_sci_b_lin) > General > Mode`         | Master | Master    | 	Select the LIN operating in master mode      |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_master LIN (r_sci_b_lin) > Interrupts > Callback`         | sci_b_lin_callback | lin_master_callback    | Set user-defined callback for SCI B LIN module      |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_master LIN (r_sci_b_lin) > Baud Rate`         | 19200 | 19200    | Select the LIN baudrate       |
-| `configuration.xml > Stacks > r_gpt > Settings > Property > Module g_lin_master_timeout > General > Period`         | 0x10000           | 1                      | Specify the timer period                       |
-| `configuration.xml > Stacks > r_gpt > Settings > Property > Module g_lin_master_timeout > General > Period Unit`    | Raw Counts        | Microseconds           | Define timer period unit                       |
-| `configuration.xml > Stacks > r_gpt > Settings > Property > Module g_lin_master_timeout > Callback`                 | NULL | lin_master_overflow_callback    | Set user-defined callback for timer module     |
+| Module Property Path and Identifier                                                                                                                    | Default Value      | Used Value                   | Reason                                         |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|------------------------------|------------------------------------------------|
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Common > Auto Synchronization Support`                                  | Disabled           | Enabled                      | Enable the auto synchronization for LIN        |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_master LIN (r_sci_b_lin) > General > Mode`                     | Master             | Master                       | Select the LIN operating in master mode        |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_master LIN (r_sci_b_lin) > Baud Rate`                          | 19200              | 19200                        | Select the LIN baudrate                        |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_master LIN (r_sci_b_lin) > Interrupts > Callback`              | sci_b_lin_callback | lin_master_callback          | Set user-defined callback for SCI B LIN module |
+| `configuration.xml > Stacks > r_gpt > Properties > Settings > Property > Module g_lin_master_timeout > General > Period`                               | 0x10000            | 1                            | Specify the timer period                       |
+| `configuration.xml > Stacks > r_gpt > Properties > Settings > Property > Module g_lin_master_timeout > General > Period Unit`                          | Raw Counts         | Microseconds                 | Define timer period unit                       |
+| `configuration.xml > Stacks > r_gpt > Properties > Settings > Property > Module g_lin_master_timeout > Callback`                                       | NULL               | lin_master_overflow_callback | Set user-defined callback for timer module     |
+| `configuration.xml > Stacks > r_gpt > Properties > Settings > Property > Module g_lin_master_timeout > Interrupts > Overflow/Crest Interrupt Priority` | Disabled           | Priority 2                   | Set priority for the overflow/crest interrupt  |
 
 #### Slave Mode
 
-| Module Property Path and Identifier                                                                                     | Default Value     | Used Value                  | Reason                                          |
-|--------------------------------------------------------------------------------------------------------------------------|-------------------|------------------------------|-------------------------------------------------|
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > General > Mode`         | Master | Slave    | 	Select the LIN operating in slave mode      |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Compare Data Mask`         | 0 | 0xFF    | 	All bits of the received PID are considered during comparison     |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Priority Compare Data`         | 0 | 0x20    | 	Select the priority compare filter data    |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Secondary Compare Data`         | 0 | 0x50    | 	Select the secondary compare filter data    |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Compare Data Select`         | Priority | Both    | 	Select the compare data to use    |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > Break Field Bits/Break Detection Threshold (bits)`         | 13 | 11    | 	When configuring this setting in slave mode, take care to set the detection threshold less than the master break field length.  |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Priority Interrupt Bit Enable`         | Disabled | Enabled    | 	Enable the Priority Interrupt Bit filter    |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Priority Interrupt Bit`         | 0 | 3    | 	This is the bit position used for an additional check    |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Callback`         | sci_b_lin_callback | lin_slave_callback    | Set user-defined callback for SCI B LIN module      |
-| `configuration.xml > Stacks > r_sci_b_lin > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Baud Rate`         | 19200 | 19200    | Select the LIN baudrate       |
-
-
+| Module Property Path and Identifier                                                                                                                                                 | Default Value      | Used Value         | Reason                                                                                                                         |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Common > Auto Synchronization Support`                                                               | Disabled           | Enabled            | Enable the auto synchronization for LIN                                                                                        |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > General > Mode`                                                   | Master             | Slave              | Select the LIN operating in slave mode                                                                                         |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Extra > Noise Filter`                                             | Disabled           | Enable             | Enable the digital noise filter on the RXDn pin                                                                                |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Baud > Baud Rate`                                                 | 19200              | 19200              | Select the LIN baudrate                                                                                                        |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Baud > Auto Synchronization`                                      | Disable            | Enable             | Enable LIN synchronization to the master's clock                                                                               |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Compare Data Mask`             | 0                  | 0xFF               | All bits of the received PID are considered during comparison                                                                  |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Priority Compare Data`         | 0                  | 0x20               | Select the priority compare filter data                                                                                        |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Secondary Compare Data`        | 0                  | 0x50               | Select the secondary compare filter data                                                                                       |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Compare Data Select`           | Priority           | Both               | Select the compare data to use                                                                                                 |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Priority Interrupt Bit Enable` | Disabled           | Enabled            | Enable the Priority Interrupt Bit filter                                                                                       |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > Break Field Bits/Break Detection Threshold (bits)`      | 13                 | 11                 | When configuring this setting in slave mode, take care to set the detection threshold less than the master break field length. |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Framing > ID Filter (Slave Mode) > Priority Interrupt Bit`        | 0                  | 3                  | This is the bit position used for an additional check                                                                          |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Interrupts > Callback`                                            | sci_b_lin_callback | lin_slave_callback | Set user-defined callback for SCI B LIN module                                                                                 |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Interrupts > Break Field Detection Interrupt Priority`            | Disabled           | Priority 12        | Select the priority for detecting break field interruption                                                                     |
+| `configuration.xml > Stacks > r_sci_b_lin > Properties > Settings > Property > Module g_slave LIN (r_sci_b_lin) > Interrupts > Active Edge Detection Interrupt Priority`            | Disabled           | Priority 12        | Select the priority for detecting active edge interruption                                                                     |
 
 ## API Usage ##
+
 The table below lists the FSP provided API used at the application layer in this example project.
 
-| #  | SAU LIN API Name                     | SCI B LIN API Name                  | Usage in Approach                                                                 |
-|----|--------------------------------------|-------------------------------------|-----------------------------------------------------------------------------------|
-| 1  | R_SAU_LIN_Open                       | R_SCI_B_LIN_Open                    | Configure the LIN driver                                                          |
-| 2  | R_SAU_LIN_StartFrameWrite           | R_SCI_B_LIN_StartFrameWrite        | Begin non-blocking transmission of a LIN start frame (break, sync and protected identifier) |
-| 3  | R_SAU_LIN_InformationFrameWrite     | R_SCI_B_LIN_InformationFrameWrite  | Begins non-blocking transmission of a LIN information frame                       |
-| 4  | R_SAU_LIN_InformationFrameRead      | R_SCI_B_LIN_InformationFrameRead   | Begin non-blocking information frame reception to receive LIN data               |
-| 5  | R_SAU_UART_BaudCalculate            | R_SCI_B_LIN_BaudCalculate          | Calculate baud rate register settings                                             |
-| 6  | R_SAU_LIN_SleepEnter                | Not supported                      | Place the LIN node in bus sleep mode                                              |
-| 7  | R_SAU_LIN_SleepExit                 | Not supported                      | Exit the bus sleep mode for LIN device                                            |
-| 8  | R_SAU_LIN_WakeupSend                | Not supported                      | Begin non-blocking transmission of the LIN wakeup signal                          |
-| 9  | R_SAU_LIN_Close                     | R_SCI_B_LIN_Close                   | Close the LIN driver                                                              |
-| 10 | R_LPM_LowPowerModeEnter             | Not used                            | Enter to LPM mode                                                                 |
-| 11 | R_TAU_Open                          | R_GPT_Open                          | Initialize the timer module                                                       |
-| 12 | R_TAU_Reset                         | R_GPT_Reset                         | Reset the counter value to the period minus one                                   |
-| 13 | R_TAU_PeriodSet                     | R_GPT_PeriodSet                     | Set period value provided.                                                        |
-| 14 | R_TAU_InfoGet                       | R_GPT_InfoGet                       | Get timer information                                                              |
-| 15 | R_TAU_Start                         | R_GPT_Start                         | Start timer                                                                       |
-| 16 | R_TAU_Stop                          | R_GPT_Stop                          | Stop timer                                                                        |
-| 17 | R_TAU_Close                         | R_GPT_Close                         | Close timer module                                                                |
+| #  | SAU LIN API Name         | SCI B LIN API Name        | Usage in Approach                                                                    |
+|----|--------------------------|---------------------------|--------------------------------------------------------------------------------------|
+| 1  | R_SAU_LIN_Open           | R_SCI_B_LIN_Open          | Configure the LIN driver                                                             |
+| 2  | R_SAU_LIN_Write          | R_SCI_B_LIN_Write         | Begin non-blocking transmission of a LIN frame (only header or both header and data) |
+| 3  | R_SAU_LIN_Read           | R_SCI_B_LIN_Read          | Begin non-blocking reception of a LIN frame to receive LIN data                      |
+| 4  | R_SAU_UART_BaudCalculate | R_SCI_B_LIN_BaudCalculate | Calculate baud rate register settings                                                |
+| 5  | R_SAU_LIN_SleepEnter     | Not supported             | Place the LIN node in bus sleep mode                                                 |
+| 6  | R_SAU_LIN_SleepExit      | Not supported             | Exit the bus sleep mode for LIN device                                               |
+| 7  | R_SAU_LIN_WakeupSend     | Not supported             | Begin non-blocking transmission of the LIN wakeup signal                             |
+| 8  | R_SAU_LIN_Close          | R_SCI_B_LIN_Close         | Close the LIN driver                                                                 |
+| 9  | R_LPM_LowPowerModeEnter  | Not used                  | Enter to LPM mode                                                                    |
+| 10 | R_TAU_Open               | R_GPT_Open                | Initialize the timer module                                                          |
+| 11 | R_TAU_Reset              | R_GPT_Reset               | Reset the counter value to the period minus one                                      |
+| 12 | R_TAU_PeriodSet          | R_GPT_PeriodSet           | Set period value provided.                                                           |
+| 13 | R_TAU_InfoGet            | R_GPT_InfoGet             | Get timer information                                                                |
+| 14 | R_TAU_Start              | R_GPT_Start               | Start timer                                                                          |
+| 15 | R_TAU_Stop               | R_GPT_Stop                | Stop timer                                                                           |
+| 16 | R_TAU_Close              | R_GPT_Close               | Close timer module                                                                   |
 
 ## Verifying Operation ##
 1. Import the project into e2 studio, generate project content, build, and flash the compiled project onto the RA board.

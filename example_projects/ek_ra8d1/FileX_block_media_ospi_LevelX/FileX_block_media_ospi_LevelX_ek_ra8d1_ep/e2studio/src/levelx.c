@@ -3,7 +3,7 @@
  * Description  : Contains data structures and functions used in levelx.c and filex.c
  *********************************************************************************************************************/
 /**********************************************************************************************************************
-* Copyright (c) 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 **********************************************************************************************************************/
@@ -227,6 +227,7 @@ static UINT verify_input_sector(ULONG **select_sector_address, uint16_t *select_
 {
     UINT status = LX_SUCCESS;
     CHAR msg_buf[MSG_SIZE];
+    CHAR recv_buf[TERM_BUFFER_SIZE] = {RESET_VALUE};
 
     /* Assume sector is empty initially */
     *is_empty = true;
@@ -239,11 +240,14 @@ static UINT verify_input_sector(ULONG **select_sector_address, uint16_t *select_
         PRINT_INFO_STR(msg_buf);
 
         /* Suspend until there is an input queue */
-        status = terminal_get_input_queue(select_sector);
+        status = term_get_input_queue(recv_buf, NULL, TX_WAIT_FOREVER);
         if (TX_SUCCESS != status)
         {
             RETURN_ERR_STR(status, "**terminal_get_input_queue failed**\r\n");
         }
+
+        /* Conversion from input string to integer value */
+        *select_sector = (uint16_t)(atoi(recv_buf));
 
         /* Verify user input */
         if (*select_sector >= LEVELX_SECTOR_RANGE_START && *select_sector <= LEVELX_SECTOR_RANGE_END)

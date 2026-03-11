@@ -1,9 +1,9 @@
 /***********************************************************************************************************************
 * File Name    : r_uarta_instance_cfg.h
-* Description  : Contains data structures and functions used in r_uarta_instance_cfg.c
+* Description  : Contains data structures and functions used in r_uarta_instance_cfg.c.
 ***********************************************************************************************************************/
 /***********************************************************************************************************************
-* Copyright (c) 2025 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 ***********************************************************************************************************************/

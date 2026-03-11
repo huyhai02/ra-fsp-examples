@@ -295,7 +295,7 @@ FSP Configuration
     BCLKA Div /6
     SDCLK Enabled
     EBCLK Src: BCLK (Synchronous)
-    EBCLK Div /2
+    EBCLK Disabled
     CLKOUT Src: HOCO
     CLKOUT Div /1
     SCICLK Src: PLL2R
@@ -1008,6 +1008,14 @@ FSP Configuration
       General: Compare Match: Compare Match A: Compare match value: 0
       General: Compare Match: Compare Match B: Status: Disabled
       General: Compare Match: Compare Match B: Compare match value: 0
+      General: Compare Match: Compare Match C: Status: Disabled
+      General: Compare Match: Compare Match C: Compare match value: 0x10000
+      General: Compare Match: Compare Match D: Status: Disabled
+      General: Compare Match: Compare Match D: Compare match value: 0x10000
+      General: Compare Match: Compare Match E: Status: Disabled
+      General: Compare Match: Compare Match E: Compare match value: 0x10000
+      General: Compare Match: Compare Match F: Status: Disabled
+      General: Compare Match: Compare Match F: Compare match value: 0x10000
       General: Period Unit: Kilohertz
       Output: Custom Waveform: GTIOA: Initial Output Level: Pin Level Low
       Output: Custom Waveform: GTIOA: Cycle End Output Level: Pin Level Retain
@@ -1038,6 +1046,10 @@ FSP Configuration
       Interrupts: Overflow/Crest Interrupt Priority: Disabled
       Interrupts: Capture/Compare match A Interrupt Priority: Disabled
       Interrupts: Capture/Compare match B Interrupt Priority: Disabled
+      Interrupts: Compare Match C Interrupt Priority: Disabled
+      Interrupts: Compare Match D Interrupt Priority: Disabled
+      Interrupts: Compare Match E Interrupt Priority: Disabled
+      Interrupts: Compare Match F Interrupt Priority: Disabled
       Interrupts: Underflow/Trough Interrupt Priority: Disabled
       Extra Features: Extra Features: Disabled
       Extra Features: Output Disable: POEG Link: POEG Channel 0
@@ -1056,13 +1068,12 @@ FSP Configuration
     Instance "g_vin Video Input (r_vin)"
       General: Name: g_vin
       Output: Conversion: Color Space Conversion Bypass: False
-      Input: Interlace Mode: Odd/Even-field capture mode
+      Input: Interlaced: Interlace Mode: Odd/Even-field capture mode
       Output: Endian Type: Little Endian
       Output: Conversion: Dithering: Mode Control: Dithering with Cumulative Addition
       Input: Interface Format: YCbCr-422, 8-bit
       Dithering: Dithering in Frame Direction: Enabled
       Output: Conversion: YCbCr422 to YUV444 Conversion Enable (from YCbCr-422): Use previous pixel
-      Output: Scaling: UDS Scaling Enable: Enabled
       Input: Pixel Data: Clipping: No Clipping (Default)
       Input: Image: Capture Start Offset: Vertical: 1
       Input: Image: Size: Vertical: 600
@@ -1086,36 +1097,36 @@ FSP Configuration
       Input: YUV: Transform Mode: Y and CbCr
       Input: RGB: 32-bit Fixed Alpha Value: 0xAA
       Output: Conversion: YUV: UV Address: 0x0
-      Output: YUV to RGB: Coefficients: Y Coefficient 2: 1.164
-      Output: YUV to RGB: Coefficients: Round Down Disable: False
-      Output: YUV to RGB: Coefficients: Y Subtraction Coefficient 2: 256
-      Output: YUV to RGB: Coefficients: Cr to G Coefficient: 0.813
-      Output: YUV to RGB: Coefficients: Cr to R Coefficient: 1.596
-      Output: YUV to RGB: Coefficients: Cb to G Coefficient: 0.392
-      Output: YUV to RGB: Coefficients: Cb to B Coefficient: 2.017
-      Output: YUV to RGB: Scaling: Interpolation: B/Cb Component: Nearest Neighbor
-      Output: YUV to RGB: Scaling: Interpolation: G/Y Component: Nearest Neighbor
-      Output: YUV to RGB: Scaling: Interpolation: R/Cr Component: Nearest Neighbor
-      Output: YUV to RGB: Scaling: Interpolation: Scale Up/Down Override: Use Component Configuration
+      Output: Conversion: YUV to RGB: Coefficients: Y Coefficient 2: 1.164
+      Output: Conversion: YUV to RGB: Coefficients: Round Down Disable: False
+      Output: Conversion: YUV to RGB: Coefficients: Y Subtraction Coefficient 2: 256
+      Output: Conversion: YUV to RGB: Coefficients: Cr to G Coefficient: 0.813
+      Output: Conversion: YUV to RGB: Coefficients: Cr to R Coefficient: 1.596
+      Output: Conversion: YUV to RGB: Coefficients: Cb to G Coefficient: 0.392
+      Output: Conversion: YUV to RGB: Coefficients: Cb to B Coefficient: 2.017
+      Output: Conversion: YUV to RGB: Scaling: Interpolation: B/Cb Component: Nearest Neighbor
+      Output: Conversion: YUV to RGB: Scaling: Interpolation: G/Y Component: Nearest Neighbor
+      Output: Conversion: YUV to RGB: Scaling: Interpolation: R/Cr Component: Nearest Neighbor
+      Output: Conversion: YUV to RGB: Scaling: Interpolation: Scale Up/Down Override: Use Component Configuration
       Output: Scaling: Interpolation: Bilinear Advanced: Disabled
       Output: Scaling: Scale Up Pixel Count: Pixel count after scale-up: (n × scale-up factor)
       Output: Image: Size: Vertical: 600
       Output: Image: Size: Horizontal: 1024
-      Output: RGB to YUV: R to Y Coefficient: 263
-      Output: RGB to YUV: G to Y Coefficient: 516
-      Output: RGB to YUV: B to Y Coefficient: 100
-      Output: RGB to YUV: Y Offset: 256
-      Output: RGB to YUV: Y Down Shift Round Off: Disabled
-      Output: RGB to YUV: R to Cb Coefficient: -152
-      Output: RGB to YUV: G to Cb Coefficient: -298
-      Output: RGB to YUV: B to Cb Coefficient: 450
-      Output: RGB to YUV: Cb Offset: 2048
-      Output: RGB to YUV: Cb Down Shift Round Off: Disabled
-      Output: RGB to YUV: R to Cr Coefficient: 450
-      Output: RGB to YUV: G to Cr Coefficient: -377
-      Output: RGB to YUV: B to Cr Coefficient: -73
-      Output: RGB to YUV: Cr Offset: 2048
-      Output: RGB to YUV: Cr Down Shift Round Off: Disabled
+      Output: Conversion: RGB to YUV: R to Y Coefficient: 263
+      Output: Conversion: RGB to YUV: G to Y Coefficient: 516
+      Output: Conversion: RGB to YUV: B to Y Coefficient: 100
+      Output: Conversion: RGB to YUV: Y Offset: 256
+      Output: Conversion: RGB to YUV: Y Down Shift Round Off: Disabled
+      Output: Conversion: RGB to YUV: R to Cb Coefficient: -152
+      Output: Conversion: RGB to YUV: G to Cb Coefficient: -298
+      Output: Conversion: RGB to YUV: B to Cb Coefficient: 450
+      Output: Conversion: RGB to YUV: Cb Offset: 2048
+      Output: Conversion: RGB to YUV: Cb Down Shift Round Off: Disabled
+      Output: Conversion: RGB to YUV: R to Cr Coefficient: 450
+      Output: Conversion: RGB to YUV: G to Cr Coefficient: -377
+      Output: Conversion: RGB to YUV: B to Cr Coefficient: -73
+      Output: Conversion: RGB to YUV: Cr Offset: 2048
+      Output: Conversion: RGB to YUV: Cr Down Shift Round Off: Disabled
       Interrupts: Status: End of Frame Detect, Frame Memory Write Completion Notify
       Interrupts: Scanline Compare Value (0: Disabled): 0
       Interrupts: Callback: vin_callback

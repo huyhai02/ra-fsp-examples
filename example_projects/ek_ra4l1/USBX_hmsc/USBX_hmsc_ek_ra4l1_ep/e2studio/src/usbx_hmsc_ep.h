@@ -38,7 +38,7 @@
 #define DATA_LEN                    (32U)
 #define TRUNCATION_VALUE            (0U)
 #if defined BOARD_RA4L1_EK
-#define MEMPOOL_SIZE                (32768)
+#define MEMPOOL_SIZE                (40000)
 #else
 #define MEMPOOL_SIZE                (63488)
 #endif

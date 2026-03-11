@@ -7,7 +7,7 @@ Please refer to the [Example Project Usage Guide](https://github.com/renesas/ra-
 To build and run the LPM example project, the following resources are needed.
 
 ### Software ###
-* Renesas Flexible Software Package (FSP): Version 6.3.0
+* Renesas Flexible Software Package (FSP): Version 6.4.0
 * e2 studio: Version 2025-12
 * LLVM Embedded Toolchain for ARM: Version 21.1.1
 * Terminal Console Application: Tera Term or a similar application

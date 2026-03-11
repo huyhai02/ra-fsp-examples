@@ -7,10 +7,10 @@ Please refer to the [Example Project Usage Guide](https://github.com/renesas/ra-
 To build and run the example project, the following resources are needed.
 
 ### Software ###
-* Renesas Flexible Software Package (FSP): Version 6.2.0
-* e2 studio: Version 2025-10
-* SEGGER J-Link RTT Viewer: Version 8.74
-* LLVM Embedded Toolchain for ARM: Version 18.1.3
+* Renesas Flexible Software Package (FSP): Version 6.4.0
+* e2 studio: Version 2025-12
+* SEGGER J-Link RTT Viewer: Version 9.14
+* LLVM Embedded Toolchain for ARM: Version 21.1.1
 
 Refer to software requirements mentioned in [Example Project Usage Guide](https://github.com/renesas/ra-fsp-examples/blob/master/example_projects/Example%20Project%20Usage%20Guide.pdf)
 
@@ -80,7 +80,7 @@ This section describes FSP Configurator properties that are important or differe
 |   Module Property Path and Identifier   |   Default Value   |   Used Value   |   Reason   |
 | :-------------------------------------: | :---------------: | :------------: | :--------: |
 | configuration.xml > BSP > Properties > Settings > Property > RA Common > Main stack size (bytes) | 0 | 0x800 | Modified main stack size to accommodate function call operations according to FSP User Manual. |
-| configuration.xml > BSP > Properties > Settings > Property > RA Common > Heap size (bytes) | 0 | 0x800| Change heap size to accommodate file operations in the EP and avoid any runtime errors according to FSP User Manual. |
+| configuration.xml > BSP > Properties > Settings > Property > RA Common > Heap size (bytes) | 0 | 0x1000| Change heap size to accommodate file operations in the EP and avoid any runtime errors according to FSP User Manual. |
 | configuration.xml > Stacks > FreeRTOS+FAT > Properties > Settings > Property > Common > Long Function Names > LFN Support | Disabled | Enabled | This support is enabled to use wide range of file names. |
 | configuration.xml > Stacks > FreeRTOS+FAT > Properties > Settings > Property > Common > Long Function Names > Shortname Case | Disabled | Enabled | This support is enabled to recognise case bits while using short names. |
 | configuration.xml > Stacks > FreeRTOS+FAT Port for RA (rm_freertos_plus_fat) > Properties > Settings > Property > Module FreeRTOS+FAT Port for RA (rm_freertos_plus_fat) > Total number of sectors | 31293440 | 31293440 | Total number of sectors modified based on the connected device. |

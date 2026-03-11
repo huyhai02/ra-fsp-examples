@@ -35,9 +35,9 @@
 		- RA boards that support J-Link OB VCOM: EK-RA8D1, EK-RA8P1, EK-RA8M2.
 
 2. Software Requirements:
-	Renesas Flexible Software Package (FSP): Version 6.3.0
+	Renesas Flexible Software Package (FSP): Version 6.4.0
 	e2 studio: Version 2025-12
-	SEGGER J-Link RTT Viewer: Version 8.92
+	SEGGER J-Link RTT Viewer: Version 9.14a
 	LLVM Embedded Toolchain for ARM: Version 21.1.1
 	Serial Terminal Console Application: Tera Term or a similar application
 

@@ -83,9 +83,9 @@ To build and run the PDM example project, the following resources are needed.
   * DAC output pin: DA0 P014 (J2:04)
 
 ## Software Requirements
-* Renesas Flexible Software Package (FSP): Version 6.3.0
+* Renesas Flexible Software Package (FSP): Version 6.4.0
 * e2 studio: Version 2025-12
-* SEGGER J-Link RTT Viewer: Version 8.92
+* SEGGER J-Link RTT Viewer: Version 9.14a
 * Terminal Console Application: Tera Term version 4.99
 * LLVM Embedded Toolchain for ARM: Version 21.1.1
 

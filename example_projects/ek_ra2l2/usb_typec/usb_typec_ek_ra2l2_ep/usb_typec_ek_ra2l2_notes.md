@@ -8,7 +8,7 @@ for general information on example projects and [readme.txt](./readme.txt) for s
 To build and run this example project, the following resources are needed.
 
 ### Software Requirements ###
-* Renesas Flexible Software Package (FSP): Version 6.3.0
+* Renesas Flexible Software Package (FSP): Version 6.4.0
 * e2 studio: Version 2025-12
 * GCC ARM Embedded Toolchain: Version 13.2.1.arm-13-7
 * Terminal Console Application: Tera Term or a similar application
@@ -16,16 +16,16 @@ To build and run this example project, the following resources are needed.
 ### Hardware Requirements ###
 * Supported RA board: EK-RA2L2
 * 1 × RA board 
-* 1 × USB Type-A male to Micro-B male cable
 * 1 × USB Type-C male to Type-C male cable
 * 1 × E2 Lite emulator with mini USB and target cables (for programming and debugging)
+* 1 × USB Type-A male to Micro-B male cable (Optional)
 
 ### Hardware Connections ###
 
 To set up the hardware for this example project, make the following connections:
 * Connect the E2 Lite emulator to the target board using either the J20 or J13 connector.
-* Connect the J10 port to the host PC using a USB cable. This connection is dedicated to providing 5V power to the board.
 * Connect the USB Full-Speed (J11) port to the host PC using a USB Type-C cable for data communication and additional power.
+* (Optional) Connect the J10 port to the host PC using a USB cable. This connection provides 5V power to the board, which is required for the QE for USB tool to continuously monitor the USB (J11) status.
 
 To ensure correct operation, set the jumpers on the EK-RA2L2 board as follows:
 

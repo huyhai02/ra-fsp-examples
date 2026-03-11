@@ -232,7 +232,7 @@ void usbx_host_hid_key_board_hub_entry(void)
                     if (UX_SUCCESS == status || UX_NO_KEY_PRESS == status)
                     {
                         /* Check if CAPS lock key pressed */
-                        if (keyboard_state != RESET_VALUE || keyboard_key != RESET_VALUE)
+                        if (keyboard_state != RESET_VALUE)
                         {
                             if (RESET_VALUE != keyboard_key[BUFF_INDEX])
                             {

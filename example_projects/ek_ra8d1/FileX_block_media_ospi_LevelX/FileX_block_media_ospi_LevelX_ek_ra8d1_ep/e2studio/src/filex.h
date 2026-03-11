@@ -3,7 +3,7 @@
  * Description  : Contains data structures and functions used in filex.c
  *********************************************************************************************************************/
 /**********************************************************************************************************************
-* Copyright (c) 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 **********************************************************************************************************************/
@@ -14,8 +14,8 @@
 /***********************************************************************************************************************
  * Includes
  **********************************************************************************************************************/
+#include <common_app.h>
 #include "common_utils.h"
-#include "terminal.h"
 #include "levelx.h"
 #include "board_ospi.h"
 
@@ -52,28 +52,28 @@
 #define SEC_INDEX                       (6U)
 
 /* macros to print info, error and trap the error.*/
-#define PRINT_INFO_STR(str)             (terminal_send_output_queue(TERMINAL_OUTPUT_APP_INFO_STR, sizeof(str), (str)))
+#define PRINT_INFO_STR(str)             (term_send_output_queue(TERMINAL_OUTPUT_APP_INFO_STR, (str), sizeof(str)))
 
-#define PRINT_ERR_STR(str)              (terminal_send_output_queue(TERMINAL_OUTPUT_APP_ERR_STR, sizeof(str), (str)))
+#define PRINT_ERR_STR(str)              (term_send_output_queue(TERMINAL_OUTPUT_APP_ERR_STR, (str), sizeof(str)))
 
-#define PRINT_ENTRY_INFO(info)          (terminal_send_output_queue(TERMINAL_OUTPUT_APP_ENTRY_INFO, sizeof(entry_info_t), &(info)))
+#define PRINT_ENTRY_INFO(info)          (term_send_output_queue(TERMINAL_OUTPUT_APP_ENTRY_INFO, &(info), sizeof(entry_info_t)))
 
-#define PRINT_DIR_PROPERTY(property)    (terminal_send_output_queue(TERMINAL_OUTPUT_APP_DIR_PROPERTY, sizeof(dir_property_t), &(property)))
+#define PRINT_DIR_PROPERTY(property)    (term_send_output_queue(TERMINAL_OUTPUT_APP_DIR_PROPERTY, &(property), sizeof(dir_property_t)))
 
-#define PRINT_MEDIA_PROPERTY(property)  (terminal_send_output_queue(TERMINAL_OUTPUT_APP_MEDIA_PROPERTY, sizeof(media_property_t), &(property)))
+#define PRINT_MEDIA_PROPERTY(property)  (term_send_output_queue(TERMINAL_OUTPUT_APP_MEDIA_PROPERTY, &(property), sizeof(media_property_t)))
 
-#define PRINT_SECTOR_INFO(info)         (terminal_send_output_queue(TERMINAL_OUTPUT_SECTOR_INFO, sizeof(sector_info_t), &(info)))
+#define PRINT_SECTOR_INFO(info)         (term_send_output_queue(TERMINAL_OUTPUT_SECTOR_INFO, &(info), sizeof(sector_info_t)))
 
 #define RETURN_ERR_STR(err, str) ({\
     if (err)\
     {\
-        terminal_send_output_queue(TERMINAL_OUTPUT_APP_ERR_STR, sizeof(str), (str));\
+        term_send_output_queue(TERMINAL_OUTPUT_APP_ERR_STR, (str), sizeof(str));\
         return (err);\
     }\
 })
 
-#define ERROR_TRAP(err)         ({\
-    terminal_send_output_queue(TERMINAL_OUTPUT_APP_ERR_TRAP, sizeof(UINT), &(err));\
+#define PRINT_ERROR_TRAP(err)         ({\
+    term_send_output_queue(TERMINAL_OUTPUT_APP_ERR_TRAP, &(err), sizeof(UINT));\
     tx_thread_suspend(tx_thread_identify());\
 })
 

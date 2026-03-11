@@ -18,7 +18,7 @@
         r20qs0051eg Evaluation Kit for RA8P1 Microcontroller Group EK-RA8P1 v1 Quick Start Guide.
 
 2. Software Requirements:
-        Renesas Flexible Software Package (FSP): Version 6.3.0
+        Renesas Flexible Software Package (FSP): Version 6.4.0
         e2 studio: Version 2025-12
         Terminal Console Application: Tera Term or a similar application
         USB Serial Drivers (included in Windows 10) 

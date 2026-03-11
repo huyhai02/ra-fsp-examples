@@ -54,7 +54,11 @@ typedef enum
 #define COLOR_SIX                           (0x69FA6927)
 #define COLOR_SEVEN                         (0x3A743AFA)
 #define COLOR_EIGHT                         (0x2B822B82)
+#if defined (BOARD_RA8E1_FPB)
+#define MATCH_RATE_MIN                      (70.0F)
+#else
 #define MATCH_RATE_MIN                      (99.0F)
+#endif
 #define MATCH_RATE_STRING_LEN_MAX           (10U)
 
 /* Functions declarations */

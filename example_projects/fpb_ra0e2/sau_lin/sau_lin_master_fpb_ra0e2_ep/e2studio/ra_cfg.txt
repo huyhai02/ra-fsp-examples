@@ -63,7 +63,7 @@ FSP Configuration
     HOCO Div /1
     MOCO Div /1
     ICLK Src: HOCO
-    TAU CK00 Div /16
+    TAU CK00 Div /128
     TAU CK01 Div /1
     TAU CK02 Div /2
     TAU CK03 Div /256
@@ -308,8 +308,8 @@ FSP Configuration
       General: Function: Interval Timer
       General: Bit Timer Mode: 16-bit timer
       General: Operation Clock: CK00
-      General: Period: 1
-      General: Period Unit: Raw Counts
+      General: Period: 200
+      General: Period Unit: Milliseconds
       General: Period (Higher 8-bit timer): 0x100
       General: Period Unit (Higher 8-bit timer): Raw Counts
       Input: Input Source: No input signal

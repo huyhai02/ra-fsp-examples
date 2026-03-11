@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include "hal_data.h"
 
-#define EP_VERSION              ("1.0")
+#define EP_VERSION              ("1.1")
 #if BSP_FEATURE_SAU_IS_AVAILABLE
 #define MODULE_NAME             "sau_lin Module  "
 #elif BSP_FEATURE_SCI_IS_AVAILABLE
@@ -29,22 +29,21 @@
                                 "\r\nRefer to readme.txt file for more details on Example Project and" \
                                 "\r\nFSP User's Manual for more information about "MODULE_NAME" driver\r\n"
 
-#define ENABLE_MASTER_TIMEOUT_MANAGEMENT   (1U)
-#define WRITE_FRAME_ID_20H                 (0x20)
-#define WRITE_FRAME_ID_21H                 (0x21)
-#define WRITE_FRAME_ID_22H                 (0x22)
-#define WRITE_FRAME_ID_23H                 (0x23)
+#define ENABLE_MASTER_TIMEOUT_MANAGEMENT    (1U)
+#define WRITE_FRAME_ID_20H                  (0x20)
+#define WRITE_FRAME_ID_21H                  (0x21)
+#define WRITE_FRAME_ID_22H                  (0x22)
+#define WRITE_FRAME_ID_23H                  (0x23)
 
-#define READ_FRAME_ID_10H                  (0x10)
-#define READ_FRAME_ID_11H                  (0x11)
-#define READ_FRAME_ID_12H                  (0x12)
-#define READ_FRAME_ID_13H                  (0x13)
+#define READ_FRAME_ID_10H                   (0x10)
+#define READ_FRAME_ID_11H                   (0x11)
+#define READ_FRAME_ID_12H                   (0x12)
+#define READ_FRAME_ID_13H                   (0x13)
 
 #define FRAME_ID_20H_DATA_LENGTH            (3)
 #define FRAME_ID_21H_DATA_LENGTH            (3)
 #define FRAME_ID_22H_DATA_LENGTH            (3)
 #define FRAME_ID_23H_DATA_LENGTH            (3)
-#define FRAME_ID_24H_DATA_LENGTH            (2)
 
 #define FRAME_ID_10H_DATA_LENGTH            (2)
 #define FRAME_ID_11H_DATA_LENGTH            (2)
@@ -102,10 +101,9 @@
 
 /* LIN API Mapping */
 #define LIN_OPEN                 (R_SAU_LIN_Open)
-#define LIN_START_FRAME_WRITE    (R_SAU_LIN_StartFrameWrite)
-#define LIN_INFO_FRAME_WRITE     (R_SAU_LIN_InformationFrameWrite)
+#define LIN_WRITE                (R_SAU_LIN_Write)
 #define LIN_COMMUNICATION_ABORT  (R_SAU_LIN_CommunicationAbort)
-#define LIN_INFO_FRAME_READ      (R_SAU_LIN_InformationFrameRead)
+#define LIN_READ                 (R_SAU_LIN_Read)
 #define LIN_BAUD_CALCULATE       (R_SAU_UART_BaudCalculate)
 #define LIN_CLOSE                (R_SAU_LIN_Close)
 
@@ -140,11 +138,10 @@
 
 /* LIN API Mapping */
 #define LIN_OPEN                 (R_SCI_B_LIN_Open)
-#define LIN_START_FRAME_WRITE    (R_SCI_B_LIN_StartFrameWrite)
-#define LIN_INFO_FRAME_WRITE     (R_SCI_B_LIN_InformationFrameWrite)
+#define LIN_WRITE                (R_SCI_B_LIN_Write)
 #define LIN_COMMUNICATION_ABORT  (R_SCI_B_LIN_CommunicationAbort)
 #define LIN_BAUD_CALCULATE       (R_SCI_B_LIN_BaudCalculate)
-#define LIN_INFO_FRAME_READ      (R_SCI_B_LIN_InformationFrameRead)
+#define LIN_READ                 (R_SCI_B_LIN_Read)
 #define LIN_CLOSE                (R_SCI_B_LIN_Close)
 
 /* Timer API Mapping */
@@ -158,20 +155,20 @@
 
 #endif
 
-#define WRITE_MENU          "\r\n=== LIN Write Selection ===" \
-                            "\r\n1. Frame ID: 0x20" \
-                            "\r\n2. Frame ID: 0x21" \
-                            "\r\n3. Frame ID: 0x22" \
-                            "\r\n4. Frame ID: 0x23" \
-                            "\r\n0. Exit" \
+#define WRITE_MENU          "\r\n=== LIN Write Selection ==="\
+                            "\r\n1. Frame ID: 0x20"\
+                            "\r\n2. Frame ID: 0x21"\
+                            "\r\n3. Frame ID: 0x22"\
+                            "\r\n4. Frame ID: 0x23"\
+                            "\r\n0. Exit"\
                             "\r\n\nSelect an option:\r\n"
 
-#define READ_MENU          "\r\n=== LIN Read Selection ===" \
-                            "\r\n1. Frame ID: 0x10" \
-                            "\r\n2. Frame ID: 0x11" \
-                            "\r\n3. Frame ID: 0x12" \
-                            "\r\n4. Frame ID: 0x13" \
-                            "\r\n0. Exit" \
+#define READ_MENU          "\r\n=== LIN Read Selection ==="\
+                            "\r\n1. Frame ID: 0x10"\
+                            "\r\n2. Frame ID: 0x11"\
+                            "\r\n3. Frame ID: 0x12"\
+                            "\r\n4. Frame ID: 0x13"\
+                            "\r\n0. Exit"\
                             "\r\n\nSelect an option:\r\n"
 
 #define BAUDRATE_OPTION     "\r\n\r\n=== LIN Master Baud Rate Selection ==="\
@@ -184,8 +181,8 @@
                             "\r\n\nSelect an option:"
 typedef struct
 {
-    uint32_t header_timeout_us;   // Header timeout in microseconds
-    uint32_t response_timeout_us; // Response timeout in microseconds
+    uint32_t header_timeout_us;   /* Header timeout in microseconds */
+    uint32_t response_timeout_us; /* Response timeout in microseconds */
 } lin_timing_t;
 
 typedef struct

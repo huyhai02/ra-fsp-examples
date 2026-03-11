@@ -292,9 +292,9 @@ FSP Configuration
     PCLKE Div /4
     BCLK Div /8
     BCLKA Src: PLL2Q
-    BCLKA Div /6
+    BCLKA Div /8
     SDCLK Enabled
-    EBCLK Src: BCLK (Synchronous)
+    EBCLK Src: BCLKA (Asynchronous)
     EBCLK Div /2
     CLKOUT Src: HOCO
     CLKOUT Div /1

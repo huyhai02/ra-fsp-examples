@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="com.renesas.cdt.managedbuild.core.toolchainInfo">
+				<option id="toolchain.id" value="clang_arm"/>
+				<option id="toolchain.version" value="21.1.1"/>
+				<option id="toolchain.enable" value="true"/>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839" name="Debug" parent="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug">
+					<folderInfo id="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839." name="/" resourcePath="">
+						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.debug.1084694613" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.debug">
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1958100417" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.338999297" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel" value="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.speedCodeSize" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1850106101" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.2067897562" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.debugwithdwarf" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.1007520052" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.endian.little" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.207662043" name="Fixit error parser (-fdiagnostics-parseable-fixits)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics" value="false" valueType="boolean"/>
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.2104201123" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization" valueType="stringList">
+								<listOptionValue builtIn="false" value="-fmessage-length=0"/>
+								<listOptionValue builtIn="false" value="-funsigned-char"/>
+							</option>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.709658340" name="Disable optimizations based on the type of expressions (-fno-strict-aliasing)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing" value="false" valueType="boolean"/>
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.50898978" name="Other flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags" valueType="stringList">
+								<listOptionValue builtIn="false" value="-g3"/>
+							</option>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1808397996" name="Warn for various unused elements (-Wunused)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1627737380" name="Warn for uninitialized variables (-Wuninitialized)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.871962137" name="Enable all warnings (-Wall)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.1082537731" name="Enable extra warnings (-Wextra)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.674432606" name="Warn for undeclared global functions (-Wmissing-declarations)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.824497942" name="Warn for implicit conversions (-Wconversion)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.346088318" name="Warn if it depends on the “size of” a function(-Wpointer-arith)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.1159737059" name="Warn for shadowed variables (-Wshadow)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.1594614740" name="Warn if structures are returned (-Waggregate-return)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn" value="true" valueType="boolean"/>
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.1258548139" name="Other Flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags" valueType="stringList">
+								<listOptionValue builtIn="false" value="-Wno-parentheses-equality"/>
+								<listOptionValue builtIn="false" value="-Wfloat-equal"/>
+							</option>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2072726693" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.family.cortex-m85" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1984889723" name="Float ABI" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.fpu.hard" valueType="enumerated"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.renesas.cdt.managedbuild.llvm.core.targetPlatform.178592135" isAbstract="false" osList="all" superClass="com.renesas.cdt.managedbuild.llvm.core.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/FileX_block_media_ospi_LevelX_ek_ra8p1_ep}/Debug" id="com.renesas.cdt.managedbuild.llvm.core.builder.677647593" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="LLVM  for Renesas Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.renesas.cdt.managedbuild.llvm.core.builder"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.288945475" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.835468215" name="Library Generator" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen">
+								<option id="com.renesas.cdt.managedbuild.llvm.arm.option.libraryType.1845886849" name="Library type" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.libraryType" value="com.renesas.cdt.managedbuild.llvm.core.option.librarygenerator.settings.libraryType.preBuilt" valueType="enumerated"/>
+							</tool>
+							<tool commandLinePattern="${COMMAND} ${toolchain_flags} ${FLAGS} -x c ${INPUTS} ${command_c_compiler} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}" id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.789724300" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat.2092606639" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.debugwithdwarf" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel.1098562628" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.speedCodeSize" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.std.1662392285" name="Language standard" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.std" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.compiler.common.c99" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1122587979" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.1189316389" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/bsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/tx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/instances}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/src/rm_threadx_port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/threadx/common/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/arm/CMSIS_6/CMSIS/Core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/fx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/middleware}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/lx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/levelx/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/ports}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/filex/common/inc}&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.macro.1975439415" name="Macro Defines (-D)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.macro" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="_RENESAS_RA_"/>
+									<listOptionValue builtIn="false" value="USE_VIRTUAL_COM=1"/>
+									<listOptionValue builtIn="false" value="_RA_CORE=CPU0"/>
+									<listOptionValue builtIn="false" value="_RA_ORDINAL=1"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1983323879" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
+							</tool>
+							<tool commandLinePattern="${COMMAND} ${toolchain_flags} ${FLAGS} -x c++ ${INPUTS} ${command_cpp_compiler} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}" id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1033382023" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat.795420966" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.debugwithdwarf" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel.90487717" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.speedCodeSize" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.cpp.language.20067067" name="Language standard" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.cpp.language" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.compiler.cpp.c11" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.749971982" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp.1014164401" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp" useByScannerDiscovery="false" valueType="includePath"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1308609981" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.assembler.source.usepreprocessor.1517471758" name="Use preprocessor (-x assembler-with-cpp)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.assembler.source.usepreprocessor"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines.1209189807" name="Define a symbol (-D)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="_RENESAS_RA_"/>
+									<listOptionValue builtIn="false" value="_RA_CORE=CPU0"/>
+									<listOptionValue builtIn="false" value="_RA_ORDINAL=1"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.assembler.includes.includeFileDirectories.1586447809" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.assembler.includes.includeFileDirectories" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/bsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/tx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/instances}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/src/rm_threadx_port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/threadx/common/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/arm/CMSIS_6/CMSIS/Core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/fx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/middleware}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/lx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/levelx/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/ports}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/filex/common/inc}&quot;"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.776023542" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.613478970" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.misc.inputsections.707941937" name="Enable garbage collection of unused input sections(-gc-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.misc.inputsections" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.archives.archiveLibraryFiles.1816001993" name="Archive (library) files (-l) [Only the library's name, without the &quot;lib&quot; prefix and &quot;.a&quot;extension]" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.archives.archiveLibraryFiles" valueType="libs">
+									<listOptionValue builtIn="false" value="crt0"/>
+									<listOptionValue builtIn="false" value="c++abi"/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc.686938204" name="Do not use the standard system startup files when linking" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc" value="false" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.entrypoint.739736226" name="Entry point:" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.entrypoint" value="" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.includes.includeFileDir.cpp.441997162" name="Include file directories" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.includes.includeFileDir.cpp" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/bsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/tx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/instances}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/src/rm_threadx_port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/threadx/common/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/arm/CMSIS_6/CMSIS/Core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/fx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/middleware}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/lx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/levelx/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/ports}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/filex/common/inc}&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.other.userDefinedOptions.1314878695" name="User defined options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.other.userDefinedOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-Wl,-z,norelro"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkerScript.1255587262" name="Linker script" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkerScript" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;fsp.lld&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.linker.archiveSearchDirectories.520505699" name="Archive search directories (-L) [Only the path to the library]" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.linker.archiveSearchDirectories" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/script&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${CWD}&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList.1483259312" name="Linkage Order List" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkOrderList" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;.\src/SERIAL_TERM\r_dtc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src/SERIAL_TERM\r_sci_b_uart.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src/SERIAL_TERM\serial_data.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src/SEGGER_RTT\SEGGER_RTT.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src/SEGGER_RTT\SEGGER_RTT_printf.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src\app_thread_entry.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src\board_ospi.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src\console_thread_entry.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src\filex.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src\hal_warmstart.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src\levelx.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src\terminal.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\src\terminal_thread_entry.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra_gen\app_thread.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra_gen\common_data.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra_gen\console_thread.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra_gen\hal_data.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra_gen\main.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra_gen\pin_data.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra_gen\terminal_thread.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra_gen\vector_data.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_pool_cleanup.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_pool_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_pool_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_pool_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_pool_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_pool_performance_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_pool_performance_system_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_pool_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_block_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_cleanup.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_performance_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_performance_system_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_pool_search.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_byte_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_cleanup.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_performance_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_performance_system_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_event_flags_set_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_initialize_high_level.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_initialize_kernel_enter.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_initialize_kernel_setup.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_cleanup.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_performance_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_performance_system_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_priority_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_mutex_put.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_cleanup.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_flush.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_front_send.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_performance_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_performance_system_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_receive.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_send.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_queue_send_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_ceiling_put.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_cleanup.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_performance_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_performance_system_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_put.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_semaphore_put_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_entry_exit_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_identify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_performance_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_performance_system_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_preemption_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_priority_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_relinquish.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_reset.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_resume.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_shell_entry.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_sleep.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_stack_analyze.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_stack_error_handler.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_stack_error_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_suspend.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_system_preempt_check.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_system_resume.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_system_suspend.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_terminate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_time_slice.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_time_slice_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_timeout.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_thread_wait_abort.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_time_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_time_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_activate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_deactivate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_expiration_process.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_performance_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_performance_system_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_system_activate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_system_deactivate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_timer_thread_entry.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_buffer_full_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_disable.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_enable.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_event_filter.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_event_unfilter.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_interrupt_control.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_isr_enter_insert.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_isr_exit_insert.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_object_register.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_object_unregister.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\tx_trace_user_event_insert.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_block_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_block_pool_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_block_pool_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_block_pool_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_block_pool_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_block_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_byte_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_byte_pool_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_byte_pool_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_byte_pool_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_byte_pool_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_byte_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_event_flags_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_event_flags_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_event_flags_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_event_flags_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_event_flags_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_event_flags_set_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_mutex_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_mutex_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_mutex_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_mutex_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_mutex_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_mutex_put.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_flush.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_front_send.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_receive.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_send.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_queue_send_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_semaphore_ceiling_put.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_semaphore_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_semaphore_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_semaphore_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_semaphore_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_semaphore_prioritize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_semaphore_put.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_semaphore_put_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_entry_exit_notify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_preemption_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_priority_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_relinquish.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_reset.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_resume.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_suspend.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_terminate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_time_slice_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_thread_wait_abort.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_timer_activate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_timer_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_timer_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_timer_deactivate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_timer_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/threadx/common/src\txe_timer_info_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_256byte_ecc_check.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_256byte_ecc_compute.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_block_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_block_data_move.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_block_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_block_mapping_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_block_status_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_close.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_data_page_copy.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_defragment.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_driver_block_erase.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_driver_block_erased_verify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_driver_block_status_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_driver_block_status_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_driver_page_erased_verify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_erase_count_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_extended_cache_enable.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_format.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_free_block_list_add.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_mapped_block_list_add.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_mapped_block_list_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_mapped_block_list_remove.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_memory_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_metadata_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_metadata_build.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_metadata_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_open.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_page_ecc_check.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_page_ecc_compute.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_partial_defragment.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_sector_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_sector_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_sector_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_sectors_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_sectors_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_sectors_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_simulator.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nand_flash_system_error.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_block_reclaim.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_close.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_defragment.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_driver_block_erase.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_driver_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_driver_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_extended_cache_enable.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_logical_sector_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_next_block_to_erase_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_open.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_partial_defragment.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_physical_sector_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_sector_mapping_cache_invalidate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_sector_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_sector_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_sector_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_simulator.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/levelx/common/src\lx_nor_flash_system_error.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_attributes_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_attributes_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_default_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_default_get_copy.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_default_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_entry_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_entry_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_exFAT_entry_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_exFAT_entry_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_exFAT_free_search.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_exFAT_unicode_entry_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_first_entry_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_first_full_entry_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_free_search.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_information_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_local_path_clear.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_local_path_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_local_path_get_copy.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_local_path_restore.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_local_path_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_long_name_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_long_name_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_name_extract.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_name_test.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_next_entry_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_next_full_entry_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_rename.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_search.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_short_name_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_directory_short_name_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_add_FAT_log.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_add_bitmap_log.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_add_checksum_log.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_add_dir_log.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_apply_logs.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_calculate_checksum.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_cleanup_FAT_chain.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_create_log_file.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_enable.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_read_FAT.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_read_directory_sector.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_read_log_file.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_recover.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_reset_log_file.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_set_FAT_chain.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_transaction_end.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_transaction_fail.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_transaction_start.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_fault_tolerant_write_log_file.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_attributes_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_attributes_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_best_effort_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_close.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_date_time_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_extended_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_extended_best_effort_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_extended_relative_seek.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_extended_seek.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_extended_truncate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_extended_truncate_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_open.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_relative_seek.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_rename.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_seek.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_truncate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_truncate_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_file_write_notify_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_abort.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_boot_info_extract.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_cache_invalidate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_check.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_check_FAT_chain_check.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_check_lost_cluster_check.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_close.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_close_notify_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_exFAT_format.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_extended_space_available.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_flush.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_format.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_format_oem_name_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_format_type_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_format_volume_id_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_open.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_open_notify_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_space_available.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_volume_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_volume_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_volume_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_media_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_partition_offset_calculate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_ram_driver.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_system_date_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_system_date_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_system_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_system_time_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_system_time_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_system_timer_entry.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_trace_event_insert.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_trace_event_update.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_trace_object_register.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_trace_object_unregister.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_directory_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_directory_entry_change.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_directory_entry_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_directory_rename.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_directory_search.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_file_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_file_rename.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_length_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_length_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_name_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_name_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_short_name_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_unicode_short_name_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_16_unsigned_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_16_unsigned_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_32_unsigned_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_32_unsigned_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_64_unsigned_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_64_unsigned_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_FAT_entry_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_FAT_entry_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_FAT_flush.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_FAT_map_flush.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_FAT_sector_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_absolute_path_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_allocate_new_cluster.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_bitmap_cache_prepare.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_bitmap_cache_update.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_bitmap_flush.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_bitmap_free_cluster_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_bitmap_initialize.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_bitmap_start_sector_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_cluster_free.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_cluster_state_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_cluster_state_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_geometry_check.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_name_hash_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_size_calculate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_system_area_checksum_verify.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_system_area_checksum_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_system_area_format.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_system_sector_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_unicode_name_hash_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_exFAT_upcase_table.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_logical_sector_cache_entry_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_logical_sector_flush.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_logical_sector_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_logical_sector_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_memory_copy.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_memory_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_string_length_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fx_utility_token_length_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_attributes_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_attributes_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_default_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_default_get_copy.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_default_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_first_entry_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_first_full_entry_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_information_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_local_path_clear.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_local_path_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_local_path_get_copy.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_local_path_restore.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_local_path_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_long_name_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_long_name_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_name_test.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_next_entry_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_next_full_entry_find.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_rename.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_short_name_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_directory_short_name_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_fault_tolerant_enable.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_attributes_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_attributes_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_best_effort_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_close.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_date_time_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_delete.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_extended_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_extended_best_effort_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_extended_relative_seek.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_extended_seek.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_extended_truncate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_extended_truncate_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_open.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_relative_seek.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_rename.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_seek.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_truncate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_truncate_release.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_file_write_notify_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_abort.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_cache_invalidate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_check.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_close.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_close_notify_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_exFAT_format.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_extended_space_available.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_flush.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_format.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_open.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_open_notify_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_read.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_space_available.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_volume_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_volume_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_volume_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_media_write.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_system_date_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_system_date_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_system_time_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_system_time_set.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_unicode_directory_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_unicode_directory_rename.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_unicode_file_create.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_unicode_file_rename.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_unicode_name_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_unicode_name_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_unicode_short_name_get.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/microsoft/azure-rtos/filex/common/src\fxe_unicode_short_name_get_extended.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_iar.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_initialize_low_level.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_isr_end.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_isr_start.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_port_wait_thread_ready.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_thread_interrupt_control.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_thread_interrupt_disable.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_thread_interrupt_restore.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_thread_schedule.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_thread_secure_stack_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_thread_secure_stack_free.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_thread_stack_build.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_thread_system_return.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\tx_timer_interrupt.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\txe_thread_secure_stack_allocate.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_threadx_port\txe_thread_secure_stack_free.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_levelx_nor_spi\rm_levelx_nor_spi.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/rm_filex_levelx_nor\rm_filex_levelx_nor.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/r_ospi_b\r_ospi_b.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/r_ioport\r_ioport.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/r_dmac\r_dmac.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/ra8p1\bsp_linker.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_clocks.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_common.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_delay.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_group_irq.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_guard.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_io.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_ipc.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_irq.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_macl.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_ospi_b.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_register_protection.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_sbrk.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_sdram.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/mcu/all\bsp_security.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/cmsis/Device/RENESAS/Source\startup.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/fsp/src/bsp/cmsis/Device/RENESAS/Source\system.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/board/ra8p1_ek\board_init.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.\ra/board/ra8p1_ek\board_leds.o&quot;"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.linker.c.509758654" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.linker.c">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionalinputdependency" paths="$(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)"/>
+									<additionalInput kind="additionaldependency" paths="$(LINKER_SCRIPT)"/>
+								</inputType>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.2001208214" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.misc.inputsections.327724550" name="Enable garbage collection of unused input sections(-gc-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.misc.inputsections" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.archives.archiveLibraryFiles.1901420496" name="Archive (library) files (-l) [Only the library's name, without the &quot;lib&quot; prefix and &quot;.a&quot;extension]" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.archives.archiveLibraryFiles" valueType="libs">
+									<listOptionValue builtIn="false" value="crt0"/>
+									<listOptionValue builtIn="false" value="c++abi"/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc.198295181" name="Do not use the standard system startup files when linking" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc" value="false" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.entrypoint.1555106460" name="Entry point:" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.entrypoint" value="" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkerScript.1115406653" name="Linker script" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkerScript" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;fsp.lld&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.linker.cpp.option.archiveSearchDirectories.297713149" name="Archive search directories (-L) [Only the path to the library]" superClass="com.renesas.cdt.managedbuild.llvm.arm.linker.cpp.option.archiveSearchDirectories" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/script&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${CWD}&quot;"/>
+								</option>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.626980111" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy">
+								<option id="com.renesas.cdt.managedbuild.llvm.arm.option.objcopy.general.outformat.1763851499" name="OutFormat" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.objcopy.general.outformat" value="com.renesas.cdt.managedbuild.llvm.core.enumeratedOptionValue.intelHex" valueType="enumerated"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.639465837" name="Archiver" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.9600926" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.printSize.general.sizeFormat.1747387323" name="Size Format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.printSize.general.sizeFormat"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.2052965451" name="Readelf" superClass="com.renesas.cdt.managedbuild.llvm.core.tool.readelf"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1211205215" name="Objdump" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839./ra/fsp/inc/ports" name="ports" resourcePath="ra/fsp/inc/ports">
+						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.debug.851469204" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.debug" unusedChildren="">
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1958100417.752768033" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1958100417"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.338999297.1959664015" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.338999297"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1850106101.1187484505" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1850106101"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.2067897562.1466802167" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.2067897562"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.1007520052.1974073073" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.1007520052"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.207662043.1915589247" name="Fixit error parser (-fdiagnostics-parseable-fixits)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.207662043"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.2104201123.815809402" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.2104201123"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.709658340.1279875535" name="Disable optimizations based on the type of expressions (-fno-strict-aliasing)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.709658340"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.50898978.1889005610" name="Other flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.50898978"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1808397996.937107146" name="Warn for various unused elements (-Wunused)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1808397996"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1627737380.819968776" name="Warn for uninitialized variables (-Wuninitialized)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1627737380"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.871962137.1608602317" name="Enable all warnings (-Wall)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.871962137"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.1082537731.862456784" name="Enable extra warnings (-Wextra)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.1082537731"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.674432606.2103270428" name="Warn for undeclared global functions (-Wmissing-declarations)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.674432606"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.824497942.2008963414" name="Warn for implicit conversions (-Wconversion)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.824497942"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.346088318.542294546" name="Warn if it depends on the “size of” a function(-Wpointer-arith)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.346088318"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.1159737059.745941590" name="Warn for shadowed variables (-Wshadow)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.1159737059"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.1594614740.601393279" name="Warn if structures are returned (-Waggregate-return)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.1594614740"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.1258548139.984119349" name="Other Flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.1258548139"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2072726693.1401700683" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2072726693"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1984889723.1791581813" name="Float ABI" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1984889723"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.renesas.cdt.managedbuild.llvm.core.targetPlatform" isAbstract="false" osList="all" superClass="com.renesas.cdt.managedbuild.llvm.core.targetPlatform"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.1859905196" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.288945475"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.83836410" name="Library Generator" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.835468215"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.164692278" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.789724300">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1846803590" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.113991600" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1209383973" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1033382023">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1734199402" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.501037894" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1308609981">
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.1414195208" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.1499673328" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.613478970"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.342080924" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.2001208214"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.171791868" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.626980111"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.376398905" name="Archiver" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.639465837"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.1031974962" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.9600926"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.1388505537" name="Readelf" superClass="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.2052965451"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.81128108" name="Objdump" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1211205215"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839./ra/microsoft" name="microsoft" resourcePath="ra/microsoft">
+						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.debug.1151188850" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.debug" unusedChildren="">
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1958100417.1674095559" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1958100417"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.338999297.1754362697" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.338999297"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1850106101.96232664" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1850106101"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.2067897562.1345966058" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.2067897562"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.1007520052.1088341934" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.1007520052"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.207662043.1444222500" name="Fixit error parser (-fdiagnostics-parseable-fixits)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.207662043"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.2104201123.347629366" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.2104201123"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.709658340.479528417" name="Disable optimizations based on the type of expressions (-fno-strict-aliasing)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.709658340"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.50898978.1555289867" name="Other flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.50898978"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1808397996.1789051524" name="Warn for various unused elements (-Wunused)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1808397996"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1627737380.1794666627" name="Warn for uninitialized variables (-Wuninitialized)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1627737380"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.871962137.910333838" name="Enable all warnings (-Wall)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.871962137"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.1082537731.1245730545" name="Enable extra warnings (-Wextra)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.1082537731"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.674432606.78475396" name="Warn for undeclared global functions (-Wmissing-declarations)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.674432606"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.824497942.1734747986" name="Warn for implicit conversions (-Wconversion)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.824497942"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.346088318.1676349555" name="Warn if it depends on the “size of” a function(-Wpointer-arith)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.346088318"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.1159737059.1262825066" name="Warn for shadowed variables (-Wshadow)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.1159737059"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.1594614740.2007548523" name="Warn if structures are returned (-Waggregate-return)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.1594614740"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.1258548139.2146793984" name="Other Flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.1258548139"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2072726693.1090652695" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2072726693"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1984889723.1996710276" name="Float ABI" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1984889723"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.renesas.cdt.managedbuild.llvm.core.targetPlatform" isAbstract="false" osList="all" superClass="com.renesas.cdt.managedbuild.llvm.core.targetPlatform"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.345473215" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.288945475"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.1739386202" name="Library Generator" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.835468215"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.847795769" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.789724300">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1248738971" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1217201548" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1912786882" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1033382023">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1398408997" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1571791192" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1308609981">
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.1099634999" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.196262508" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.613478970"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.45524893" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.2001208214"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.279517616" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.626980111"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.1713481481" name="Archiver" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.639465837"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.846106421" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.9600926"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.193573541" name="Readelf" superClass="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.2052965451"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.547383872" name="Objdump" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1211205215"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839./ra/arm" name="arm" resourcePath="ra/arm">
+						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.debug.558460816" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.debug" unusedChildren="">
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1958100417.201552592" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1958100417"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.338999297.1077127795" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.338999297"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1850106101.444912695" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1850106101"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.2067897562.1698798207" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.2067897562"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.1007520052.791819992" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.1007520052"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.207662043.407064296" name="Fixit error parser (-fdiagnostics-parseable-fixits)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.207662043"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.2104201123.1956334487" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.2104201123"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.709658340.1925005962" name="Disable optimizations based on the type of expressions (-fno-strict-aliasing)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.709658340"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.50898978.972932576" name="Other flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.50898978"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1808397996.407639410" name="Warn for various unused elements (-Wunused)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1808397996"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1627737380.596653786" name="Warn for uninitialized variables (-Wuninitialized)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1627737380"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.871962137.868799740" name="Enable all warnings (-Wall)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.871962137"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.1082537731.436119603" name="Enable extra warnings (-Wextra)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.1082537731"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.674432606.804463815" name="Warn for undeclared global functions (-Wmissing-declarations)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.674432606"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.824497942.525714230" name="Warn for implicit conversions (-Wconversion)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.824497942"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.346088318.1513415488" name="Warn if it depends on the “size of” a function(-Wpointer-arith)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.346088318"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.1159737059.1676929614" name="Warn for shadowed variables (-Wshadow)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.1159737059"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.1594614740.2101262102" name="Warn if structures are returned (-Waggregate-return)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.1594614740"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.1258548139.1657891258" name="Other Flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.1258548139"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2072726693.1729136956" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2072726693"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1984889723.1472071433" name="Float ABI" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1984889723"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.renesas.cdt.managedbuild.llvm.core.targetPlatform" isAbstract="false" osList="all" superClass="com.renesas.cdt.managedbuild.llvm.core.targetPlatform"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.707241112" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.288945475"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.1968618269" name="Library Generator" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.835468215"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.76900804" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.789724300">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.339740409" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1200055113" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1826095349" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1033382023">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1294500500" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.733658840" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1308609981">
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.1847891745" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.541172389" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.613478970"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.19024305" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.2001208214"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.14511204" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.626980111"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.1937502267" name="Archiver" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.639465837"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.2125920855" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.9600926"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.275594374" name="Readelf" superClass="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.2052965451"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.312814776" name="Objdump" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1211205215"/>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="ra"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="ra_gen"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="com.renesas.cdt.managedbuild.core.toolchainInfo">
+				<option id="toolchain.id" value="clang_arm"/>
+				<option id="toolchain.version" value="21.1.1"/>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079" name="Release" parent="com.renesas.cdt.managedbuild.llvm.arm.configuration.release">
+					<folderInfo id="com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079." name="/" resourcePath="">
+						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.release.191744883" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.release">
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1819882767" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.274421514" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel" value="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.codeSize" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1999590699" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.1203019260" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.Default" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.490836797" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.endian.little" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.1747147273" name="Fixit error parser (-fdiagnostics-parseable-fixits)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics" value="false" valueType="boolean"/>
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.767576682" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization" valueType="stringList">
+								<listOptionValue builtIn="false" value="-fmessage-length=0"/>
+								<listOptionValue builtIn="false" value="-funsigned-char"/>
+							</option>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.690528467" name="Disable optimizations based on the type of expressions (-fno-strict-aliasing)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing" value="true" valueType="boolean"/>
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.747563375" name="Other flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags" valueType="stringList">
+								<listOptionValue builtIn="false" value="-g3"/>
+							</option>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1563777917" name="Warn for various unused elements (-Wunused)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1222808952" name="Warn for uninitialized variables (-Wuninitialized)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.432150578" name="Enable all warnings (-Wall)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.2014796877" name="Enable extra warnings (-Wextra)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.1300637446" name="Warn for undeclared global functions (-Wmissing-declarations)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.1499776690" name="Warn for implicit conversions (-Wconversion)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.1046530378" name="Warn if it depends on the “size of” a function(-Wpointer-arith)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.438904415" name="Warn for shadowed variables (-Wshadow)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow" value="true" valueType="boolean"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.933396419" name="Warn if structures are returned (-Waggregate-return)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn" value="true" valueType="boolean"/>
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.284169356" name="Other Flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags" valueType="stringList">
+								<listOptionValue builtIn="false" value="-Wno-parentheses-equality"/>
+								<listOptionValue builtIn="false" value="-Wfloat-equal"/>
+							</option>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2040877037" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.family.cortex-m85" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1096834719" name="Float ABI" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu" value="com.renesas.cdt.managedbuild.llvm.arm.option.armspecific.fpu.hard" valueType="enumerated"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.renesas.cdt.managedbuild.llvm.core.targetPlatform.1218638387" isAbstract="false" osList="all" superClass="com.renesas.cdt.managedbuild.llvm.core.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/FileX_block_media_ospi_LevelX_ek_ra8p1_ep}/Release" id="com.renesas.cdt.managedbuild.llvm.core.builder.1316355107" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="LLVM  for Renesas Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.renesas.cdt.managedbuild.llvm.core.builder"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.235041194" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.1553342748" name="Library Generator" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen">
+								<option id="com.renesas.cdt.managedbuild.llvm.arm.option.libraryType.616896704" name="Library type" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.libraryType" value="com.renesas.cdt.managedbuild.llvm.core.option.librarygenerator.settings.libraryType.preBuilt" valueType="enumerated"/>
+							</tool>
+							<tool commandLinePattern="${COMMAND} ${toolchain_flags} ${FLAGS} -x c ${INPUTS} ${command_c_compiler} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}" id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1273606084" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel.1357630589" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.codeSize" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat.1346665410" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.Default" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.std.363195841" name="Language standard" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.std" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.compiler.common.c99" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.693818514" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.197753070" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/bsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/tx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/instances}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/src/rm_threadx_port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/threadx/common/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/arm/CMSIS_6/CMSIS/Core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/fx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/middleware}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/lx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/levelx/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/ports}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/filex/common/inc}&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.macro.1688010341" name="Macro Defines (-D)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.macro" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="_RENESAS_RA_"/>
+									<listOptionValue builtIn="false" value="_RA_CORE=CPU0"/>
+									<listOptionValue builtIn="false" value="_RA_ORDINAL=1"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1835320121" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
+							</tool>
+							<tool commandLinePattern="${COMMAND} ${toolchain_flags} ${FLAGS} -x c++ ${INPUTS} ${command_cpp_compiler} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}" id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.549150897" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel.1334084758" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.optimizationLevel" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.codeSize" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat.1425350007" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.Default" valueType="enumerated"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.cpp.language.936810490" name="Language standard" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.cpp.language" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.llvm.core.option.compiler.cpp.c11" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1221740335" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp.381517065" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.compiler.includesFiles.cpp" useByScannerDiscovery="false" valueType="includePath"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1980273567" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.assembler.source.usepreprocessor.1418178217" name="Use preprocessor (-x assembler-with-cpp)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.assembler.source.usepreprocessor"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines.670958778" name="Define a symbol (-D)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.assembler.includes.symbolDefines" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="_RENESAS_RA_"/>
+									<listOptionValue builtIn="false" value="_RA_CORE=CPU0"/>
+									<listOptionValue builtIn="false" value="_RA_ORDINAL=1"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.assembler.includes.includeFileDirectories.1171290540" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.assembler.includes.includeFileDirectories" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/bsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/tx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/instances}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/src/rm_threadx_port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/threadx/common/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/arm/CMSIS_6/CMSIS/Core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/fx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/middleware}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/lx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/levelx/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/ports}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/filex/common/inc}&quot;"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.402806970" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.106820559" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.misc.inputsections.418610960" name="Enable garbage collection of unused input sections(-gc-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.misc.inputsections" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.archives.archiveLibraryFiles.357154863" name="Archive (library) files (-l) [Only the library's name, without the &quot;lib&quot; prefix and &quot;.a&quot;extension]" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.archives.archiveLibraryFiles" valueType="libs">
+									<listOptionValue builtIn="false" value="crt0"/>
+									<listOptionValue builtIn="false" value="c++abi"/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc.1888917628" name="Do not use the standard system startup files when linking" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc" value="false" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.entrypoint.1114352446" name="Entry point:" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.entrypoint" value="" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.includes.includeFileDir.cpp.233547309" name="Include file directories" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.includes.includeFileDir.cpp" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;.&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/bsp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/tx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/instances}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/src/rm_threadx_port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/threadx/common/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/arm/CMSIS_6/CMSIS/Core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/fx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/ra_gen}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/middleware}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra_cfg/fsp_cfg/azure/lx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/levelx/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/fsp/inc/ports}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ra/microsoft/azure-rtos/filex/common/inc}&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.other.userDefinedOptions.1624587194" name="User defined options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.other.userDefinedOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-Wl,-z,norelro"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkerScript.728082827" name="Linker script" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkerScript" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;fsp.lld&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.option.linker.archiveSearchDirectories.1150625785" name="Archive search directories (-L) [Only the path to the library]" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.linker.archiveSearchDirectories" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/script&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${CWD}&quot;"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.linker.c.2015004953" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.linker.c">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionalinputdependency" paths="$(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)"/>
+									<additionalInput kind="additionaldependency" paths="$(LINKER_SCRIPT)"/>
+								</inputType>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.1583751601" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.misc.inputsections.537049864" name="Enable garbage collection of unused input sections(-gc-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.misc.inputsections"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.archives.archiveLibraryFiles.245536055" name="Archive (library) files (-l) [Only the library's name, without the &quot;lib&quot; prefix and &quot;.a&quot;extension]" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.archives.archiveLibraryFiles" valueType="libs">
+									<listOptionValue builtIn="false" value="crt0"/>
+									<listOptionValue builtIn="false" value="c++abi"/>
+								</option>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc.1231305512" name="Do not use the standard system startup files when linking" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkUsingGcc" value="false" valueType="boolean"/>
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.linker.entrypoint.1131457876" name="Entry point:" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.entrypoint" value="" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkerScript.1296476974" name="Linker script" superClass="com.renesas.cdt.managedbuild.llvm.core.option.linker.source.linkerScript" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;fsp.lld&quot;"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.arm.linker.cpp.option.archiveSearchDirectories.389325120" name="Archive search directories (-L) [Only the path to the library]" superClass="com.renesas.cdt.managedbuild.llvm.arm.linker.cpp.option.archiveSearchDirectories" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/script&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${CWD}&quot;"/>
+								</option>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.139236284" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.2106162463" name="Archiver" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.267185181" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize">
+								<option id="com.renesas.cdt.managedbuild.llvm.core.option.printSize.general.sizeFormat.780256187" name="Size Format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.printSize.general.sizeFormat"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.1227119481" name="Readelf" superClass="com.renesas.cdt.managedbuild.llvm.core.tool.readelf"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1341615244" name="Objdump" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079./ra/fsp/inc/ports" name="ports" resourcePath="ra/fsp/inc/ports">
+						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.release.1853969330" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.release" unusedChildren="">
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1819882767.1964544790" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1819882767"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.274421514.642428698" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.274421514"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1999590699.22018121" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1999590699"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.1203019260.1865527223" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.1203019260"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.490836797.115225281" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.490836797"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.1747147273.1405889895" name="Fixit error parser (-fdiagnostics-parseable-fixits)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.1747147273"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.767576682.537803056" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.767576682"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.690528467.2007988485" name="Disable optimizations based on the type of expressions (-fno-strict-aliasing)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.690528467"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.747563375.1553094569" name="Other flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.747563375"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1563777917.614181516" name="Warn for various unused elements (-Wunused)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1563777917"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1222808952.1997374854" name="Warn for uninitialized variables (-Wuninitialized)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1222808952"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.432150578.1095231445" name="Enable all warnings (-Wall)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.432150578"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.2014796877.258542484" name="Enable extra warnings (-Wextra)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.2014796877"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.1300637446.2082881595" name="Warn for undeclared global functions (-Wmissing-declarations)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.1300637446"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.1499776690.1469040121" name="Warn for implicit conversions (-Wconversion)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.1499776690"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.1046530378.983071433" name="Warn if it depends on the “size of” a function(-Wpointer-arith)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.1046530378"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.438904415.1554425192" name="Warn for shadowed variables (-Wshadow)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.438904415"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.933396419.1749893441" name="Warn if structures are returned (-Waggregate-return)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.933396419"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.284169356.968486526" name="Other Flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.284169356"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2040877037.513159853" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2040877037"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1096834719.822210877" name="Float ABI" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1096834719"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.renesas.cdt.managedbuild.llvm.core.targetPlatform" isAbstract="false" osList="all" superClass="com.renesas.cdt.managedbuild.llvm.core.targetPlatform"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.1479370684" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.235041194"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.1395252811" name="Library Generator" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.1553342748"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1433575579" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1273606084">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.2015233157" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1334500856" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.346055330" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.549150897">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.2116081149" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.2000971070" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1980273567">
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.149875286" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.340352791" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.106820559"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.961575087" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.1583751601"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.1472212848" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.139236284"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.902955007" name="Archiver" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.2106162463"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.826109014" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.267185181"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.2091169084" name="Readelf" superClass="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.1227119481"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1860957505" name="Objdump" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1341615244"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079./ra/microsoft" name="microsoft" resourcePath="ra/microsoft">
+						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.release.697859230" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.release" unusedChildren="">
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1819882767.1827845678" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1819882767"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.274421514.1940766000" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.274421514"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1999590699.1144513313" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1999590699"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.1203019260.195004068" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.1203019260"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.490836797.1512568820" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.490836797"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.1747147273.938819181" name="Fixit error parser (-fdiagnostics-parseable-fixits)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.1747147273"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.767576682.1750656206" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.767576682"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.690528467.1120383077" name="Disable optimizations based on the type of expressions (-fno-strict-aliasing)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.690528467"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.747563375.1663402880" name="Other flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.747563375"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1563777917.1389083594" name="Warn for various unused elements (-Wunused)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1563777917"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1222808952.722139668" name="Warn for uninitialized variables (-Wuninitialized)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1222808952"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.432150578.703823216" name="Enable all warnings (-Wall)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.432150578"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.2014796877.901758698" name="Enable extra warnings (-Wextra)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.2014796877"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.1300637446.323300851" name="Warn for undeclared global functions (-Wmissing-declarations)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.1300637446"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.1499776690.190308306" name="Warn for implicit conversions (-Wconversion)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.1499776690"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.1046530378.1376483276" name="Warn if it depends on the “size of” a function(-Wpointer-arith)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.1046530378"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.438904415.606965011" name="Warn for shadowed variables (-Wshadow)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.438904415"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.933396419.694868938" name="Warn if structures are returned (-Waggregate-return)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.933396419"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.284169356.1891226976" name="Other Flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.284169356"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2040877037.50985170" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2040877037"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1096834719.188186894" name="Float ABI" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1096834719"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.renesas.cdt.managedbuild.llvm.core.targetPlatform" isAbstract="false" osList="all" superClass="com.renesas.cdt.managedbuild.llvm.core.targetPlatform"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.168098037" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.235041194"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.1713462632" name="Library Generator" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.1553342748"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1281862481" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1273606084">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1563285648" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1257283900" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.997046254" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.549150897">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.80957314" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.269124680" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1980273567">
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.2054554932" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.544819202" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.106820559"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.1599419838" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.1583751601"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.1077830166" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.139236284"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.1297625466" name="Archiver" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.2106162463"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.1360772650" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.267185181"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.493137321" name="Readelf" superClass="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.1227119481"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.209278869" name="Objdump" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1341615244"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079./ra/arm" name="arm" resourcePath="ra/arm">
+						<toolChain id="com.renesas.cdt.managedbuild.llvm.arm.toolchain.release.1859931598" name="LLVM for ARM" superClass="com.renesas.cdt.managedbuild.llvm.arm.toolchain.release" unusedChildren="">
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1819882767.940571696" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.core.option.cpu.printsize.1819882767"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.274421514.215951203" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.optimizationLevel.274421514"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1999590699.1702630578" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fdatasections.1999590699"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.1203019260.370924386" name="Debug format" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.debugFormat.1203019260"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.490836797.251639114" name="Endian" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.endian.490836797"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.1747147273.663276372" name="Fixit error parser (-fdiagnostics-parseable-fixits)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.fdiagnostics.1747147273"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.767576682.678794830" name="Other optimization flags" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.otherOptimization.767576682"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.690528467.1712129073" name="Disable optimizations based on the type of expressions (-fno-strict-aliasing)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.optimization.fnoaliasing.690528467"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.747563375.105574533" name="Other flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.debug.otherFlags.747563375"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1563777917.1768915116" name="Warn for various unused elements (-Wunused)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.unused.1563777917"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1222808952.895001444" name="Warn for uninitialized variables (-Wuninitialized)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.uninitialized.1222808952"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.432150578.452642208" name="Enable all warnings (-Wall)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.allwarn.432150578"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.2014796877.298083050" name="Enable extra warnings (-Wextra)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.extrawarn.2014796877"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.1300637446.1898489832" name="Warn for undeclared global functions (-Wmissing-declarations)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.missingdeclaration.1300637446"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.1499776690.157930318" name="Warn for implicit conversions (-Wconversion)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.conversion.1499776690"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.1046530378.39496813" name="Warn if it depends on the “size of” a function(-Wpointer-arith)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.pointerarith.1046530378"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.438904415.1481110618" name="Warn for shadowed variables (-Wshadow)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.shadow.438904415"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.933396419.464339051" name="Warn if structures are returned (-Waggregate-return)" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.agreggatereturn.933396419"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.284169356.204439495" name="Other Flags" superClass="com.renesas.cdt.managedbuild.llvm.core.option.warnings.otherFlags.284169356"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2040877037.1327668789" name="ARM family" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.family.2040877037"/>
+							<option id="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1096834719.1123242063" name="Float ABI" superClass="com.renesas.cdt.managedbuild.llvm.arm.option.cpu.fpu.1096834719"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.renesas.cdt.managedbuild.llvm.core.targetPlatform" isAbstract="false" osList="all" superClass="com.renesas.cdt.managedbuild.llvm.core.targetPlatform"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.227653045" name="SMS Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.smsAsm.235041194"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.849691473" name="Library Generator" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.libgen.1553342748"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.335165601" name="Compiler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1273606084">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.1385751238" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.456421025" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.454778176" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.549150897">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.573622549" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
+									<listOptionValue builtIn="false" value="-flax-vector-conversions"/>
+									<listOptionValue builtIn="false" value="-fshort-enums"/>
+									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
+									<listOptionValue builtIn="false" value="-w"/>
+								</option>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1053820256" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1980273567">
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.804004966" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.1964235060" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.106820559"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.1826915170" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.1583751601"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.1609087414" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.139236284"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.1269573705" name="Archiver" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.archiver.2106162463"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.456686021" name="Print Size" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.PrintSize.267185181"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.430032348" name="Readelf" superClass="com.renesas.cdt.managedbuild.llvm.core.tool.readelf.1227119481"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.914357004" name="Objdump" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.objdump.1341615244"/>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="ra"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="ra_gen"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="FileX_block_media_ospi_LevelX_ek_ra8p1_ep.com.renesas.cdt.managedbuild.llvm.arm.projectType.Id.107747950" name="Executable" projectType="com.renesas.cdt.managedbuild.llvm.arm.projectType.Id"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079;com.renesas.cdt.managedbuild.llvm.arm.configuration.release.1750202079.;com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.1273606084;com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1835320121">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839;com.renesas.cdt.managedbuild.llvm.arm.configuration.debug.1337791839.;com.renesas.cdt.managedbuild.llvm.arm.tool.compiler.789724300;com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1983323879">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+</cproject>

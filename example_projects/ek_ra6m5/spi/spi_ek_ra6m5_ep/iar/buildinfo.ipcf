@@ -95,6 +95,7 @@
             <path>ra/arm/CMSIS_6/LICENSE</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm0.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm0plus.h</path>
+            <path>ra/arm/CMSIS_6/CMSIS/Core/Include/tz_context.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm1.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm23.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/cmsis_armclang.h</path>
@@ -106,7 +107,6 @@
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm3.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm33.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm35p.h</path>
-            <path>ra/arm/CMSIS_6/CMSIS/Core/Include/tz_context.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm4.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm52.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm55.h</path>

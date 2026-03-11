@@ -3,7 +3,7 @@ This project showcases the AI inference capabilities of the Arm® Ethos™-U Neu
 
 > **Note:**  
 > * This project also includes an example demonstrating how to integrate face detection using the Arm Ethos-U55 NPU with the RUHMI (Robust Unified Heterogeneous Model Integration) framework. This integration showcases advanced deployment capabilities for AI applications on Renesas RA microcontrollers.
-> * Information can be displayed using either the SEGGER J-Link RTT Viewer or a serial terminal (UART) via J-Link OB VCOM. By default, the serial terminal (UART) via J-Link OB VCOM is used to print the terminal log. To use the SEGGER J-Link RTT Viewer instead, please refer to the instructions in the [Special Topic](#special-topic) section below (see: **1. Selecting Terminal Output Method**).
+> * Information can be displayed using either the SEGGER J-Link RTT Viewer or a serial terminal (UART) via J-Link OB VCOM. By default, the serial terminal (UART) via J-Link OB VCOM is used to print the terminal log. To use the SEGGER J-Link RTT Viewer instead, please refer to the instructions in the [Verifying operation](#verifying-operation) section below (see: Section 1).
 
 Please refer to the [Example Project Usage Guide](https://github.com/renesas/ra-fsp-examples/blob/master/example_projects/Example%20Project%20Usage%20Guide.pdf) 
 for general information on example projects and [readme.txt](./readme.txt) for specifics of operation.
@@ -12,10 +12,10 @@ for general information on example projects and [readme.txt](./readme.txt) for s
 To build and run this example project, the following resources are needed.
 
 ### Software Requirements ###
-* Renesas Flexible Software Package (FSP): Version 6.2.0
-* e2 studio: Version 2025-10
-* SEGGER J-Link RTT Viewer: Version 8.74
-* LLVM Embedded Toolchain for ARM: Version 18.1.3
+* Renesas Flexible Software Package (FSP): Version 6.4.0
+* e2 studio: Version 2025-12
+* SEGGER J-Link RTT Viewer: Version 9.14a
+* LLVM Embedded Toolchain for ARM: Version 21.1.1
 * Terminal Console Application: Tera Term or a similar application
 
 ### Hardware Requirements ###
@@ -81,7 +81,7 @@ The following table lists the key FSP APIs used by the application layer in this
    - **`ethos_u55_face_detection_ek_ra8p1_ep`** : Demonstrates standalone AI inference using the Arm Ethos-U55 NPU.  
    - **`ethos_u55_face_detection_ruhmi_ek_ra8p1_ep`** : Illustrates AI inference integrated with the modular deployment features of the RUHMI framework.
 
-    By default, the EP supports Serial terminal for RA boards that support J-link OB VCOM
+    By default, the EP supports Serial terminal for RA boards that support J-Link OB VCOM
     * Define USE_VIRTUAL_COM = 1 macro in Project Properties -> C/C++ Build -> Settings -> Tool Settings -> Compiler -> Includes -> Macro Defines (-D)
 
     To use SEGGER J-Link RTT Viewer, please follow the instructions below:
@@ -90,7 +90,7 @@ The following table lists the key FSP APIs used by the application layer in this
 3. Conduct the hardware connection as described in the Hardware Connections section.
 4. Open a serial terminal application (e.g., Tera Term) on the host PC and connect to the COM port provided by the J-Link onboard, or open the SEGGER J-Link RTT Viewer if you have selected that output method.
    * Note: For using the serial terminal:
-        * Please ensure that the connection to the RTT viewer has been terminated if it was previously established.
+        * Please ensure that the connection to the RTT Viewer has been terminated if it was previously established.
         * The COM port is provided by the J-Link onboard, with a baud rate of 115200 bps, a data length of 8 bits, no parity check, one stop bit, and no flow control.
 
 5. Debug or flash the EP project to the RA board. 
@@ -218,4 +218,3 @@ The original image is downloaded from [Pexels](https://www.pexels.com/photo/boy-
 > **Note:**  
 > Ensure your image is properly formatted (192x192, 24bpp RGB) before conversion.  
 > Both `convert` (ImageMagick) and `xxd` utilities are available on most Linux distributions and can be installed on Windows via WSL.
-

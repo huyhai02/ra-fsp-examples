@@ -991,6 +991,7 @@ FSP Configuration
     DP83620 Target: Disabled
     ICS1894 Target: Disabled
     GPY111 Target: Disabled
+    VSC8541 Target: Disabled
     User Own Target: Disabled
     Reference Clock: Default
     
@@ -1001,6 +1002,7 @@ FSP Configuration
     DP83620 Target: Disabled
     ICS1894 Target: Disabled
     GPY111 Target: Disabled
+    VSC8541 Target: Disabled
     User Own Target: Disabled
     Reference Clock: Default
     
@@ -1124,6 +1126,8 @@ FSP Configuration
           Buffers: Allocate RX buffer: Enable
           Buffers: Number of node num: 24
           Timestamp: TS queue length: 8
+          Forwarding: Transmission descriptor format: Transmission direct descriptor
+          Forwarding: Port based forwarding for reception: Disabled
           
           Instance "g_layer3_switch0 Switch (r_layer3_switch)"
             Name: g_layer3_switch0
@@ -1131,8 +1135,9 @@ FSP Configuration
             Context: NULL
             Callback: NULL
             Interrupts: Interrupt priority: Priority 12
-            Ports: Port 0: Fowarding: CPU
-            Ports: Port 1: Fowarding: CPU
+            Ports: Port 0: Forwarding: CPU
+            Ports: Port 1: Forwarding: CPU
+            Ports: CPU: Forwarding: 
             Ports: Port 0: IPV queues for preemptable frames: 
             Ports: Port 1: IPV queues for preemptable frames: 
             Ports: Port 0: Minimum fragment size of preemptable frames: 64 bytes

@@ -17,9 +17,9 @@ void hal_entry(void) {
     fsp_pack_version_t version = {RESET_VALUE};
     uint8_t xyz_axis[6]      = {RESET_VALUE};
     char flt_str[64]        = {RESET_VALUE};
-    float x_axis            = 0.0f;
-    float y_axis            = 0.0f;
-    float z_axis            = 0.0f;
+    double x_axis            = 0.0;
+    double y_axis            = 0.0;
+    double z_axis            = 0.0;
 
     /* version get API for FLEX pack information */
     R_FSP_VersionGet(&version);
@@ -68,9 +68,9 @@ void hal_entry(void) {
               * shifting it by 8 bits obtains data value to float variable
               */
 
-            x_axis = (float) (xyz_axis[0] | (xyz_axis[1] << BIT_SHIFT_8));   // X-axis value
-            y_axis = (float) (xyz_axis[2] | (xyz_axis[3] << BIT_SHIFT_8));   // Y-axis value
-            z_axis = (float) (xyz_axis[4] | (xyz_axis[5] << BIT_SHIFT_8));   // Z-axis value
+            x_axis = (double) (xyz_axis[0] | (xyz_axis[1] << BIT_SHIFT_8));   // X-axis value
+            y_axis = (double) (xyz_axis[2] | (xyz_axis[3] << BIT_SHIFT_8));   // Y-axis value
+            z_axis = (double) (xyz_axis[4] | (xyz_axis[5] << BIT_SHIFT_8));   // Z-axis value
 
             snprintf(flt_str,SIZE_64,"X-axis = %.02f, Y-axis = %.02f, Z-axis = %.02f",x_axis,y_axis,z_axis);
 

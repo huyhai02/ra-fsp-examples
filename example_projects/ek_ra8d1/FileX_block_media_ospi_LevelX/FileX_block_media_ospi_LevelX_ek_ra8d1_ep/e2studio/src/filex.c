@@ -3,7 +3,7 @@
  * Description  : Contains data structures and functions
  *********************************************************************************************************************/
 /**********************************************************************************************************************
-* Copyright (c) 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 **********************************************************************************************************************/
@@ -18,6 +18,8 @@
  * Public global variable
  *********************************************************************************************************************/
 FX_MEDIA g_fx_media;
+extern ospi_b_instance_ctrl_t * g_ospi_b_ctrl;
+extern spi_flash_cfg_t g_ospi_b_cfg;
 
 /**********************************************************************************************************************
  * Private global variable
@@ -220,13 +222,13 @@ static UINT media_format(void)
     g_media_opened = false;
 
 	/* Open OSPI module */
-	status = (UINT) R_OSPI_B_Open(&g_ospi_b_ctrl, &g_ospi_b_cfg);
+	status = (UINT) R_OSPI_B_Open(g_ospi_b_ctrl, &g_ospi_b_cfg);
 	RETURN_ERR_STR(status, "R_OSPI_B_Open API FAILED \r\n");
 
 	/* Erase the flash sectors prior to usage for file system operations. */
     for (uint32_t i = RESET_VALUE; i <= g_rm_levelx_nor_spi_cfg.size ; i+= OSPI_B_SECTOR_256K_SIZE)
     {
-		status = (UINT) R_OSPI_B_Erase(&g_ospi_b_ctrl, (uint8_t *)FILEX_START_ADDRESS + i, OSPI_B_SECTOR_256K_SIZE);
+		status = (UINT) R_OSPI_B_Erase(g_ospi_b_ctrl, (uint8_t *)FILEX_START_ADDRESS + i, OSPI_B_SECTOR_256K_SIZE);
 		RETURN_ERR_STR(status, "R_OSPI_B_Erase API FAILED \r\n");
 
 		/* Wait until erase operation complete */
@@ -235,7 +237,7 @@ static UINT media_format(void)
     }
 
     /* Close OSPI flash */
-    status = (UINT) R_OSPI_B_Close(&g_ospi_b_ctrl);
+    status = (UINT) R_OSPI_B_Close(g_ospi_b_ctrl);
     RETURN_ERR_STR(status, "R_OSPI_B_Close API FAILED \r\n");
 
     /* Erase OSPI flash successful */
@@ -862,13 +864,13 @@ static UINT file_read(void)
     {
         /* Display content of the file */
         PRINT_INFO_STR("\r\nContent of the file\r\n\r\n");
-        terminal_send_output_queue(TERMINAL_OUTPUT_APP_INFO_STR, len + ONE_BYTE, read_data);
+        term_send_output_queue(TERMINAL_OUTPUT_APP_INFO_STR, read_data, len + ONE_BYTE);
     }
     else
     {
         /* Display content of the first 1 kB of the file */
         PRINT_INFO_STR("\r\nContent of the first 1 kB of the file\r\n\r\n");
-        terminal_send_output_queue(TERMINAL_OUTPUT_APP_INFO_STR, READ_BUFFER_SIZE + ONE_BYTE, read_data);
+        term_send_output_queue(TERMINAL_OUTPUT_APP_INFO_STR, read_data, READ_BUFFER_SIZE + ONE_BYTE);
     }
 
     /* Read a file successfully */

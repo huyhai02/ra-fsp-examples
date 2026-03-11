@@ -76,7 +76,7 @@
  */
 
 /* change or modify this based on your application requirement */
-#define BYTE_POOL_SIZE      ((ULONG)2048U)
+#define BYTE_POOL_SIZE      ((ULONG)512U)
 #define TIME_STAMP_MSG_SIZE (35U)
 
 /* As per SEGGER_RTT_conf.h size */

@@ -30,11 +30,6 @@
     </customArgVars>
     <files>
         <group name="Components">
-            <path>ra/board/ra4m1_ek/board.h</path>
-            <path>ra/board/ra4m1_ek/board_init.c</path>
-            <path>ra/board/ra4m1_ek/board_init.h</path>
-            <path>ra/board/ra4m1_ek/board_leds.c</path>
-            <path>ra/board/ra4m1_ek/board_leds.h</path>
             <path>ra/fsp/inc/fsp_version.h</path>
             <path>ra/fsp/inc/api/fsp_common_api.h</path>
             <path>ra/fsp/inc/api/r_ioport_api.h</path>
@@ -96,6 +91,7 @@
             <path>ra/arm/CMSIS_6/LICENSE</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm0.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm0plus.h</path>
+            <path>ra/arm/CMSIS_6/CMSIS/Core/Include/tz_context.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm1.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm23.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/cmsis_armclang.h</path>
@@ -107,7 +103,6 @@
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm3.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm33.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm35p.h</path>
-            <path>ra/arm/CMSIS_6/CMSIS/Core/Include/tz_context.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm4.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm52.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/core_cm55.h</path>
@@ -135,6 +130,11 @@
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/r-profile/cmsis_armclang_r.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/r-profile/cmsis_clang_r.h</path>
             <path>ra/arm/CMSIS_6/CMSIS/Core/Include/r-profile/cmsis_gcc_r.h</path>
+            <path>ra/board/ra4m1_ek/board.h</path>
+            <path>ra/board/ra4m1_ek/board_init.c</path>
+            <path>ra/board/ra4m1_ek/board_init.h</path>
+            <path>ra/board/ra4m1_ek/board_leds.c</path>
+            <path>ra/board/ra4m1_ek/board_leds.h</path>
         </group>
         <group name="Build Configuration">
             <path>ra_cfg/fsp_cfg/bsp/bsp_pin_cfg.h</path>

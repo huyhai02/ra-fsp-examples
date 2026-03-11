@@ -5,7 +5,7 @@
 
 1. Project Overview:
         The example project demonstrates some of the capabilities of the EK and FSP by using multiple peripherals.
-        The project initializes the QSPI , LPM , SLCD and GPIO modules to create an interactive user demo.
+        The project initializes the QSPI, LPM, SLCD and GPIO modules to create an interactive user demo.
 
         Once programmed the user can control the board by button presses on the board and see regularly updated board 
         configuration on the kit information screen.
@@ -13,12 +13,10 @@
         d020244_11_s01_v01_r20qs0081eg0100 Evaluation Kit for RA4L1 Microcontroller Group EK-RA4L1 Quick Start Guide
 
 2. Software Requirements:
-        Renesas Flexible Software Package (FSP): Version 6.2.0
-        e2 studio: Version 2025-10
+        Renesas Flexible Software Package (FSP): Version 6.4.0
+        e2 studio: Version 2025-12
         GCC ARM Embedded Toolchain: Version 13.2.1.arm-13-7
         Terminal Console Application: Tera Term or a similar application
-        USB Serial Drivers (included in Windows 10) 
-        Windows® 10 operating system
 
 3. Hardware settings for the project:
         Please configure the Jumper settings as described in the Quick Start Guide.

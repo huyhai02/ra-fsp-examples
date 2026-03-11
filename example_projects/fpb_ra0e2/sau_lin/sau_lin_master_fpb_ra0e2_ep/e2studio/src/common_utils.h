@@ -3,7 +3,7 @@
  * Description  : Contains macros, data structures, and functions commonly used in the EP.
  **********************************************************************************************************************/
 /***********************************************************************************************************************
-* Copyright (c) 2020 - 2025 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2020 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 ***********************************************************************************************************************/
@@ -56,7 +56,7 @@
 #endif /* BSP_CFG_RTOS != 0U */
 
 /* Macros commonly used */
-#define LVL_ERR                         (1U)       /* Error conditions */
+#define LVL_ERR                         (1U)    /* Error condition */
 #define RESET_VALUE                     (0x00)
 #define NULL_CHAR                       ('\0')
 #define MODULE_CLOSE                    (0U)
@@ -64,8 +64,8 @@
 #define APP_PRINT(fn_, ...)             (TERM_PRINTF((fn_), ##__VA_ARGS__))
 
 #if LVL_ERR
-  #define APP_ERR_PRINT(fn_, ...)       (APP_PRINT("\r\n[ERR] In Function: %s(), %s", __FUNCTION__, \
-                                                   (fn_), ##__VA_ARGS__))
+  #define APP_ERR_PRINT(fn_, ...)       (APP_PRINT("\r\n[ERR] In Function: %s(), %s", __FUNCTION__,\
+                                        (fn_), ##__VA_ARGS__))
 #else
   #define APP_ERR_PRINT(fn_, ...)
 #endif /* LVL_ERR */
@@ -73,22 +73,22 @@
 #define APP_ERR_RET(con, err, fn_, ...) ({\
                                         if (con)\
                                         {\
-                                        APP_ERR_PRINT((fn_), ##__VA_ARGS__); \
-                                        return (err); \
+                                        APP_ERR_PRINT((fn_), ##__VA_ARGS__);\
+                                        return (err);\
                                         }\
                                         })
 
-#define ERROR_TRAP                      ({ \
-                                        __asm("BKPT #0\n"); \
+#define ERROR_TRAP                      ({\
+                                        __asm("BKPT #0\n");\
                                         })
 
 #define APP_ERR_TRAP(err)               ({\
                                         if(err)\
                                         {\
                                         APP_PRINT("\r\nReturned Error Code: 0x%x  \r\n", (err));\
-                                        TERM_DEINIT(); \
-                                        /* Trap upon the error */ \
-                                        ERROR_TRAP; \
+                                        TERM_DEINIT();\
+                                        /* Trap upon the error */\
+                                        ERROR_TRAP;\
                                         }\
                                         })
 
@@ -109,7 +109,7 @@ typedef struct st_term_msg
     uint32_t size;
     uint32_t time;
     char msg[];
-}term_msg_t;
+} term_msg_t;
 #endif /* BSP_CFG_RTOS != 0U */
 
 /***********************************************************************************************************************

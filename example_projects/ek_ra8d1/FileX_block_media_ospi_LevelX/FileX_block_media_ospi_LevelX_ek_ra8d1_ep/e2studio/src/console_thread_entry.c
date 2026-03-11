@@ -3,7 +3,7 @@
  * Description  : Contains functions from the console thread
  **********************************************************************************************************************/
 /***********************************************************************************************************************
-* Copyright (c) 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 ***********************************************************************************************************************/
@@ -25,6 +25,7 @@ void console_thread_entry(void)
     ULONG request = RESET_VALUE;
     uint16_t input = RESET_VALUE;
     menu_t menu = MENU_MAIN;
+    char recv_buf[TERM_BUFFER_SIZE] = {RESET_VALUE};
 
     /* Suspend thread until received start console event flag */
     status = tx_event_flags_get (&g_request_event, REQUEST_START_CONSOLE,
@@ -32,15 +33,15 @@ void console_thread_entry(void)
     if (TX_SUCCESS != status)
     {
         PRINT_ERR_STR("tx_event_flags_get for REQUEST_START_CONSOLE failed\r\n");
-        ERROR_TRAP(status);
+        PRINT_ERROR_TRAP(status);
     }
 
     /* Send a output queue to the terminal thread to display EP banner */
-    terminal_send_output_queue(TERMINAL_OUTPUT_EP_BANNER, RESET_VALUE, NULL);
+    term_send_output_queue(TERMINAL_OUTPUT_EP_BANNER, NULL, RESET_VALUE);
     tx_thread_sleep (PRINT_EP_BANNER_TICK);
 
     /* Send a output queue to the terminal thread to display EP information */
-    terminal_send_output_queue(TERMINAL_OUTPUT_EP_INFO, RESET_VALUE, NULL);
+    term_send_output_queue(TERMINAL_OUTPUT_EP_INFO, NULL, RESET_VALUE);
     tx_thread_sleep (PRINT_EP_BANNER_TICK);
 
     /* Send a start file system event to the APP thread */
@@ -48,7 +49,7 @@ void console_thread_entry(void)
     if (TX_SUCCESS != status)
     {
         PRINT_ERR_STR("tx_event_flags_set for REQUEST_START_APP_THREAD failed\r\n");
-        ERROR_TRAP(status);
+        PRINT_ERROR_TRAP(status);
     }
 
     tx_thread_sleep (CONSOLE_THREAD_SLEEP_TICK);
@@ -59,19 +60,22 @@ void console_thread_entry(void)
         PRINT_MENU(menu);
 
         /* Suspend until there is an input queue */
-        status = terminal_get_input_queue(&input);
+        status = term_get_input_queue(recv_buf, NULL, TX_WAIT_FOREVER);
         if (TX_SUCCESS != status)
         {
             PRINT_ERR_STR("**terminal_get_input_queue failed**\r\n");
-            ERROR_TRAP(status);
+            PRINT_ERROR_TRAP(status);
         }
+
+        /* Conversion from input string to integer value */
+        input = (uint16_t)(atoi(recv_buf));
 
         /* Handle user input base on the current menu */
         status = console_handle(&menu, &input, &request);
         if (TX_SUCCESS != status)
         {
             PRINT_ERR_STR("console_handle failed\r\n");
-            ERROR_TRAP(status);
+            PRINT_ERROR_TRAP(status);
         }
 
         /* Handle valid user request */
@@ -82,7 +86,7 @@ void console_thread_entry(void)
             if (TX_SUCCESS != status)
             {
                 PRINT_ERR_STR("tx_event_flags_set for user request failed\r\n");
-                ERROR_TRAP(status);
+                PRINT_ERROR_TRAP(status);
             }
 
             /* Wait for request completed event from the App Thread */
@@ -91,7 +95,7 @@ void console_thread_entry(void)
             if (TX_SUCCESS != status)
             {
                 PRINT_ERR_STR("tx_event_flags_get for REQUEST_START_CONSOLE failed\r\n");
-                ERROR_TRAP(status);
+                PRINT_ERROR_TRAP(status);
             }
         }
 

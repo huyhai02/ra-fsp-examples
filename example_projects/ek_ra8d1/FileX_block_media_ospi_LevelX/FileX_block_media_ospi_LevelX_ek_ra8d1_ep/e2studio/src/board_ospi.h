@@ -3,7 +3,7 @@
  * Description  : Contains macros data structures and functions used in board_ospi.c
  **********************************************************************************************************************/
 /**********************************************************************************************************************
-* Copyright (c) 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 **********************************************************************************************************************/
@@ -16,6 +16,7 @@
 #include <stdbool.h>
 #include "common_utils.h"
 #include "filex.h"
+#include "app_thread.h"
 
 /***********************************************************************************************************************
  * Macro definitions
@@ -164,11 +165,9 @@ typedef enum e_ospi_b_transfer
     OSPI_B_TRANSFER_MAX
 } ospi_b_transfer_t;
 
-
 /***********************************************************************************************************************
  * Exported global variables
  **********************************************************************************************************************/
-
 extern spi_flash_direct_transfer_t g_ospi_b_direct_transfer [OSPI_B_TRANSFER_MAX];
 
 /***********************************************************************************************************************

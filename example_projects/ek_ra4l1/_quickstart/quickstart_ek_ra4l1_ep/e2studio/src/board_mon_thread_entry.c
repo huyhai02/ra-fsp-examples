@@ -74,8 +74,13 @@ static fsp_err_t read_die_temperature(float * celcius_temperature)
     float32_t vs;
     float32_t slope;
     float32_t cal140;
-
     fsp_err_t err;
+
+    err = R_ADC_ScanStart (&g_adc_ctrl);
+    if (FSP_SUCCESS != err)
+    {
+        return err;
+    }
 
     err = R_ADC_Read(&g_adc_ctrl, ADC_CHANNEL_TEMPERATURE, (uint16_t *) &adc_tsn_result); /* Cast to uint16_t */
 

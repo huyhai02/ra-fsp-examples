@@ -39,7 +39,7 @@
 2. Software Requirements:
 	Renesas Flexible Software Package (FSP): Version 6.3.0
 	e2 studio: Version 2025-12
-	SEGGER J-Link RTT Viewer: Version 8.92
+	SEGGER J-Link RTT Viewer: Version 9.14a
 	GCC ARM Embedded Toolchain: Version 13.2.1.arm-13-7
 	Zadig.exe - v2.0.1.160 (https://sourceforge.net/projects/libwdi/files/zadig/)
 	dfu-util-0.11-binaries.tar.xz (https://sourceforge.net/projects/dfu-util/files/)

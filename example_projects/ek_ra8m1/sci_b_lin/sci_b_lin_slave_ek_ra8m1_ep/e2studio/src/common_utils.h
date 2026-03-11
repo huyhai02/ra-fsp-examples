@@ -82,12 +82,12 @@
                                         __asm("BKPT #0\n"); \
                                         })
 
+/* Trap upon the error */
 #define APP_ERR_TRAP(err)               ({\
                                         if(err)\
                                         {\
                                         APP_PRINT("\r\nReturned Error Code: 0x%x  \r\n", (err));\
                                         TERM_DEINIT(); \
-                                        /* Trap upon the error */ \
                                         ERROR_TRAP; \
                                         }\
                                         })
@@ -109,7 +109,7 @@ typedef struct st_term_msg
     uint32_t size;
     uint32_t time;
     char msg[];
-}term_msg_t;
+} term_msg_t;
 #endif /* BSP_CFG_RTOS != 0U */
 
 /***********************************************************************************************************************

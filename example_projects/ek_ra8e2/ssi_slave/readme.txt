@@ -15,9 +15,9 @@
      	one intended for Master and other for the Slave.
 
 2. Software Requirements:
-     	Renesas Flexible Software Package (FSP): Version 6.3.0
+     	Renesas Flexible Software Package (FSP): Version 6.4.0
      	e2 studio: Version 2025-12
-     	SEGGER J-Link RTT Viewer: Version 8.92
+     	SEGGER J-Link RTT Viewer: Version 9.14a
      	LLVM Embedded Toolchain for ARM: Version 21.1.1
 
 3. Hardware Requirements:

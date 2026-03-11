@@ -5,7 +5,7 @@
 
   <Header>### uVision Project, (C) Keil Software</Header>
 
-  <WorkspaceName>C:\b\example_projects\ek_ra6m5\trustzone\iic_master\keil\iic_master_ek_ra6m5_ep.uvmpw</WorkspaceName>
+  <WorkspaceName>iic_master_ek_ra6m5_ep</WorkspaceName>
 
   <project>
     <PathAndName>.\iic_master_ns_ek_ra6m5_ep\iic_master_ns_ek_ra6m5_ep.uvprojx</PathAndName>

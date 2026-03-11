@@ -5,11 +5,10 @@
 
   <Header>### uVision Project, (C) Keil Software</Header>
 
-  <WorkspaceName>C:\b\example_projects\ek_ra4e2\trustzone\agt\keil\agt_ek_ra4e2_ep.uvmpw</WorkspaceName>
+  <WorkspaceName>agt_ek_ra4e2_ep</WorkspaceName>
 
   <project>
     <PathAndName>.\agt_s_ek_ra4e2_ep\agt_s_ek_ra4e2_ep.uvprojx</PathAndName>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>

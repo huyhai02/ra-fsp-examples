@@ -3,7 +3,7 @@
  * Description  : Contains data structures and functions used in console_thread_entry.c
  *********************************************************************************************************************/
 /**********************************************************************************************************************
-* Copyright (c) 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 **********************************************************************************************************************/
@@ -11,8 +11,8 @@
 #ifndef CONSOLE_H_
 #define CONSOLE_H_
 
+#include <common_app.h>
 #include "common_utils.h"
-#include "terminal.h"
 #include "filex.h"
 
 #define CONSOLE_THREAD_SLEEP_TICK       (1U)
@@ -47,7 +47,7 @@
 #define SELECT_SECTOR_GO_BACK           (4U)
 
 
-#define PRINT_MENU(menu)                (terminal_send_output_queue(TERMINAL_OUTPUT_APP_MENU, sizeof(UINT *), &(menu)))
+#define PRINT_MENU(menu)                (term_send_output_queue(TERMINAL_OUTPUT_APP_MENU, &(menu), sizeof(UINT *)))
 
 
 #endif /* CONSOLE_H_ */

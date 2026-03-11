@@ -164,14 +164,6 @@ static fsp_err_t gpt_initialize(void)
         }
     }
 
-
-    fsp_err = R_GPT_Open (g_gpt_blue.p_ctrl, g_gpt_blue.p_cfg);
-    if (fsp_err)
-    {
-        SYSTEM_ERROR_CFG_
-        return fsp_err;
-    }
-
     fsp_err = R_GPT_Start (g_blinker.p_ctrl);
 
     if (FSP_SUCCESS != fsp_err)

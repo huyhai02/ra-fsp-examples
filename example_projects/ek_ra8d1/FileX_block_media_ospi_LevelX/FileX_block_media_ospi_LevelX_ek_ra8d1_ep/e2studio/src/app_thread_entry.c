@@ -3,13 +3,13 @@
  * Description  : Contains functions from the App thread
  **********************************************************************************************************************/
 /***********************************************************************************************************************
-* Copyright (c) 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 ***********************************************************************************************************************/
+#include "common_app.h"
 #include "app_thread.h"
 #include "filex.h"
-#include "terminal.h"
 #include "board_ospi.h"
 
 /**********************************************************************************************************************
@@ -32,15 +32,15 @@ void app_thread_entry(void)
     if (TX_SUCCESS != status)
     {
         PRINT_ERR_STR("tx_event_flags_get for REQUEST_START_APP_THREAD failed\r\n");
-        ERROR_TRAP(status);
+        PRINT_ERROR_TRAP(status);
     }
 
     /* Initialize the OSPI Flash */
-    err = ospi_b_init ();
+    err = ospi_b_init();
     if (FSP_SUCCESS != err)
     {
         PRINT_ERR_STR("**ospi_b_init failed**\r\n");
-        ERROR_TRAP(err);
+        PRINT_ERROR_TRAP(err);
     }
 
     /* Initialize the FileX file system */
@@ -48,7 +48,7 @@ void app_thread_entry(void)
     if (FX_SUCCESS != status)
     {
         PRINT_ERR_STR("**file_system_init failed**\r\n");
-        ERROR_TRAP(status);
+        PRINT_ERROR_TRAP(status);
     }
 
     /* Initialize LevelX system */
@@ -56,7 +56,7 @@ void app_thread_entry(void)
     if (LX_SUCCESS != lx_ret_val)
     {
         PRINT_ERR_STR("**lx_nor_flash_initialize failed**\r\n");
-        ERROR_TRAP(lx_ret_val);
+        PRINT_ERROR_TRAP(lx_ret_val);
     }
 
     while (true)
@@ -68,7 +68,7 @@ void app_thread_entry(void)
         if (TX_SUCCESS != status)
         {
             PRINT_ERR_STR("tx_event_flags_get for user request events failed\r\n");
-            ERROR_TRAP(status);
+            PRINT_ERROR_TRAP(status);
         }
 
         /* Perform file system operations as required by the user */
@@ -76,7 +76,7 @@ void app_thread_entry(void)
         if (FX_SUCCESS != status)
         {
             PRINT_ERR_STR("file_system_operation failed\r\n");
-            ERROR_TRAP(status);
+            PRINT_ERROR_TRAP(status);
         }
 
         /* Send a request complete event flag to the console thread */
@@ -84,7 +84,7 @@ void app_thread_entry(void)
         if (TX_SUCCESS != status)
         {
             PRINT_ERR_STR("tx_event_flags_set for REQUEST_COMPLETED event failed\r\n");
-            ERROR_TRAP(status);
+            PRINT_ERROR_TRAP(status);
         }
 
         tx_thread_sleep (APP_SLEEP_TICK);

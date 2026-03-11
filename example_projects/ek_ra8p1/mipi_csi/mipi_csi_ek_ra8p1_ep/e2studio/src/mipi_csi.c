@@ -412,11 +412,15 @@ static fsp_err_t vin_scale_image(uint16_t new_width, uint16_t new_height)
      /* Copy the default extended configuration into the runtime copy */
      g_vin_cfg_run_time_extend = g_vin_cfg_extend;
 
-     /* Fetch old dimensions and masks from the default (template) config */
+     /* Fetch old output dimensions and masks from the default configuration */
      const uint32_t old_v  = (uint32_t) g_vin_cfg_extend.conversion_data.uds_clipping_bits.cl_vsize;
      const uint32_t old_h  = (uint32_t) g_vin_cfg_extend.conversion_data.uds_clipping_bits.cl_hsize;
      const uint16_t old_vm = (uint16_t) g_vin_cfg_extend.conversion_data.uds_scale_bits.vertical_mask;
      const uint16_t old_hm = (uint16_t) g_vin_cfg_extend.conversion_data.uds_scale_bits.horizontal_mask;
+
+     /* Fetch input dimensions from the default configuration */
+     const uint16_t input_height = (uint16_t) g_vin_cfg_extend.input_ctrl.preclip.line_end + 1;
+     const uint16_t input_width = (uint16_t) g_vin_cfg_extend.input_ctrl.preclip.pixel_end + 1;
 
      /* Recalculate the scale masks: new_mask = (old_mask * old_size) / new_size */
      g_vin_cfg_run_time_extend.conversion_data.uds_scale_bits.vertical_mask =
@@ -428,6 +432,16 @@ static fsp_err_t vin_scale_image(uint16_t new_width, uint16_t new_height)
      /* Update clipping sizes to match the new target dimensions */
      g_vin_cfg_run_time_extend.conversion_data.uds_clipping_bits.cl_vsize = (uint16_t) new_height;
      g_vin_cfg_run_time_extend.conversion_data.uds_clipping_bits.cl_hsize = (uint16_t) new_width;
+
+     /* Update scaling enable bit */
+     if ((input_height != new_height) || (input_width != new_width))
+     {
+         g_vin_cfg_run_time_extend.input_ctrl.cfg_bits.scaling_enable = true;
+     }
+     else
+     {
+         g_vin_cfg_run_time_extend.input_ctrl.cfg_bits.scaling_enable = false;
+     }
 
      /* Copy the default main configuration into the runtime copy */
      g_vin_cfg_run_time = g_vin_cfg;
