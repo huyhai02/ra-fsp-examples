@@ -74,11 +74,14 @@
                 Connect the Segment LCD Board (J1:1) --> J2 on the RA board (J2:1)
 
 Note:
-1) Segger RTT block address may be needed to download and observe EP operation using a hex file with RTT Viewer.
+1) For EK-RA4C1, EK-RA4L1: In case the user is using SEG4 (P400), please be aware that the pull-up behavior may cause
+   ghosting display on the Segment LCD Panel.
+
+2) Segger RTT block address may be needed to download and observe EP operation using a hex file with RTT Viewer.
    RTT Block address for hex file committed in repository are as follows:
    a. e2studio: 0x20000c64
    b. Keil: 	Not Available 
    c. IAR:  	Not Available
  
-2) If an EP is modified, compiled, and downloaded please find the block address (for the variable in RAM called _SEGGER_RTT)
+3) If an EP is modified, compiled, and downloaded please find the block address (for the variable in RAM called _SEGGER_RTT)
    in .map file generated in the project folder (e2studio\Debug or e2studio\Release).

@@ -11,6 +11,7 @@
 /**********************************************************************************************************************
  * History : DD.MM.YYYY Version  Description
  *         : 20.10.2025 1.00     First Release
+ *         : 04.03.2026 1.01     Fixed OSPI_RESET_PIN pin
  *********************************************************************************************************************/
 
 #include <stdint.h>
@@ -70,7 +71,7 @@
 #define OSPI_SECTOR_SIZE                            (4096U)
 #define OSPI_BLOCK_SIZE                             (262144U)
 
-#define OSPI_RESET_PIN                              (BSP_IO_PORT_12_PIN_07)
+#define OSPI_RESET_PIN                              (BSP_IO_PORT_01_PIN_06)
 #define OSPI_RESET_DELAY                            (50U)
 
 #define EXTENDED_SPI_MODE                           (0xFFu)

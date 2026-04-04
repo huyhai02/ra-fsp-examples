@@ -3,7 +3,7 @@
  * Description  : Contains data structures and functions used in clock_output_ep.c
  **********************************************************************************************************************/
 /***********************************************************************************************************************
-* Copyright (c) 2024 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 ***********************************************************************************************************************/
@@ -74,6 +74,8 @@
 #define CLKOUT_PIN      (BSP_IO_PORT_01_PIN_09)
 #elif defined (BOARD_RA8D1_EK)
 #define CLKOUT_PIN      (BSP_IO_PORT_09_PIN_13)
+#elif defined (BOARD_RA8P1_EK)
+#define CLKOUT_PIN      (BSP_IO_PORT_06_PIN_11)
 #else
 #define CLKOUT_PIN      (BSP_IO_PORT_02_PIN_05)
 #endif

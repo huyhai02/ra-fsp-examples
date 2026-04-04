@@ -7,6 +7,14 @@ FSP Configuration
     data_flash_size_bytes: 0
     package_style: LFBGA
     package_pins: 289
+    ospi0_cs0_start_address: 2147483648
+    ospi0_cs0_size_bytes: 268435456
+    ospi0_cs1_start_address: 2415919104
+    ospi0_cs1_size_bytes: 268435456
+    ospi1_cs0_start_address: 1879048192
+    ospi1_cs0_size_bytes: 134217728
+    ospi1_cs1_start_address: 2013265920
+    ospi1_cs1_size_bytes: 134217728
     number of cores: 2
     
   R7KA8T2LFECAC
@@ -30,6 +38,7 @@ FSP Configuration
     SDRAM: Endian Mode: Little Endian
     SDRAM: Continuous Access Mode: Enabled
     SDRAM: Bus Width: 32-bit
+    OSPI_B: Startup Support: Disabled
     Security: Exceptions: Exception Response: Non-Maskable Interrupt
     Security: Exceptions: BusFault, HardFault, and NMI Target: Secure State
     Security: System Reset Request Accessibility: Secure State
@@ -59,6 +68,8 @@ FSP Configuration
     Main Oscillator Wait Time: 8163 cycles
     Cache settings: Data cache: Disabled
     Cache settings: Data cache forced write-through: Disabled
+    I/O Ports: Voltage Mode: VCC: High (VCC >= 2.7 V)
+    I/O Ports: Voltage Mode: VCC2: High (VCC2 >= 2.7 V)
     
   RA8T2 Device Options
     OFS Registers: OFS0 (Option Function Select Register 0) Settings: Enabled
@@ -281,7 +292,7 @@ FSP Configuration
     BCLKA Div /6
     SDCLK Enabled
     EBCLK Src: BCLK (Synchronous)
-    EBCLK Div /2
+    EBCLK Disabled
     CLKOUT Src: HOCO
     CLKOUT Div /1
     SCICLK Src: PLL2R
@@ -898,13 +909,17 @@ FSP Configuration
     
   User Event Links
     
+  Linker Section Mappings
+    *(.bss.g_heap): RAM Uninitialized
+    *(.bss.g_main_stack): RAM Uninitialized
+    
   Module "I/O Port (r_ioport)"
     Parameter Checking: Default (BSP)
     CCD Support: Not Supported
     
   Module "SPI (r_spi_b)"
     Parameter Checking: Default (BSP)
-    Enable Support for using DTC: Enabled
+    Enable Support for using a transfer API: Enabled
     Enable Transmitting from RXI Interrupt: Disabled
     
   Module "Transfer (r_dtc)"
@@ -928,12 +943,13 @@ FSP Configuration
       Transfer Complete Interrupt Priority: Priority 2
       Error Interrupt Priority: Priority 2
       Operating Mode: Master
-      Clock Phase: Data sampling on odd edge, data variation on even edge
+      Clock Phase: Data sampling on even edge, data variation on odd edge
       Clock Polarity: Low when idle
       Mode Fault Error: Disable
       Bit Order: MSB First
       Callback: spi_master_callback
       SPI Mode: Clock Synchronous Operation
+      SPI burst transfer without delay between frames: Disable
       Communication Mode Select: Full Duplex
       Slave Select Polarity: Active Low
       Select SSL(Slave Select): SSL0

@@ -3,7 +3,7 @@
  * Description  : Contains data structures and functions.
  **********************************************************************************************************************/
 /***********************************************************************************************************************
-* Copyright (c) 2024 - 2025 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2024 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 ***********************************************************************************************************************/
@@ -95,7 +95,8 @@ static void clock_output_operation(void)
     user_input = get_user_input();
 
     /* Configure clock output pin as peripheral clock out pin */
-    R_IOPORT_PinCfg(&g_ioport_ctrl, CLKOUT_PIN, IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_CLKOUT_COMP_RTC);
+    R_IOPORT_PinCfg(&g_ioport_ctrl, CLKOUT_PIN, IOPORT_CFG_PERIPHERAL_PIN | \
+                    (uint32_t) IOPORT_PERIPHERAL_CLKOUT_COMP_RTC);
 
     /* Perform operation on user input */
     switch (user_input)

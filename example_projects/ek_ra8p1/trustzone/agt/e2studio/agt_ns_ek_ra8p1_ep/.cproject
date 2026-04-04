@@ -249,6 +249,7 @@
 									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
 									<listOptionValue builtIn="false" value="-w"/>
 								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1100568667" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
 							</tool>
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.466710601" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.466643448">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.206842455" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
@@ -258,7 +259,9 @@
 									<listOptionValue builtIn="false" value="-w"/>
 								</option>
 							</tool>
-							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1074153348" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.2014909596"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.1074153348" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.2014909596">
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.993302004" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.1426239831" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.106335438"/>
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.2130340526" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.1924974648"/>
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.1188921555" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.172989905"/>
@@ -491,6 +494,7 @@
 									<listOptionValue builtIn="false" value="-fno-unroll-loops"/>
 									<listOptionValue builtIn="false" value="-w"/>
 								</option>
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c.1798807624" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.compiler.c"/>
 							</tool>
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1854445180" name="Compiler CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.compiler.1633776796">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions.159599913" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.llvm.core.option.compiler.source.userDefinedCompilerOptions" valueType="stringList">
@@ -500,7 +504,9 @@
 									<listOptionValue builtIn="false" value="-w"/>
 								</option>
 							</tool>
-							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.444146555" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.499125782"/>
+							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.444146555" name="Assembler" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.assembler.499125782">
+								<inputType id="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler.1928123350" superClass="com.renesas.cdt.managedbuild.llvm.core.inputType.assembler"/>
+							</tool>
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.342494639" name="Linker" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.linker.2133878818"/>
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.986110914" name="Linker CPP" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.cpp.linker.656430373"/>
 							<tool id="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.1653446484" name="Objcopy" superClass="com.renesas.cdt.managedbuild.llvm.arm.tool.Objcopy.2133616056"/>

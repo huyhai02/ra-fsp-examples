@@ -53,7 +53,7 @@ FSP Configuration
     OFS Registers: OFS1 (Option Function Select Register 1) Settings: Voltage Detection 0 Level: 1.90 V
     OFS Registers: OFS1 (Option Function Select Register 1) Settings: HOCO Oscillation Enable: HOCO oscillation is disabled after reset
     OFS Registers: BANKSEL (Bank Select Register) Settings: Disabled
-    OFS Registers: BANKSEL (Bank Select Register) Settings: Bank Swap Switch: Disabled
+    OFS Registers: BANKSEL (Bank Select Register) Settings: Startup Bank Switch: Disabled
     OFS Registers: BANKSEL (Bank Select Register) Settings: Block Swap Select: Disabled
     OFS Registers: BPS (Block Protect Setting Register) Settings: Disabled
     OFS Registers: BPS (Block Protect Setting Register) Settings: BPS0: 
@@ -66,7 +66,7 @@ FSP Configuration
     OFS Registers: OFS1_SEC (Option Function Select Register 1 Secure) Settings: Voltage Detection 0 Level: 1.90 V
     OFS Registers: OFS1_SEC (Option Function Select Register 1 Secure) Settings: HOCO Oscillation Enable: HOCO oscillation is disabled after reset
     OFS Registers: BANKSEL_SEC (Bank Select Register Secure) Settings: Disabled
-    OFS Registers: BANKSEL_SEC (Bank Select Register Secure) Settings: Bank Swap Switch: Disabled
+    OFS Registers: BANKSEL_SEC (Bank Select Register Secure) Settings: Startup Bank Switch: Disabled
     OFS Registers: BANKSEL_SEC (Bank Select Register Secure) Settings: Block Swap Select: Disabled
     OFS Registers: BPS_SEC (Block Protect Setting Register Secure) Settings: Disabled
     OFS Registers: BPS_SEC (Block Protect Setting Register Secure) Settings: BPS_SEC0: 
@@ -74,14 +74,14 @@ FSP Configuration
     OFS Registers: PBPS_SEC (Permanent Block Protect Setting Register Secure) Settings: Disabled
     OFS Registers: PBPS_SEC (Permanent Block Protect Setting Register Secure) Settings: PBPS_SEC0: 
     OFS Registers: PBPS_SEC (Permanent Block Protect Setting Register Secure) Settings: PBPS_SEC2: 
-    OFS Registers: OFS1_SEL (OFS1 Register Select) Settings: Enabled
-    OFS Registers: OFS1_SEL (OFS1 Register Select) Settings: Voltage Detection 0 Level Security Attribution: VDSEL setting loads from OFS1_SEC
-    OFS Registers: OFS1_SEL (OFS1 Register Select) Settings: Voltage Detection 0 Circuit Start Security Attribution: LVDAS setting loads from OFS1_SEC
-    OFS Registers: BANKSEL_SEL (Banksel Register Select) Settings: Disabled
-    OFS Registers: BANKSEL_SEL (Banksel Register Select) Settings: Flash Bank Select Accessibility: Both Secure and Non-Secure State
-    OFS Registers: BPS_SEL (BPS Register Select) Settings: Disabled
-    OFS Registers: BPS_SEL (BPS Register Select) Settings: BPS_SEL0: 
-    OFS Registers: BPS_SEL (BPS Register Select) Settings: BPS_SEL2: 
+    OFS Registers: OFS1_SEL (OFS1 Security Attribution) Settings: Enabled
+    OFS Registers: OFS1_SEL (OFS1 Security Attribution) Settings: Voltage Detection 0 Level Security Attribution: VDSEL setting loads from OFS1_SEC
+    OFS Registers: OFS1_SEL (OFS1 Security Attribution) Settings: Voltage Detection 0 Circuit Start Security Attribution: LVDAS setting loads from OFS1_SEC
+    OFS Registers: BANKSEL_SEL (Banksel Security Attribution) Settings: Disabled
+    OFS Registers: BANKSEL_SEL (Banksel Security Attribution) Settings: Flash Bank Select Accessibility: Non-Secure State
+    OFS Registers: BPS_SEL (BPS Security Attribution) Settings: Disabled
+    OFS Registers: BPS_SEL (BPS Security Attribution) Settings: BPS_SEL0: 
+    OFS Registers: BPS_SEL (BPS Security Attribution) Settings: BPS_SEL2: 
     
   RA4C1 event data
   RA Common
@@ -171,7 +171,7 @@ FSP Configuration
       P305 43 SLCDC_SEG20 SLCD_SEG20_PMOD2_P8_RST - None "Peripheral mode" - - "GPT_OPS: GTOWUP; IRQ8: IRQ8; SLCDC: SEG20; UARTA0: RxDA0" - IO - - 
       P306 42 SLCDC_SEG19 SLCD_SEG19 - - "Peripheral mode" - - "GPT_OPS: GTOULO; SLCDC: SEG19; UARTA0: TxDA0" - IO - - 
       P307 41 SLCDC_SEG18 SLCD_SEG18 - - "Peripheral mode" - - "GPT_OPS: GTOUUP; SLCDC: SEG18" - IO - - 
-      P400 1 SLCDC_SEG4 IIC_SYSTEM_SCL - None "Peripheral mode" - - "AGT1: AGTIO1; GPT2: GTIOC2A; GPT_POEGB: GTETRGB; IIC1: SCL1; IRQ0: IRQ0; SCI1: TXD1; SLCDC: SEG4" - IO - - 
+      P400 1 - IIC_SYSTEM_SCL - - Disabled - - "AGT1: AGTIO1; GPT2: GTIOC2A; GPT_POEGB: GTETRGB; IIC1: SCL1; IRQ0: IRQ0; SCI1: TXD1; SLCDC: SEG4" - None - - 
       P401 2 - IIC_SYSTEM_SDA - - Disabled - - "CANFD0: CRX0; GPT2: GTIOC2B; GPT_POEGA: GTETRGA; IIC1: SDA1; IRQ5: IRQ5; SCI1: RXD1; SLCDC: SEG5" - None - - 
       P402 3 SLCDC_SEG6 SLCD_SEG6_PMOD1_P8_RST - None "Peripheral mode" - - "AGT0: AGTIO0; AGT1: AGTIO1; CAC: CACREF; CANFD0: CTX0; GPT_POEGC: GTETRGC; IRQ4: IRQ4; SCI1: CTS_RTS1; SLCDC: SEG6" - IO - - 
       P403 4 SLCDC_SEG7 SLCDC_SEG7_ARDUINO_D2 - None "Peripheral mode" - - "AGT0: AGTIO0; AGT1: AGTIO1; IRQ14: IRQ14; SCI1: SCK1; SLCDC: SEG7" - IO - - 
@@ -272,7 +272,7 @@ FSP Configuration
       P305 43 - SLCD_SEG20_PMOD2_P8_RST - None Disabled - - "GPT_OPS: GTOWUP; IRQ8: IRQ8; SLCDC: SEG20; UARTA0: RxDA0" - IO - - 
       P306 42 - SLCD_SEG19 - - Disabled - - "GPT_OPS: GTOULO; SLCDC: SEG19; UARTA0: TxDA0" - IO - - 
       P307 41 - SLCD_SEG18 - - Disabled - - "GPT_OPS: GTOUUP; SLCDC: SEG18" - IO - - 
-      P400 1 - IIC_SYSTEM_SCL - None Disabled - - "AGT1: AGTIO1; GPT2: GTIOC2A; GPT_POEGB: GTETRGB; IIC1: SCL1; IRQ0: IRQ0; SCI1: TXD1; SLCDC: SEG4" - IO - - 
+      P400 1 - IIC_SYSTEM_SCL - - Disabled - - "AGT1: AGTIO1; GPT2: GTIOC2A; GPT_POEGB: GTETRGB; IIC1: SCL1; IRQ0: IRQ0; SCI1: TXD1; SLCDC: SEG4" - None - - 
       P401 2 - IIC_SYSTEM_SDA - - Disabled - - "CANFD0: CRX0; GPT2: GTIOC2B; GPT_POEGA: GTETRGA; IIC1: SDA1; IRQ5: IRQ5; SCI1: RXD1; SLCDC: SEG5" - None - - 
       P402 3 - SLCD_SEG6_PMOD1_P8_RST - None Disabled - - "AGT0: AGTIO0; AGT1: AGTIO1; CAC: CACREF; CANFD0: CTX0; GPT_POEGC: GTETRGC; IRQ4: IRQ4; SCI1: CTS_RTS1; SLCDC: SEG6" - IO - - 
       P403 4 - SLCDC_SEG7_ARDUINO_D2 - None Disabled - - "AGT0: AGTIO0; AGT1: AGTIO1; IRQ14: IRQ14; SCI1: SCK1; SLCDC: SEG7" - IO - - 
@@ -331,9 +331,12 @@ FSP Configuration
   User Event Links
     
   Linker Section Mappings
+    *(.bss.g_heap): RAM Uninitialized
+    *(.bss.g_main_stack): RAM Uninitialized
     
   Module "I/O Port (r_ioport)"
     Parameter Checking: Default (BSP)
+    CCD Support: Not Supported
     
   Module "Segment LCD (r_slcdc)"
     Parameter Checking: Default (BSP)
@@ -356,5 +359,5 @@ FSP Configuration
       Output: Waveform: Waveform A
       Output: Drive method: Internal voltage boosting
       Output: Reference Voltage: Select VL1 or VCC
-      Output: Default contrast (if available): 22
+      Output: Default contrast (if available): 14
       

@@ -7,6 +7,14 @@ FSP Configuration
     data_flash_size_bytes: 0
     package_style: LFBGA
     package_pins: 289
+    ospi0_cs0_start_address: 2147483648
+    ospi0_cs0_size_bytes: 268435456
+    ospi0_cs1_start_address: 2415919104
+    ospi0_cs1_size_bytes: 268435456
+    ospi1_cs0_start_address: 1879048192
+    ospi1_cs0_size_bytes: 134217728
+    ospi1_cs1_start_address: 2013265920
+    ospi1_cs1_size_bytes: 134217728
     number of cores: 2
     
   R7KA8P1KFLCAC
@@ -30,6 +38,7 @@ FSP Configuration
     SDRAM: Endian Mode: Little Endian
     SDRAM: Continuous Access Mode: Enabled
     SDRAM: Bus Width: 32-bit
+    OSPI_B: Startup Support: Disabled
     Security: Exceptions: Exception Response: Non-Maskable Interrupt
     Security: Exceptions: BusFault, HardFault, and NMI Target: Secure State
     Security: System Reset Request Accessibility: Secure State
@@ -59,6 +68,8 @@ FSP Configuration
     Main Oscillator Wait Time: 8163 cycles
     Cache settings: Data cache: Disabled
     Cache settings: Data cache forced write-through: Disabled
+    I/O Ports: Voltage Mode: VCC: High (VCC >= 2.7 V)
+    I/O Ports: Voltage Mode: VCC2: High (VCC2 >= 2.7 V)
     
   RA8P1 Device Options
     OFS Registers: OFS0 (Option Function Select Register 0) Settings: Enabled
@@ -284,7 +295,7 @@ FSP Configuration
     BCLKA Div /6
     SDCLK Enabled
     EBCLK Src: BCLK (Synchronous)
-    EBCLK Div /2
+    EBCLK Disabled
     CLKOUT Src: HOCO
     CLKOUT Div /1
     SCICLK Src: PLL2R
@@ -1009,10 +1020,12 @@ FSP Configuration
   Module "FreeRTOS Heap 4"
   Module "Ethernet MAC (r_rmac)"
     Parameter Checking: Default (BSP)
+    Read Buffer Size Checking: Disabled
     
   Module "Switch (r_layer3_switch)"
     Parameter Checking: Default (BSP)
     Available queue num: 4
+    gPTP enable: Disabled
     Time Aware Shaper: Disabled
     
   Module "Ethernet (r_rmac_phy)"
@@ -1022,6 +1035,7 @@ FSP Configuration
     DP83620 Target: Disabled
     ICS1894 Target: Disabled
     GPY111 Target: Disabled
+    VSC8541 Target: Disabled
     User Own Target: Disabled
     Reference Clock: Default
     
@@ -1032,6 +1046,7 @@ FSP Configuration
     DP83620 Target: Disabled
     ICS1894 Target: Disabled
     GPY111 Target: Disabled
+    VSC8541 Target: Disabled
     User Own Target: Disabled
     Reference Clock: Default
     
@@ -1162,10 +1177,16 @@ FSP Configuration
           Buffers: RX queue length: 4
           Buffers: TX queue num: 2
           Buffers: RX queue num: 2
+          Buffers: Number of TX buffer: 12
+          Buffers: Number of RX buffer: 12
           Buffers: Buffer size: 1514
           Interrupts: Magic packet interrupt priority: Disabled
           Interrupts: Callback: vEtherISRCallback
           Buffers: Allocate RX buffer: Enable
+          Buffers: Number of node num: 24
+          Timestamp: TS queue length: 8
+          Forwarding: Transmission descriptor format: Transmission direct descriptor
+          Forwarding: Port based forwarding for reception: Disabled
           
           Instance "g_layer3_switch0 Switch (r_layer3_switch)"
             Name: g_layer3_switch0
@@ -1173,8 +1194,13 @@ FSP Configuration
             Context: NULL
             Callback: NULL
             Interrupts: Interrupt priority: Priority 12
-            Ports: Port 0: Fowarding: CPU
-            Ports: Port 1: Fowarding: CPU
+            Ports: Port 0: Forwarding: CPU
+            Ports: Port 1: Forwarding: CPU
+            Ports: CPU: Forwarding: 
+            Ports: Port 0: IPV queues for preemptable frames: 
+            Ports: Port 1: IPV queues for preemptable frames: 
+            Ports: Port 0: Minimum fragment size of preemptable frames: 64 bytes
+            Ports: Port 1: Minimum fragment size of preemptable frames: 64 bytes
             Ports: Port 0: MAC address: 00:11:22:33:44:55
             Ports: Port 1: MAC address: 00:11:22:33:44:55
             Ports: Port 0: IPV queue depth: Queue 0: 64
@@ -1197,6 +1223,8 @@ FSP Configuration
             Ports: Port 1: Callback: NULL
             Ports: Port 0: Context: NULL
             Ports: Port 1: Context: NULL
+            Ports: Port 0: GPTP timer number: Timer 0
+            Ports: Port 1: GPTP timer number: Timer 1
             Number of Layer 3 routing entries: 10
             Interrupts: ETHA0 error interrupt priority: Priority 12
             Interrupts: ETHA1 error interrupt priority: Priority 12
@@ -1246,6 +1274,12 @@ FSP Configuration
               MDC clock rate (Hz): 2500000
               MDIO hold timing adjustment: 0
               MDIO capture timing adjustment: 0
+              Frame preemption: Disable
+              Verify frame interval: 10
+              Interrupts: Context: NULL
+              Interrupts: Callback: NULL
+              Interrupts: ETHA0 status interrupt priority: Disabled
+              Interrupts: ETHA1 status interrupt priority: Disabled
               
               Instance "g_rmac_phy_lsi1 Ethernet PHY-LSI"
                 Name: g_rmac_phy_lsi1
@@ -1278,6 +1312,8 @@ FSP Configuration
             General: DS Auto-calibration Pattern Address: 0
             Command Sets: Custom Table: Table Pointer: 
             Command Sets: Custom Table: Table Length: 0
+            Command Sets: Custom Table: Erase Command Table: 
+            Command Sets: Custom Table: Erase Command Table Length: 0
             Command Sets: Erase Sizes: Sector Erase: 4096
             Command Sets: Erase Sizes: Block Erase: 65536
             Command Sets: Initial Mode: Protocol Mode: SPI (1S-1S-1S)
@@ -1286,7 +1322,7 @@ FSP Configuration
             Command Sets: Initial Mode: Address Length: 4 bytes
             Command Sets: Initial Mode: Address MSB Mask: 0xF0
             Command Sets: Initial Mode: Command Code Length: 1 byte
-            Command Sets: Initial Mode: Status Register Address Length: No address
+            Command Sets: Initial Mode: Status Register: No address
             Command Sets: Initial Mode: Status Register Address: 0x00
             Command Sets: Initial Mode: Read: Command Code: 0x13
             Command Sets: Initial Mode: Read: Dummy Cycles: 0
@@ -1308,7 +1344,7 @@ FSP Configuration
             Command Sets: High-speed Mode: Address Length: 4 bytes
             Command Sets: High-speed Mode: Address MSB Mask: 0xF0
             Command Sets: High-speed Mode: Command Code Length: 2 bytes
-            Command Sets: High-speed Mode: Status Register Address Length: 4 bytes
+            Command Sets: High-speed Mode: Status Register: 4 bytes
             Command Sets: High-speed Mode: Status Register Address: 0x00
             Command Sets: High-speed Mode: Read: Command Code: 0xEEEE
             Command Sets: High-speed Mode: Read: Dummy Cycles: 20
@@ -1325,8 +1361,8 @@ FSP Configuration
             Command Sets: High-speed Mode: Block Erase: Command Code: 0xDCDC
             Command Sets: High-speed Mode: Chip Erase: Command Code: 0x6060
             Timing Settings: Chip Select: Command Interval: 2 cycles
-            Timing Settings: Chip Select: Pull-up Timing: No Extension
-            Timing Settings: Chip Select: Pull-down Timing: No Extension
+            Timing Settings: Chip Select: Assertion Extension: No extension
+            Timing Settings: Chip Select: Negation Extension: No extension
             Timing Settings: DS Latching Delay: Auto-calibrate
             Timing Settings: SDR: Drive Timing: Drive 1/2 cycle before CK
             Timing Settings: SDR: CK Sampling Edge: Falling edge
@@ -1339,8 +1375,8 @@ FSP Configuration
             DOTF: AES IV: g_ospi_dotf_iv
             DOTF: AES Key Length: 128
             DOTF: Key Format: Plaintext
-            DOTF: Decryption start address: 0x90000000
-            DOTF: Decryption end address: 0x90001FFF
+            DOTF: Decryption Start Address: 0x90000000
+            DOTF: Decryption End Address: 0x90001FFF
             Row Addressing: Row Address Length: No address
             
             Instance "g_transfer0 Transfer (r_dmac) No ELC Trigger"
@@ -1357,7 +1393,7 @@ FSP Configuration
               Callback: NULL
               Transfer End Interrupt Priority: Disabled
               Interrupt Frequency: Interrupt after all transfers have completed
-              Offset value (Valid only when address mode is \'Offset\'): 0
+              Offset value (Valid only when address mode is Offset addition): 0
               Source Buffer Size: 0
               
     Instance "FreeRTOS Heap 4"
