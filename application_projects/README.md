@@ -30,7 +30,7 @@
 | 21 | r01an8194 | [Getting Started with GUIX Thermostat Application for EK-RA8D2](https://www.renesas.com/en/document/apn/getting-started-guix-thermostat-application-ek-ra8d2) | 6.2.0 |
 | 22 | r01an8261 | [RA8P1 and RA8D2/M2/T2 Secure Factory Programming](https://www.renesas.com/en/document/apn/ra8p1-and-ra8d2m2t2-secure-factory-programming) | 6.3.0 |
 | 23 | r11an0416 | [Securing Data at Rest Utilizing the Renesas Security MPU](https://www.renesas.com/en/document/apn/securing-data-rest-utilizing-renesas-security-mpu) | 5.0.0 |
-| 24 | r11an0449 | [Establishing and Protecting Device Identity using SCE7 and FAW](https://www.renesas.com/en/document/apn/renesas-ra-family-establishing-and-protecting-device-identity-using-sce7-and-faw) | 5.5.0 |
+| 24 | r11an0449 | [Establishing and Protecting Device Identity using SCE7 and FAW](https://www.renesas.com/en/document/apn/renesas-ra-family-establishing-and-protecting-device-identity-using-sce7-and-faw) | 6.4.0 |
 | 25 | r11an0463 | [Getting Started with the Graphics Application](https://www.renesas.com/en/document/apn/getting-started-graphics-application) | 6.0.0 |
 | 26 | r11an0467 | [Security Design with Arm® TrustZone® using Cortex-M33](https://www.renesas.com/en/document/apn/security-design-arm-trustzone-using-cortex-m33) | 5.5.0 |
 | 27 | r11an0468 | [Securing Data at Rest Using the Arm® TrustZone®](https://www.renesas.com/en/document/apn/renesas-ra-securing-data-rest-using-arm-trustzone) | 5.2.0 |
@@ -65,27 +65,28 @@
 | 52 | r11an0773 | [Application Design using RA8 Series MCU Decryption on the Fly for OSPI](https://www.renesas.com/en/document/apn/application-design-using-ra8-series-mcu-decryption-fly-ospi) | 6.0.0 |
 | 53 | r11an0774 | [Application Design using RA8 First Stage Bootloader](https://www.renesas.com/en/document/apn/application-design-using-ra8-first-stage-bootloader-application-project) | 6.1.0 |
 | 54 | r11an0782 | [Virtual EEPROM Example Using RA4E2](https://www.renesas.com/en/document/apn/virtual-eeprom-example-using-ra4e2) | 6.2.0 |
-| 55 | r11an0811 | [RA AWS MQTT/TLS Cloud Connectivity Solution - Wi-Fi DA16600](https://www.renesas.com/en/document/apn/ra-aws-mqtttls-cloud-connectivity-solution-wi-fi-da16600) | 6.0.0 |
+| 55 | r11an0785 | [Device Lifecycle Management for RA8 MCUs](https://www.renesas.com/en/document/apn/device-lifecycle-management-ra8-mcus) | N/A |
+| 56 | r11an0811 | [RA AWS MQTT/TLS Cloud Connectivity Solution - Wi-Fi DA16600](https://www.renesas.com/en/document/apn/ra-aws-mqtttls-cloud-connectivity-solution-wi-fi-da16600) | 6.0.0 |
 |   |   | [Related: r11an0812 - RA AWS Cloud Connectivity on CK-RA6M5v2 with Wi-Fi DA16600– Getting Started Guide](https://www.renesas.com/en/document/qsg/ra-aws-cloud-connectivity-ck-ra6m5v2-wi-fi-da16600-getting-started-guide) |   |
-| 56 | r11an0868 | [Booting Encrypted Image on RA4 using MCUboot and QSPI](https://www.renesas.com/en/document/apn/booting-encrypted-image-ra4-using-mcuboot-and-qspi-application-project) | 6.2.0 |
-| 57 | r11an0869 | [RA4 Secure Bootloader Using MCUboot and Internal Code Flash](https://www.renesas.com/en/document/apn/ra4-secure-bootloader-using-mcuboot-and-internal-code-flash) | 5.2.0 |
-| 58 | r11an0897 | [Security Design using Arm TrustZone - Cortex M85](https://www.renesas.com/en/document/apn/security-design-using-arm-trustzone-cortex-m85) | 5.6.0 |
-| 59 | r11an0901 | [RA AWS MQTT/TLS Cloud Connectivity Solution - Cellular GM02S](https://www.renesas.com/en/document/apn/ra-aws-mqtttls-cloud-connectivity-solution-cellular-gm02s) | 6.0.0 |
+| 57 | r11an0868 | [Booting Encrypted Image on RA4 using MCUboot and QSPI](https://www.renesas.com/en/document/apn/booting-encrypted-image-ra4-using-mcuboot-and-qspi-application-project) | 6.2.0 |
+| 58 | r11an0869 | [RA4 Secure Bootloader Using MCUboot and Internal Code Flash](https://www.renesas.com/en/document/apn/ra4-secure-bootloader-using-mcuboot-and-internal-code-flash) | 5.2.0 |
+| 59 | r11an0897 | [Security Design using Arm TrustZone - Cortex M85](https://www.renesas.com/en/document/apn/security-design-using-arm-trustzone-cortex-m85) | 5.6.0 |
+| 60 | r11an0901 | [RA AWS MQTT/TLS Cloud Connectivity Solution - Cellular GM02S](https://www.renesas.com/en/document/apn/ra-aws-mqtttls-cloud-connectivity-solution-cellular-gm02s) | 6.0.0 |
 |   |   | [Related: r11an0902 - RA AWS Cloud Connectivity on CK-RA6M5 v2 with Cellular GM02S – Getting Started Guide](https://www.renesas.com/en/document/qsg/ra-aws-cloud-connectivity-ck-ra6m5-v2-cellular-gm02s-getting-started-guide) |   |
-| 60 | r11an0909 | [RA8 Basic Secure Bootloader Using MCUboot and Internal Code Flash](https://www.renesas.com/en/document/apn/ra8-basic-secure-bootloader-using-mcuboot-and-internal-code-flash) | 5.5.0 |
-| 61 | r11an0915 | [RA AWS Cloud Connectivity and Firmware Update OTA on CK-RA6M5 v2 with Ethernet](https://www.renesas.com/en/document/apn/ra-aws-cloud-connectivity-and-firmware-update-ota-ck-ra6m5-v2-ethernet) | 6.1.0 |
+| 61 | r11an0909 | [RA8 Basic Secure Bootloader Using MCUboot and Internal Code Flash](https://www.renesas.com/en/document/apn/ra8-basic-secure-bootloader-using-mcuboot-and-internal-code-flash) | 5.5.0 |
+| 62 | r11an0915 | [RA AWS Cloud Connectivity and Firmware Update OTA on CK-RA6M5 v2 with Ethernet](https://www.renesas.com/en/document/apn/ra-aws-cloud-connectivity-and-firmware-update-ota-ck-ra6m5-v2-ethernet) | 6.1.0 |
 |   |   | [Related: r11an0914 - RA AWS Cloud Connectivity and Firmware Update OTA on CK-RA6M5 v2 with Ethernet – Getting Started Guide](https://www.renesas.com/en/document/apn/ra-aws-cloud-connectivity-and-firmware-update-ota-ck-ra6m5-v2-ethernet-getting-started-guide) |   |
-| 62 | r11an0979 | [Establishing and Protecting Device Identity using RSIP](https://www.renesas.com/en/document/apn/establishing-and-protecting-device-identity-using-rsip) | 6.0.0 |
-| 63 | r11an0995 | [Building a Vision AI Application using the RA8P1 MCU with Ethos-U55 NPU](https://www.renesas.com/en/document/apn/building-vision-ai-application-using-ra8p1-mcu-ethos-u55-npu) | 6.0.0 |
-| 64 | r11an1048 | [RA6 Secure Bootloader Using MCUboot with Protected mode and Internal Code Flash](https://www.renesas.com/en/document/apn/ra6-secure-bootloader-using-mcuboot-protected-mode-and-internal-code-flash) | 6.1.0 |
-| 65 | r11an1056 | [Getting Started with the Graphics Application on EK-RA8E2](https://www.renesas.com/document/apn/getting-started-graphics-application-ek-ra8e2) | 6.0.0 |
-| 66 | r11an1065 | [Secure Bootloader using MCUboot with the Ocrypto Cryptographic Library](https://www.renesas.com/en/document/apn/secure-bootloader-using-mcuboot-ocrypto-cryptographic-library) | 6.1.0 |
-| 67 | r11an1068 | [Getting Started with the Graphics Application on RA8D2](https://www.renesas.com/en/document/apn/getting-started-graphics-application-ek-ra8d2) | 6.2.0 |
-| 68 | r11an1088 | [RA0/RA2 MCUboot and USB-Based Firmware Updates](https://www.renesas.com/en/document/apn/ra0ra2-mcuboot-and-usb-based-firmware-updates) | 6.1.0 |
-| 69 | r12an0120 | [Getting Started with GUIX Thermostat Application](https://www.renesas.com/en/document/apn/getting-started-guix-thermostat-application) | 6.0.0 |
-| 70 | r12an0142 | [GUIX Hello World Application on RA8E2](https://www.renesas.com/en/document/apn/guix-hello-world-ek-ra8e2) | 6.0.0 |
-| 71 | r21qs0007 | [RYZ024A PMOD LTE Connectivity with RA6M5 MCU Quick Start Guide](https://www.renesas.com/en/document/qsg/ryz024a-pmod-lte-connectivity-ra6m5-mcu-quick-start-guide) | 5.0.0 |
-| 72 | r21qs0008 | [RYZ024A PMOD LTE Connectivity with RA4M2 MCU Quick Start Guide](https://www.renesas.com/en/document/qsg/ryz024a-pmod-lte-connectivity-ek-ra4m2-mcu-quick-start-guide) | 5.0.0 |
-| 73 | r30an0384 | [Example of Low Power Application (Data Logger)](https://www.renesas.com/en/document/apn/ra2l1ra2e1-group-example-low-power-application-data-logger) | 5.5.0 |
-| 74 | r30an0392 | [Low Power Application (Use of ADC, DTC and ELC at Snooze mode) for FPB-RA2E1 and FPB-RA2E2](https://www.renesas.com/en/document/apn/low-power-application-use-adc-dtc-and-elc-snooze-mode-fpb-ra2e1-and-fpb-ra2e2) | 5.5.0 |
-| 75 | r30an0423 | [Low Power Application for FPB-RA4E1 or FPB-RA6E1](https://www.renesas.com/en/document/apn/low-power-application-fpb-ra4e1-or-fpb-ra6e1-application-project) | 6.0.0 |
+| 63 | r11an0979 | [Establishing and Protecting Device Identity using RSIP](https://www.renesas.com/en/document/apn/establishing-and-protecting-device-identity-using-rsip) | 6.0.0 |
+| 64 | r11an0995 | [Building a Vision AI Application using the RA8P1 MCU with Ethos-U55 NPU](https://www.renesas.com/en/document/apn/building-vision-ai-application-using-ra8p1-mcu-ethos-u55-npu) | 6.0.0 |
+| 65 | r11an1048 | [RA6 Secure Bootloader Using MCUboot with Protected mode and Internal Code Flash](https://www.renesas.com/en/document/apn/ra6-secure-bootloader-using-mcuboot-protected-mode-and-internal-code-flash) | 6.1.0 |
+| 66 | r11an1056 | [Getting Started with the Graphics Application on EK-RA8E2](https://www.renesas.com/document/apn/getting-started-graphics-application-ek-ra8e2) | 6.0.0 |
+| 67 | r11an1065 | [Secure Bootloader using MCUboot with the Ocrypto Cryptographic Library](https://www.renesas.com/en/document/apn/secure-bootloader-using-mcuboot-ocrypto-cryptographic-library) | 6.1.0 |
+| 68 | r11an1068 | [Getting Started with the Graphics Application on RA8D2](https://www.renesas.com/en/document/apn/getting-started-graphics-application-ek-ra8d2) | 6.2.0 |
+| 69 | r11an1088 | [RA0/RA2 MCUboot and USB-Based Firmware Updates](https://www.renesas.com/en/document/apn/ra0ra2-mcuboot-and-usb-based-firmware-updates) | 6.1.0 |
+| 70 | r12an0120 | [Getting Started with GUIX Thermostat Application](https://www.renesas.com/en/document/apn/getting-started-guix-thermostat-application) | 6.0.0 |
+| 71 | r12an0142 | [GUIX Hello World Application on RA8E2](https://www.renesas.com/en/document/apn/guix-hello-world-ek-ra8e2) | 6.0.0 |
+| 72 | r21qs0007 | [RYZ024A PMOD LTE Connectivity with RA6M5 MCU Quick Start Guide](https://www.renesas.com/en/document/qsg/ryz024a-pmod-lte-connectivity-ra6m5-mcu-quick-start-guide) | 5.0.0 |
+| 73 | r21qs0008 | [RYZ024A PMOD LTE Connectivity with RA4M2 MCU Quick Start Guide](https://www.renesas.com/en/document/qsg/ryz024a-pmod-lte-connectivity-ek-ra4m2-mcu-quick-start-guide) | 5.0.0 |
+| 74 | r30an0384 | [Example of Low Power Application (Data Logger)](https://www.renesas.com/en/document/apn/ra2l1ra2e1-group-example-low-power-application-data-logger) | 5.5.0 |
+| 75 | r30an0392 | [Low Power Application (Use of ADC, DTC and ELC at Snooze mode) for FPB-RA2E1 and FPB-RA2E2](https://www.renesas.com/en/document/apn/low-power-application-use-adc-dtc-and-elc-snooze-mode-fpb-ra2e1-and-fpb-ra2e2) | 5.5.0 |
+| 76 | r30an0423 | [Low Power Application for FPB-RA4E1 or FPB-RA6E1](https://www.renesas.com/en/document/apn/low-power-application-fpb-ra4e1-or-fpb-ra6e1-application-project) | 6.0.0 |

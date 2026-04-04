@@ -1,0 +1,2 @@
+Device Lifecycle Management for RA8 MCUs
+https://www.renesas.com/en/document/apn/device-lifecycle-management-ra8-mcus

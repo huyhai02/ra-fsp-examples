@@ -5,5 +5,6 @@
     </LocalDebuggerAttach>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>connect 10</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArgumentsHistory>connect 10|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
 </Project>
