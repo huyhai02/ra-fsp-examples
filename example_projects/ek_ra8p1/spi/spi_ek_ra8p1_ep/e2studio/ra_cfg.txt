@@ -946,7 +946,7 @@ FSP Configuration
       Transfer Complete Interrupt Priority: Priority 2
       Error Interrupt Priority: Priority 2
       Operating Mode: Master
-      Clock Phase: Data sampling on odd edge, data variation on even edge
+      Clock Phase: Data sampling on even edge, data variation on odd edge
       Clock Polarity: Low when idle
       Mode Fault Error: Disable
       Bit Order: MSB First
