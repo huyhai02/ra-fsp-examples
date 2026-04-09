@@ -248,7 +248,7 @@
       <property id="module.driver.spi_b.tei_ipl" value="board.icu.common.irq.priority2" />
       <property id="module.driver.spi_b.eri_ipl" value="board.icu.common.irq.priority2" />
       <property id="module.driver.spi_b.operating_mode" value="module.driver.spi_b.operating_mode.mode_master" />
-      <property id="module.driver.spi_b.clk_phase" value="module.driver.spi_b.clk_phase.clk_phase_edge_odd" />
+      <property id="module.driver.spi_b.clk_phase" value="module.driver.spi_b.clk_phase.clk_phase_edge_even" />
       <property id="module.driver.spi_b.clk_polarity" value="module.driver.spi_b.clk_polarity.clk_polarity_low" />
       <property id="module.driver.spi_b.mode_fault" value="module.driver.spi_b.mode_fault.mode_fault_error_disable" />
       <property id="module.driver.spi_b.bit_order" value="module.driver.spi_b.bit_order.bit_order_msb_first" />
@@ -304,7 +304,7 @@
       <property id="module.driver.spi_b.tei_ipl" value="board.icu.common.irq.priority2" />
       <property id="module.driver.spi_b.eri_ipl" value="board.icu.common.irq.priority2" />
       <property id="module.driver.spi_b.operating_mode" value="module.driver.spi_b.operating_mode.mode_slave" />
-      <property id="module.driver.spi_b.clk_phase" value="module.driver.spi_b.clk_phase.clk_phase_edge_odd" />
+      <property id="module.driver.spi_b.clk_phase" value="module.driver.spi_b.clk_phase.clk_phase_edge_even" />
       <property id="module.driver.spi_b.clk_polarity" value="module.driver.spi_b.clk_polarity.clk_polarity_low" />
       <property id="module.driver.spi_b.mode_fault" value="module.driver.spi_b.mode_fault.mode_fault_error_disable" />
       <property id="module.driver.spi_b.bit_order" value="module.driver.spi_b.bit_order.bit_order_msb_first" />
